@@ -14,6 +14,15 @@
         <sourceFile filename="script.lua" />
         <sourceFile filename="extensions.lua" />
     </extraSourceFiles>
+    <inputBindings>
+        <input name="CT_TOGGLE_HUD" category="ONFOOT VEHICLE" key1="KEY_lctrl KEY_h" key2="" device="0" button="" mouse="" visible="true" />
+    </inputBindings>
+     <l10n>   
+        <text name="input_CT_TOGGLE_HUD">
+            <en>Hide/Show HUD</en>
+            <it>Nascondi/Mostra gli HUD</it>
+        </text>
+    </l10n>
     <git>
         <host>GitHub</host>
         <url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>

@@ -32,13 +32,34 @@ function CreatorTools:mouseEvent(posX, posY, isDown, isUp, button)
 end
 
 function CreatorTools:update(dt)
+    self:checkInputs();
+    self:drawHelpButtons();
 end
 
 function CreatorTools:draw()
 end
 
+function CreatorTools:checkInputs()
+     if InputBinding.hasEvent(InputBinding.CT_TOGGLE_HUD, true) then
+        self:toggleHud();
+        self:toggleCrosshair();
+    end
+end
+
+function CreatorTools:drawHelpButtons()
+    -- show all button helps
+    g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_TOGGLE_HUD"), InputBinding.CT_TOGGLE_HUD);   
+    if g_currentMission.currentVehicle == nil then
+        -- show only onfoot button helps
+        
+    else
+        -- show only vehicle button helps
+
+    end
+end
+
 function CreatorTools:TestCommand()
-    return self:toggleGui();
+    --return self:toggleHud() .. " " .. self:toggleCrosshair();
 end
 
 function CreatorTools:toggleCrosshair()
@@ -58,10 +79,10 @@ function CreatorTools:toggleCrosshair()
     return "hideCrosshair = " .. tostring(self.hideCrosshair);
 end
 
-function CreatorTools:toggleGui()
-    self.hideGui = not self.hideGui;
-    g_currentMission:setAllowsGuiDisplay(not self.hideGui);
-    return "hideGui = " .. tostring(self.hideGui);
+function CreatorTools:toggleHud()
+    self.hideHud = not self.hideHud;
+    g_currentMission:setAllowsHudDisplay(not self.hideHud);
+    return "hideHud = " .. tostring(self.hideHud);
 end
 
 addModEventListener(CreatorTools)
