@@ -8,19 +8,23 @@
 CreatorToolsExtensions = {};
 
 function CreatorToolsExtensions:load()
-    g_currentMission.setAllowsGuiDisplay = CreatorToolsExtensions.setAllowsGuiDisplay;
+    g_currentMission.setAllowsHudDisplay = CreatorToolsExtensions.setAllowsHudDisplay;
 end
 
-function CreatorToolsExtensions:setAllowsGuiDisplay(v)
+function CreatorToolsExtensions:setAllowsHudDisplay(v)
     g_currentMission.showHudEnv = v;
     g_currentMission.showWeatherForecast = v;
     g_currentMission.renderTime = v;
     g_currentMission.showVehicleInfo = v;
-    g_currentMission.showHelpMenu = v;
+    if v then
+        g_gameSettings:setValue("showHelpMenu", g_currentMission.oldShowHelpMenu);
+    else
+        g_currentMission.oldShowHelpMenu = g_gameSettings:getValue("showHelpMenu");
+        g_gameSettings:setValue("showHelpMenu", false);
+    end  
     g_currentMission.showHudMissionBase = v;
     g_currentMission.showHudMissionBaseOriginal = v;
     g_currentMission.showVehicleSchema = v;
-
 end
 
 -- real extension methods
