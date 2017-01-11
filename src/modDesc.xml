@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="32">
+    <author>TyKonKet</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Creator Tools</en>
+    </title>
+    <description>
+        <en>Creator Tools allow you to do magics with HUD, camera and much more.</en>
+    </description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="false"/>
+    <extraSourceFiles>
+        <sourceFile filename="script.lua"/>
+    </extraSourceFiles>
+    <git>
+        <host>GitHub</host>
+        <url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>
+    </git>
+</modDesc>
