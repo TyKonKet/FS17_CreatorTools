@@ -19,6 +19,7 @@ function CreatorTools:loadMap(name)
     if self.debug then
         addConsoleCommand("AAACreatorToolseTestCommand", "", "TestCommand", self);
     end
+    CreatorToolsExtensions:load();
 end
 
 function CreatorTools:deleteMap()
@@ -37,24 +38,30 @@ function CreatorTools:draw()
 end
 
 function CreatorTools:TestCommand()
-    return self:toggleCrosshair();
+    return self:toggleGui();
 end
 
 function CreatorTools:toggleCrosshair()
     self.hideCrosshair = not self.hideCrosshair;
     if self.hideCrosshair then
-        --save old values
+        -- save old values
         self.oldPickedUpObjectWidth = g_currentMission.player.pickedUpObjectWidth;
         self.oldPickedUpObjectHeight = g_currentMission.player.pickedUpObjectHeight;
-        --set new values
+        -- set new values
         g_currentMission.player.pickedUpObjectWidth = 0;
         g_currentMission.player.pickedUpObjectHeight = 0;
     else
-        --restore old values
+        -- restore old values
         g_currentMission.player.pickedUpObjectWidth = self.oldPickedUpObjectWidth;
         g_currentMission.player.pickedUpObjectHeight = self.oldPickedUpObjectHeight;
     end
     return "hideCrosshair = " .. tostring(self.hideCrosshair);
+end
+
+function CreatorTools:toggleGui()
+    self.hideGui = not self.hideGui;
+    g_currentMission:setAllowsGuiDisplay(not self.hideGui);
+    return "hideGui = " .. tostring(self.hideGui);
 end
 
 addModEventListener(CreatorTools)

@@ -9,9 +9,10 @@
         <en>Creator Tools allow you to do magics with HUD, camera and much more.</en>
     </description>
     <iconFilename>icon.dds</iconFilename>
-    <multiplayer supported="false"/>
+    <multiplayer supported="false" />
     <extraSourceFiles>
-        <sourceFile filename="script.lua"/>
+        <sourceFile filename="script.lua" />
+        <sourceFile filename="extensions.lua" />
     </extraSourceFiles>
     <git>
         <host>GitHub</host>
