@@ -8,21 +8,80 @@
 CreatorTools = {};
 CreatorTools.name = "CreatorTools";
 CreatorTools.debug = true;
+CreatorTools.savegameFile = "creatorTools.xml";
 
-function CreatorTools:print(txt)
-    if CreatorTools.debug then
-        print("[" .. self.name .. "] -> " .. txt);
+function CreatorTools:print(txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9)
+    if self.debug then
+        local args = {txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9};
+        for i, v in ipairs(args) do
+            if v then
+                print("[" .. self.name .. "] -> " .. tostring(v));
+            end
+        end
     end
 end
 
-function CreatorTools:loadMap(name)    
+function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
+    self = CreatorTools;
+    self:print("initialize()");
+    self.hideCrosshair = false;
+    self.hideHud = false;
+end
+g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
+
+function CreatorTools:load(missionInfo, missionDynamicInfo, loadingScreen)
+    self = CreatorTools;
+    self:print("load()");
+    CreatorToolsExtensions:load();
+    g_currentMission.loadMapFinished = Utils.appendedFunction(g_currentMission.loadMapFinished, self.loadMapFinished);
+    g_currentMission.onStartMission = Utils.appendedFunction(g_currentMission.onStartMission, self.afterLoad);
+    g_currentMission.missionInfo.saveToXML = Utils.appendedFunction(g_currentMission.missionInfo.saveToXML, self.saveSavegame);
+end
+g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.load);
+
+function CreatorTools:loadMap(name)
+    self:print(("loadMap(name:%s)"):format(name));
     if self.debug then
         addConsoleCommand("AAACreatorToolseTestCommand", "", "TestCommand", self);
     end
-    CreatorToolsExtensions:load();
+    self:loadSavegame();
+end
+
+function CreatorTools:loadMapFinished()
+    self = CreatorTools;
+    self:print("loadMapFinished()");
+end
+
+function CreatorTools:afterLoad()
+    self = CreatorTools;
+    self:print("afterLoad");
+    self:toggleCrosshair();
+    self:toggleHud();
+end
+
+function CreatorTools:loadSavegame()
+    self:print("loadSavegame()");
+    local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile);
+    if fileExists(filePath) then
+        local xml = loadXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
+        self.hideHud = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), false);
+        self.hideCrosshair = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.crosshair#hide"), false);
+    end
+end
+
+function CreatorTools:saveSavegame()
+    self = CreatorTools;
+    self:print("saveSavegame()");
+    local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile);
+    local xml = createXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
+    setXMLBool(xml, "creatorTools.hud#hide", self.hideHud);
+    setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair);
+    saveXMLFile(xml);
+    delete(xml);
 end
 
 function CreatorTools:deleteMap()
+    self:print("deleteMap()");
 end
 
 function CreatorTools:keyEvent(unicode, sym, modifier, isDown)
