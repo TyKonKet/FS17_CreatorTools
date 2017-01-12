@@ -9,18 +9,45 @@
         <en>Creator Tools allow you to do magics with HUD, camera and much more.</en>
     </description>
     <iconFilename>icon.dds</iconFilename>
-    <multiplayer supported="false" />
+    <multiplayer supported="true" />
     <extraSourceFiles>
         <sourceFile filename="script.lua" />
         <sourceFile filename="extensions.lua" />
     </extraSourceFiles>
     <inputBindings>
         <input name="CT_TOGGLE_HUD" category="ONFOOT VEHICLE" key1="KEY_lctrl KEY_h" key2="" device="0" button="" mouse="" visible="true" />
+        <input name="CT_WALKING_SPEED_DOWN" category="ONFOOT" key1="KEY_1" key2="" device="0" button="" mouse="" visible="true" />
+        <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_2" key2="" device="0" button="" mouse="" visible="true" />
+        <input name="CT_WALKING_SPEED_UP" category="ONFOOT" key1="KEY_3" key2="" device="0" button="" mouse="" visible="true" />
     </inputBindings>
      <l10n>   
         <text name="input_CT_TOGGLE_HUD">
             <en>Hide/Show HUD</en>
             <it>Nascondi/Mostra gli HUD</it>
+        </text>
+        <text name="CT_SHOW_HUD">
+            <en>Show HUD</en>
+            <it>Mostra gli HUD</it>
+        </text>
+        <text name="CT_HIDE_HUD">
+            <en>Hide HUD</en>
+            <it>Nascondi gli HUD</it>
+        </text>
+        <text name="input_CT_WALKING_SPEED_DOWN">
+            <en>Decrease the walking speed</en>
+            <it>Diminuisci la velocità di movimento</it>
+        </text>
+        <text name="input_CT_WALKING_SPEED_DEFAULT">
+            <en>Set to 1x the walking speed</en>
+            <it>Imposta ad 1x la velocità di movimento</it>
+        </text>
+        <text name="input_CT_WALKING_SPEED_UP">
+            <en>Increase the walking speed</en>
+            <it>Aumenta la velocità di movimento</it>
+        </text>
+        <text name="CT_WALKING_SPEED_HELP">
+            <en>Use %s, %s and %s to set the walking speed</en>
+            <it>Usa %s, %s e %s per impostare la velocità di movimento</it>
         </text>
     </l10n>
     <git>

@@ -9,6 +9,9 @@ CreatorToolsExtensions = {};
 
 function CreatorToolsExtensions:load()
     g_currentMission.setAllowsHudDisplay = CreatorToolsExtensions.setAllowsHudDisplay;
+    if g_currentMission.backup == nil then
+        g_currentMission.backup = {};
+    end
 end
 
 function CreatorToolsExtensions:setAllowsHudDisplay(v)
@@ -17,9 +20,9 @@ function CreatorToolsExtensions:setAllowsHudDisplay(v)
     g_currentMission.renderTime = v;
     g_currentMission.showVehicleInfo = v;
     if v then
-        g_gameSettings:setValue("showHelpMenu", g_currentMission.oldShowHelpMenu);
+        g_gameSettings:setValue("showHelpMenu", g_currentMission.backup.showHelpMenu);
     else
-        g_currentMission.oldShowHelpMenu = g_gameSettings:getValue("showHelpMenu");
+        g_currentMission.backup.showHelpMenu = g_gameSettings:getValue("showHelpMenu");
         g_gameSettings:setValue("showHelpMenu", false);
     end  
     g_currentMission.showHudMissionBase = v;
@@ -28,3 +31,13 @@ function CreatorToolsExtensions:setAllowsHudDisplay(v)
 end
 
 -- real extension methods
+InputBinding.getKeyNamesOfDigitalAction = function (actionIndex)
+	local actionData = InputBinding.actions[actionIndex];
+	if actionData.keys1 then
+		return InputBinding.getKeyNames(actionData.keys1);
+	elseif actionData.keys2 then
+		return InputBinding.getKeyNames(actionData.keys2);
+	else
+		return "";
+	end
+end
