@@ -8,7 +8,7 @@
 VirtualAxis = {};
 VirtualAxis_mt = Class(VirtualAxis);
 
-function VirtualAxis:new(axis, onlyIntegers)
+function VirtualAxis:new(axis, onlyEvent, onlyIntegers)
     local self = {};
     setmetatable(self, VirtualAxis_mt);
     if type(axis) == "number" then
@@ -19,7 +19,9 @@ function VirtualAxis:new(axis, onlyIntegers)
     self.changeMultiplier = 1;
     self.changeCurrentDelay = 0;
     self.changeDelay = 250;
+    self.eventReset = true;
     self.onlyIntegers = onlyIntegers
+    self.onlyEvent = onlyEvent;
     return self;
 end
 
@@ -44,6 +46,24 @@ function VirtualAxis.getVirtualAxis(self, dt)
         else
             self.changeMultiplier = 1;
             self.changeCurrentDelay = 0;
+        end
+    elseif self.onlyEvent then
+        local inputW = InputBinding.getDigitalInputAxis(self.axis);
+        if InputBinding.isAxisZero(inputW) then
+            inputW = InputBinding.getAnalogInputAxis(self.axis);
+        end
+        if inputW ~= 0 then
+            if self.eventReset then
+                if inputW > g_analogStickVTolerance then
+                    self.eventReset = false;
+                    return 1;
+                elseif inputW < -g_analogStickVTolerance then
+                    self.eventReset = false;
+                    return -1;
+                end
+            end
+        else
+            self.eventReset = true;
         end
     else
         local inputW = InputBinding.getDigitalInputAxis(self.axis);

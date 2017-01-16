@@ -17,10 +17,9 @@
     </extraSourceFiles>
     <inputBindings>
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lctrl KEY_h" device="1" visible="true" />
-        <input name="CT_WALKING_SPEED_DOWN" category="ONFOOT" key1="KEY_1" device="1" visible="true" />
-        <input name="CT_WALKING_SPEED_UP" category="ONFOOT" key1="KEY_2" device="1" visible="true" />
+        <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_2" key2="KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_3" device="1" visible="true" />
-        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
+        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lshift KEY_1" key2="KEY_lshift KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
         <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
         <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
@@ -38,21 +37,21 @@
             <en>Hide HUD</en>
             <it>Nascondi gli HUD</it>
         </text>
-        <text name="input_CT_WALKING_SPEED_DOWN">
+        <text name="input_AXIS_CT_WALKING_SPEED_2">
             <en>Decrease the walking speed</en>
             <it>Diminuisci la velocità di movimento</it>
+        </text>
+        <text name="input_AXIS_CT_WALKING_SPEED_1">
+            <en>Increase the walking speed</en>
+            <it>Aumenta la velocità di movimento</it>
+        </text>
+        <text name="AXIS_CT_WALKING_SPEED_HELP">
+            <en>Change the walking speed</en>
+            <it>Cambia la velocità di movimento</it>
         </text>
         <text name="input_CT_WALKING_SPEED_DEFAULT">
             <en>Set to 1x the walking speed</en>
             <it>Imposta ad 1x la velocità di movimento</it>
-        </text>
-        <text name="input_CT_WALKING_SPEED_UP">
-            <en>Increase the walking speed</en>
-            <it>Aumenta la velocità di movimento</it>
-        </text>
-        <text name="CT_WALKING_SPEED_HELP">
-            <en>Use %s, %s and %s to set the walking speed</en>
-            <it>Usa %s, %s e %s per impostare la velocità di movimento</it>
         </text>
         <text name="input_CT_FOVY_DEFAULT">
             <en>Set the camera FOV to default value</en>
@@ -64,7 +63,7 @@
         </text>
         <text name="input_AXIS_CT_FOVY_2">
             <en>Decrease the camera FOV</en>
-            <it>Diminuisce il FOV della camera</it>
+            <it>Diminuisci il FOV della camera</it>
         </text>
         <text name="AXIS_CT_FOVY_HELP">
             <en>Change the camera FOV</en>
@@ -80,7 +79,7 @@
         </text>
         <text name="input_AXIS_CT_CAMY_2">
             <en>Decrease the camera height</en>
-            <it>Diminuisce l'altezza della camera</it>
+            <it>Diminuisci l'altezza della camera</it>
         </text>
         <text name="AXIS_CT_CAMY_HELP">
             <en>Change the camera height</en>

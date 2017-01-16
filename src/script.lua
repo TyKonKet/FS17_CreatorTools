@@ -36,6 +36,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.hideCrosshair = false;
     self.hideHud = false;
     self.walkingSpeed = 0;
+    self.axisInputWalkingSpeed = VirtualAxis:new("AXIS_CT_WALKING_SPEED", true);
     self.backup.fovy = tonumber(g_gameSettings:getValue("fovy"));
     self.backup.camy = 0.73;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
@@ -147,20 +148,16 @@ function CreatorTools:checkInputs(dt)
         if camyAxis ~= nil then
             self:addCamy(camyAxis * 0.075);
         end
-        if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DOWN, true) then
-            local wp = self.walkingSpeed - 1;
-            if self.WALKING_SPEEDS[wp] ~= nil then
-                self:setWalkingSpeed(wp);
-            end
-        end
-        if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_UP, true) then
-            local wp = self.walkingSpeed + 1;
-            if self.WALKING_SPEEDS[wp] ~= nil then
-                self:setWalkingSpeed(wp);
-            end
-        end
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
             self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED);
+        end
+        local walkingSpeedAxis = self.axisInputWalkingSpeed:getVirtualAxis(dt);
+        if walkingSpeedAxis ~= nil then
+            self:print(walkingSpeedAxis);
+            local wp = self.walkingSpeed + walkingSpeedAxis;
+            if self.WALKING_SPEEDS[wp] ~= nil then
+                self:setWalkingSpeed(wp);
+            end
         end
     else
         -- check only onvehicle inputs
@@ -180,7 +177,9 @@ function CreatorTools:drawHelpButtons(dt)
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil,  GS_PRIO_LOW);
         g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_CAMY_HELP"), InputBinding.AXIS_CT_CAMY, nil, GS_PRIO_NORMAL);
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CAMY_DEFAULT"), InputBinding.CT_CAMY_DEFAULT, nil,  GS_PRIO_LOW);
-        g_currentMission:addExtraPrintText(g_i18n:getText("CT_WALKING_SPEED_HELP"):format(InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DOWN), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DEFAULT), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_UP)));
+        --g_currentMission:addExtraPrintText(g_i18n:getText("CT_WALKING_SPEED_HELP"):format(InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DOWN), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DEFAULT), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_UP)));
+        g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_WALKING_SPEED_HELP"), InputBinding.AXIS_CT_WALKING_SPEED, nil, GS_PRIO_NORMAL);
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil,  GS_PRIO_LOW);
     else
         -- show only vehicle button helps
 
@@ -241,7 +240,6 @@ end
 
 function CreatorTools:addCamy(camy)
     self.camy = math.max(camy + self.camy, -self.backup.camy * 3);
-    self:print(("camy:%s, self.camy:%s"):format(camy, self.camy));
     g_currentMission.player.camY = self.camy;
 end
 
