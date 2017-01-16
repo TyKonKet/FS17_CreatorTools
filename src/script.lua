@@ -68,6 +68,8 @@ function CreatorTools:afterLoad()
     self = CreatorTools;
     self:print("afterLoad");
     self.backup.walkingSpeed = g_currentMission.player.walkingSpeed;
+    self.backup.pickedUpObjectWidth = g_currentMission.player.pickedUpObjectWidth;
+    self.backup.pickedUpObjectHeight = g_currentMission.player.pickedUpObjectHeight;
     self:toggleCrosshair();
     self:toggleHud();
     self:setWalkingSpeed(self.walkingSpeed);
