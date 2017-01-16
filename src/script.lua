@@ -37,7 +37,9 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.hideHud = false;
     self.walkingSpeed = 0;
     self.backup.fovy = tonumber(g_gameSettings:getValue("fovy"));
+    self.backup.camy = 0.73;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
+    self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
 end
 g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
 
@@ -74,6 +76,7 @@ function CreatorTools:afterLoad()
     self:toggleHud();
     self:setWalkingSpeed(self.walkingSpeed);
     self:setFovy(self.fovy);
+    self:setCamy(self.camy);
 end
 
 function CreatorTools:loadSavegame()
@@ -85,6 +88,7 @@ function CreatorTools:loadSavegame()
         self.hideCrosshair = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.crosshair#hide"), self.hideCrosshair);
         self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed);
         self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy);
+        self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
         delete(xml);
     end
 end
@@ -98,6 +102,7 @@ function CreatorTools:saveSavegame()
     setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair);
     setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed);
     setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
+    setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);
     saveXMLFile(xml);
     delete(xml);
 end
@@ -135,6 +140,13 @@ function CreatorTools:checkInputs(dt)
         if fovyAxis ~= nil then
             self:addFovy(fovyAxis * 0.375);
         end
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) then
+            self:setCamy(self.backup.camy);
+        end
+        local camyAxis = self.axisInputCamy:getVirtualAxis(dt);
+        if camyAxis ~= nil then
+            self:addCamy(camyAxis * 0.075);
+        end
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DOWN, true) then
             local wp = self.walkingSpeed - 1;
             if self.WALKING_SPEEDS[wp] ~= nil then
@@ -166,6 +178,8 @@ function CreatorTools:drawHelpButtons(dt)
         -- show only onfoot button helps
         g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_FOVY_HELP"), InputBinding.AXIS_CT_FOVY, nil, GS_PRIO_NORMAL);
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil,  GS_PRIO_LOW);
+        g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_CAMY_HELP"), InputBinding.AXIS_CT_CAMY, nil, GS_PRIO_NORMAL);
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CAMY_DEFAULT"), InputBinding.CT_CAMY_DEFAULT, nil,  GS_PRIO_LOW);
         g_currentMission:addExtraPrintText(g_i18n:getText("CT_WALKING_SPEED_HELP"):format(InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DOWN), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DEFAULT), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_UP)));
     else
         -- show only vehicle button helps
@@ -218,6 +232,17 @@ end
 function CreatorTools:addFovy(fovy)
     self.fovy =  math.max(math.min(self.fovy + fovy, 120), 0.1);
     setFovy(g_currentMission.player.cameraNode, self.fovy);
+end
+
+function CreatorTools:setCamy(camy)
+    self.camy = math.max(camy, -self.backup.camy * 3);
+    g_currentMission.player.camY = camy;
+end
+
+function CreatorTools:addCamy(camy)
+    self.camy = math.max(camy + self.camy, -self.backup.camy * 3);
+    self:print(("camy:%s, self.camy:%s"):format(camy, self.camy));
+    g_currentMission.player.camY = self.camy;
 end
 
 addModEventListener(CreatorTools)

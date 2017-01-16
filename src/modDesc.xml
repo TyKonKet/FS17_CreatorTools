@@ -20,8 +20,10 @@
         <input name="CT_WALKING_SPEED_DOWN" category="ONFOOT" key1="KEY_1" device="1" visible="true" />
         <input name="CT_WALKING_SPEED_UP" category="ONFOOT" key1="KEY_2" device="1" visible="true" />
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_3" device="1" visible="true" />
-        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
-        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
+        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
+        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
+        <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
+        <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
 </inputBindings>
      <l10n>   
         <text name="input_CT_HUD_TOGGLE">
@@ -67,6 +69,22 @@
         <text name="AXIS_CT_FOVY_HELP">
             <en>Change the camera FOV</en>
             <it>Cambia il FOV della camera</it>
+        </text>
+        <text name="input_CT_CAMY_DEFAULT">
+            <en>Set the camera height to default value</en>
+            <it>Imposta l'altezza della camera al valore predefinito</it>
+        </text>
+        <text name="input_AXIS_CT_CAMY_1">
+            <en>Increase the camera height</en>
+            <it>Aumenta l'altezza della camera</it>
+        </text>
+        <text name="input_AXIS_CT_CAMY_2">
+            <en>Decrease the camera height</en>
+            <it>Diminuisce l'altezza della camera</it>
+        </text>
+        <text name="AXIS_CT_CAMY_HELP">
+            <en>Change the camera height</en>
+            <it>Cambia l'altezza della camera</it>
         </text>
     </l10n>
     <git>
