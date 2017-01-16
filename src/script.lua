@@ -114,24 +114,30 @@ function CreatorTools:draw()
 end
 
 function CreatorTools:checkInputs()
-     if InputBinding.hasEvent(InputBinding.CT_TOGGLE_HUD, true) then
+    -- check all inputs
+    if InputBinding.hasEvent(InputBinding.CT_TOGGLE_HUD, true) then
         self:toggleHud();
         self:toggleCrosshair();
     end
-    if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DOWN, true) then
-        local wp = self.walkingSpeed - 1;
-        if self.WALKING_SPEEDS[wp] ~= nil then
-            self:setWalkingSpeed(wp);
+    if g_currentMission.controlledVehicle == nil then
+        -- check only onfoot inputs
+        if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DOWN, true) then
+            local wp = self.walkingSpeed - 1;
+            if self.WALKING_SPEEDS[wp] ~= nil then
+                self:setWalkingSpeed(wp);
+            end
         end
-    end
-    if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_UP, true) then
-        local wp = self.walkingSpeed + 1;
-        if self.WALKING_SPEEDS[wp] ~= nil then
-            self:setWalkingSpeed(wp);
+        if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_UP, true) then
+            local wp = self.walkingSpeed + 1;
+            if self.WALKING_SPEEDS[wp] ~= nil then
+                self:setWalkingSpeed(wp);
+            end
         end
-    end
-    if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
-        self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED);
+        if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
+            self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED);
+        end
+    else
+        -- check only onvehicle inputs
     end
 end
 
