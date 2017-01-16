@@ -36,6 +36,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.hideCrosshair = false;
     self.hideHud = false;
     self.walkingSpeed = 0;
+    self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
 end
 g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
 
@@ -106,14 +107,14 @@ function CreatorTools:mouseEvent(posX, posY, isDown, isUp, button)
 end
 
 function CreatorTools:update(dt)
-    self:checkInputs();
-    self:drawHelpButtons();
+    self:checkInputs(dt);
+    self:drawHelpButtons(dt);
 end
 
 function CreatorTools:draw()
 end
 
-function CreatorTools:checkInputs()
+function CreatorTools:checkInputs(dt)
     -- check all inputs
     if InputBinding.hasEvent(InputBinding.CT_HUD_TOGGLE, true) then
         self:toggleHud();
@@ -121,6 +122,9 @@ function CreatorTools:checkInputs()
     end
     if g_currentMission.controlledVehicle == nil then
         -- check only onfoot inputs
+        if InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT, true) then
+        end
+        self:print(self.axisInputFovy:getVirtualAxis(dt));
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DOWN, true) then
             local wp = self.walkingSpeed - 1;
             if self.WALKING_SPEEDS[wp] ~= nil then
@@ -141,16 +145,18 @@ function CreatorTools:checkInputs()
     end
 end
 
-function CreatorTools:drawHelpButtons()
+function CreatorTools:drawHelpButtons(dt)
     -- show all button helps
     if self.hideHud then
-        g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD"), InputBinding.CT_HUD_TOGGLE);   
+        g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE);   
     else
-        g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD"), InputBinding.CT_HUD_TOGGLE);   
-    end  
+        g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD_HELP"), InputBinding.CT_HUD_TOGGLE);   
+    end
     if g_currentMission.controlledVehicle == nil then
         -- show only onfoot button helps
         g_currentMission:addExtraPrintText(g_i18n:getText("CT_WALKING_SPEED_HELP"):format(InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DOWN), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DEFAULT), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_UP)));
+        g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_FOVY_HELP"), InputBinding.AXIS_CT_FOVY);
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil,  GS_PRIO_LOW);
     else
         -- show only vehicle button helps
 
