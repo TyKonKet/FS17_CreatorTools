@@ -31,7 +31,7 @@ function VirtualAxis.getVirtualAxis(self, dt)
         end
         if inputW ~= 0 then
             self.changeCurrentDelay = self.changeCurrentDelay - dt * self.changeMultiplier;
-            self.changeMultiplier = math.min(self.changeMultiplier + dt * 0.003, 10);
+            self.changeMultiplier = math.min(self.changeMultiplier + dt * 0.03, 10);
             if self.changeCurrentDelay <= 0 then
                 if inputW > g_analogStickVTolerance then
                     self.changeCurrentDelay = self.changeDelay;
@@ -58,12 +58,13 @@ function VirtualAxis.getVirtualAxis(self, dt)
                     end
                 end
             else
+                self.changeMultiplier = 1;
                 self.changeCurrentDelay = 0;
             end
         else
             if inputW ~= 0 then
                 self.changeCurrentDelay = self.changeCurrentDelay - dt * self.changeMultiplier;
-                self.changeMultiplier = math.min(self.changeMultiplier + dt * 0.003, 10);
+                self.changeMultiplier = math.min(self.changeMultiplier + dt * 0.03, 10);
                 if self.changeCurrentDelay <= 0 then
                     if inputW > g_analogStickVTolerance then
                         self.changeCurrentDelay = self.changeDelay;
@@ -79,5 +80,5 @@ function VirtualAxis.getVirtualAxis(self, dt)
             end
         end
     end
-	return 0;
+	return nil;
 end
