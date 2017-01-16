@@ -15,13 +15,13 @@
         <sourceFile filename="extensions.lua" />
     </extraSourceFiles>
     <inputBindings>
-        <input name="CT_TOGGLE_HUD" category="ONFOOT VEHICLE" key1="KEY_lctrl KEY_h" device="1" visible="true" />
+        <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lctrl KEY_h" device="1" visible="true" />
         <input name="CT_WALKING_SPEED_DOWN" category="ONFOOT" key1="KEY_1" device="1" visible="true" />
         <input name="CT_WALKING_SPEED_UP" category="ONFOOT" key1="KEY_2" device="1" visible="true" />
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_3" device="1" visible="true" />
     </inputBindings>
      <l10n>   
-        <text name="input_CT_TOGGLE_HUD">
+        <text name="input_CT_HUD_TOGGLE">
             <en>Hide/Show HUD</en>
             <it>Nascondi/Mostra gli HUD</it>
         </text>

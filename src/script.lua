@@ -115,7 +115,7 @@ end
 
 function CreatorTools:checkInputs()
     -- check all inputs
-    if InputBinding.hasEvent(InputBinding.CT_TOGGLE_HUD, true) then
+    if InputBinding.hasEvent(InputBinding.CT_HUD_TOGGLE, true) then
         self:toggleHud();
         self:toggleCrosshair();
     end
@@ -144,9 +144,9 @@ end
 function CreatorTools:drawHelpButtons()
     -- show all button helps
     if self.hideHud then
-        g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD"), InputBinding.CT_TOGGLE_HUD);   
+        g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD"), InputBinding.CT_HUD_TOGGLE);   
     else
-        g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD"), InputBinding.CT_TOGGLE_HUD);   
+        g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD"), InputBinding.CT_HUD_TOGGLE);   
     end  
     if g_currentMission.controlledVehicle == nil then
         -- show only onfoot button helps
