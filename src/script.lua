@@ -49,6 +49,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.backup.camy = 0.73;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
+    g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement);
     self.guis = {};
     self.guis["cTPanelGui"] = CTPanelGui:new();
     g_gui:loadGui(self.dir .. "cTPanelGui.xml", "CTPanelGui", self.guis.cTPanelGui);

@@ -98,3 +98,15 @@ function Utils.getTimeScaleFromIndex(timeScaleIndex)
 	end
 	return 1;
 end
+
+function Utils.getNumTimeScales()
+		return 13;
+end
+
+function Utils.getTimeScaleString(timeScaleIndex)
+	if timeScaleIndex == 1 then
+		return g_i18n:getText("ui_realTime");
+	else
+		return string.format("%dx", Utils.getTimeScaleFromIndex(timeScaleIndex));
+	end
+end
