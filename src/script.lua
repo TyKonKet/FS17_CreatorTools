@@ -8,6 +8,7 @@
 CreatorTools = {};
 CreatorTools.name = "CreatorTools";
 CreatorTools.debug = true;
+CreatorTools.dir = g_currentModDirectory;
 CreatorTools.savegameFile = "creatorTools.xml";
 CreatorTools.WALKING_SPEEDS = {};
 CreatorTools.WALKING_SPEEDS[1] = 0.5;
@@ -48,6 +49,9 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.backup.camy = 0.73;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
+    self.guis = {};
+    self.guis["cTPanelGui"] = CTPanelGui:new();
+    g_gui:loadGui(self.dir .. "cTPanelGui.xml", "CTPanelGui", self.guis.cTPanelGui);
 end
 g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
 
@@ -139,6 +143,9 @@ function CreatorTools:checkInputs(dt)
         self:toggleHud();
         self:toggleCrosshair();
     end
+    if InputBinding.hasEvent(InputBinding.CT_OPEN_PANEL, true) then
+        g_gui:showGui("CTPanelGui");
+    end
     if g_currentMission.controlledVehicle == nil then
         -- check only onfoot inputs
         if InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT, true) then
@@ -180,7 +187,8 @@ function CreatorTools:drawHelpButtons(dt)
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
     else
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
-    end
+    end    
+    g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_OPEN_PANEL"), InputBinding.CT_OPEN_PANEL, nil, GS_PRIO_HIGH);
     if g_currentMission.controlledVehicle == nil then
         -- show only onfoot button helps
         g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_FOVY_HELP"), InputBinding.AXIS_CT_FOVY, nil, GS_PRIO_NORMAL);
