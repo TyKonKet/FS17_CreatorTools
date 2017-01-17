@@ -1,6 +1,5 @@
 --
--- CreatorTools script
---
+-- CreatorTools
 --
 -- @author  TyKonKet
 -- @date 16/01/2017

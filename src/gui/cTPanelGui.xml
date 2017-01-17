@@ -1,3 +1,9 @@
+<!--
+CreatorTools
+
+@author  TyKonKet
+@date 17/01/2017
+-->
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
     <GuiElement type="bitmap" profile="backgroundImageIngame" />
