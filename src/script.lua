@@ -17,6 +17,13 @@ CreatorTools.WALKING_SPEEDS[4] = 8;
 CreatorTools.WALKING_SPEEDS[5] = 13;
 CreatorTools.WALKING_SPEEDS[6] = 21;
 CreatorTools.DEFAULT_WALKING_SPEED = 2;
+CreatorTools.DIRT_STEPS = {};
+CreatorTools.DIRT_STEPS[1] = 0;
+CreatorTools.DIRT_STEPS[2] = 0.25;
+CreatorTools.DIRT_STEPS[3] = 0.5;
+CreatorTools.DIRT_STEPS[4] = 0.75;
+CreatorTools.DIRT_STEPS[5] = 1;
+CreatorTools.DIRT_STEPS_COUNT = 5;
 
 function CreatorTools:print(txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9)
     if self.debug then
@@ -161,15 +168,18 @@ function CreatorTools:checkInputs(dt)
         end
     else
         -- check only onvehicle inputs
+        if InputBinding.hasEvent(InputBinding.CT_CHANGE_DIRT, true) then
+             self:changeDirt(g_currentMission.controlledVehicle);
+        end
     end
 end
 
 function CreatorTools:drawHelpButtons(dt)
     -- show all button helps
     if self.hideHud then
-        g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);   
+        g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
     else
-        g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);   
+        g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
     end
     if g_currentMission.controlledVehicle == nil then
         -- show only onfoot button helps
@@ -182,7 +192,7 @@ function CreatorTools:drawHelpButtons(dt)
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil,  GS_PRIO_LOW);
     else
         -- show only vehicle button helps
-
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CHANGE_DIRT"), InputBinding.CT_CHANGE_DIRT, nil, GS_PRIO_HIGH);     
     end
 end
 
@@ -241,6 +251,19 @@ end
 function CreatorTools:addCamy(camy)
     self.camy = math.max(camy + self.camy, -self.backup.camy * 3);
     g_currentMission.player.camY = self.camy;
+end
+
+function CreatorTools:changeDirt(vehicle)
+    if vehicle.CreatorTools == nil then
+        vehicle.CreatorTools = {};
+    end
+    if vehicle.CreatorTools.dirt == nil or vehicle.CreatorTools.dirt == CreatorTools.DIRT_STEPS_COUNT then
+        vehicle.CreatorTools.dirt = 0;
+    end
+    if vehicle.setDirtAmount ~= nil then
+        vehicle.CreatorTools.dirt =  vehicle.CreatorTools.dirt + 1;
+        vehicle:setDirtAmount(CreatorTools.DIRT_STEPS[vehicle.CreatorTools.dirt], true);
+    end
 end
 
 addModEventListener(CreatorTools)

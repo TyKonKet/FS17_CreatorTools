@@ -23,6 +23,7 @@
         <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
         <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
+        <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
 </inputBindings>
      <l10n>   
         <text name="input_CT_HUD_TOGGLE">
@@ -84,6 +85,10 @@
         <text name="AXIS_CT_CAMY_HELP">
             <en>Change the camera height</en>
             <it>Cambia l'altezza della camera</it>
+        </text>
+        <text name="input_CT_CHANGE_DIRT">
+            <en>Change the dirt amount</en>
+            <it>Cambia la quantità di sporco</it>
         </text>
     </l10n>
     <git>
