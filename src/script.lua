@@ -17,6 +17,7 @@ CreatorTools.WALKING_SPEEDS[4] = 8;
 CreatorTools.WALKING_SPEEDS[5] = 13;
 CreatorTools.WALKING_SPEEDS[6] = 21;
 CreatorTools.DEFAULT_WALKING_SPEED = 2;
+CreatorTools.WALKING_SPEEDs_COUNT = 6;
 CreatorTools.DIRT_STEPS = {};
 CreatorTools.DIRT_STEPS[1] = 0;
 CreatorTools.DIRT_STEPS[2] = 0.25;
@@ -170,7 +171,6 @@ function CreatorTools:checkInputs(dt)
         end
         local walkingSpeedAxis = self.axisInputWalkingSpeed:getVirtualAxis(dt);
         if walkingSpeedAxis ~= nil then
-            self:print(walkingSpeedAxis);
             local wp = self.walkingSpeed + walkingSpeedAxis;
             if self.WALKING_SPEEDS[wp] ~= nil then
                 self:setWalkingSpeed(wp);
@@ -237,10 +237,11 @@ end
 function CreatorTools:setWalkingSpeed(speed)
     local ws = self.WALKING_SPEEDS[speed];
     if ws == nil then
-        return "speed out of range";
+        return "Speed out of range";
     end
     self.walkingSpeed = speed;
     g_currentMission.player.walkingSpeed = self.backup.walkingSpeed * ws;
+    self.guis.cTPanelGui:setSelectedPlayerSpeed(self.walkingSpeed);
     return ("walkingSpeed = %s(%s), player.walkingSpeed = %s"):format(speed, ws, g_currentMission.player.walkingSpeed);
 end
 

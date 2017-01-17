@@ -31,10 +31,34 @@ end
 
 function CTPanelGui:onClickOk()
 	CTPanelGui:superClass().onClickOk(self);
+	CreatorTools:setWalkingSpeed(self.playerSpeedElement:getState());
 	self:onClickBack();
 end
 
-function CTPanelGui:setHelpBoxText (text)
+function CTPanelGui:setHelpBoxText(text)
 	self.ingameMenuHelpBoxText:setText(text);
 	self.ingameMenuHelpBox:setVisible(text ~= "");
+end
+
+function CTPanelGui:onFocusElement(element)
+	if element.toolTip ~= nil then
+		self:setHelpBoxText(element.toolTip);
+	end
+end
+
+function CTPanelGui:onLeaveElement(element)
+	self:setHelpBoxText("");
+end
+
+function CTPanelGui:onCreatePlayerSpeed(element)
+	self.playerSpeedElement = element;
+	local speeds = {};
+	for i=1, CreatorTools.WALKING_SPEEDs_COUNT, 1 do
+		 speeds[i] = "x" .. tostring(CreatorTools.WALKING_SPEEDS[i]);
+	end
+	element:setTexts(speeds);
+end
+
+function CTPanelGui:setSelectedPlayerSpeed(index)
+	self.playerSpeedElement:setState(index, false);
 end
