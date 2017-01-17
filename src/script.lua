@@ -144,7 +144,11 @@ function CreatorTools:checkInputs(dt)
         self:toggleCrosshair();
     end
     if InputBinding.hasEvent(InputBinding.CT_OPEN_PANEL, true) then
-        g_gui:showGui("CTPanelGui");
+        if self.guis.cTPanelGui.isOpen then
+            self.guis.cTPanelGui:onClickBack();
+        else
+            g_gui:showGui("CTPanelGui");
+        end
     end
     if g_currentMission.controlledVehicle == nil then
         -- check only onfoot inputs

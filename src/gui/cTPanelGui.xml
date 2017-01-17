@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
-
+    <GuiElement type="bitmap" profile="backgroundImageIngame" />
+    <GuiElement type="bitmap" profile="uiElementBg">
+        <GuiElement type="bitmap" profile="uiElementMainBg">
+            <GuiElement type="bitmap" profile="uiElementBaseHeader">
+                <GuiElement type="text" profile="headerText" text="Creator Tools" />
+            </GuiElement>
+            
+            <GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">
+                <GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
+                <GuiElement type="text" profile="ingameMenuHelpRowText" id="ingameMenuHelpBoxText" text=""/>
+            </GuiElement>
+            <GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC" >
+                <GuiElement type="button" id="backButton" profile="buttonBack" size="500px 40px" text="$l10n_button_back" onClick="onClickBack" focusId="1" focusChangeTop="2" focusChangeBottom="2" focusChangeRight="2"/>
+                <GuiElement type="button" profile="buttonOK" size="500px 40px" text="$l10n_button_ok" onClick="onClickOk" focusId="2" focusChangeTop="1" focusChangeBottom="1" focusChangeLeft="1"/>
+            </GuiElement>
+            <GuiElement type="flowLayout" profile="buttonBoxConsole" id="buttonsConsole" >
+                <GuiElement type="button" profile="buttonCircle" size="500px 40px" text="$l10n_button_back" id="backButtonConsole"/>
+                <GuiElement type="button" profile="buttonRectangle" size="500px 40px" text="$l10n_button_ok" id="yesButtonConsole"/>
+            </GuiElement>
+        </GuiElement>
+    </GuiElement>
 </GUI>
