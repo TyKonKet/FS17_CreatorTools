@@ -41,12 +41,15 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self = CreatorTools;
     self:print("initialize()");
     self.backup = {};
-    self.hideCrosshair = false;
-    self.hideHud = false;
-    self.walkingSpeed = 0;
+    self.hideCrosshair = true;
+    self.hideHud = true;
+    self.backup.showHelpBox = true;
+    self.walkingSpeed = CreatorTools.DEFAULT_WALKING_SPEED;
     self.axisInputWalkingSpeed = VirtualAxis:new("AXIS_CT_WALKING_SPEED", true);
     self.backup.fovy = tonumber(g_gameSettings:getValue("fovy"));
+    self.fovy = self.backup.fovy;
     self.backup.camy = 0.73;
+    self.camy = self.backup.camy;
     self.backup.money = -1;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
@@ -100,6 +103,7 @@ function CreatorTools:loadSavegame()
         local xml = loadXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
         self.hideHud = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), self.hideHud);
         self.hideCrosshair = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.crosshair#hide"), self.hideCrosshair);
+        self.backup.showHelpBox = Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.helpbox#show"), self.backup.showHelpBox);
         self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed);
         self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy);
         self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
@@ -115,6 +119,7 @@ function CreatorTools:saveSavegame()
     local xml = createXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
     setXMLBool(xml, "creatorTools.hud#hide", self.hideHud);
     setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair);
+    setXMLBool(xml, "creatorTools.hud.helpbox#show", self.backup.showHelpBox);
     setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed);
     setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
     setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);   

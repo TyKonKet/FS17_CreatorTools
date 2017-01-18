@@ -19,9 +19,9 @@ function CreatorToolsExtensions:setAllowsHudDisplay(v)
     g_currentMission.renderTime = v;
     g_currentMission.showVehicleInfo = v;
     if v then
-        g_gameSettings:setValue("showHelpMenu", g_currentMission.backup.showHelpMenu);
+        g_gameSettings:setValue("showHelpMenu", CreatorTools.backup.showHelpBox);
     else
-        g_currentMission.backup.showHelpMenu = g_gameSettings:getValue("showHelpMenu");
+        CreatorTools.backup.showHelpBox = g_gameSettings:getValue("showHelpMenu");
         g_gameSettings:setValue("showHelpMenu", false);
     end  
     g_currentMission.showHudMissionBase = v;
