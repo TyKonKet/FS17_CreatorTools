@@ -12,7 +12,14 @@ CreatorTools
             <GuiElement type="bitmap" profile="uiElementBaseHeader">
                 <GuiElement type="text" profile="headerText" text="Creator Tools" />
             </GuiElement>
-            <GuiElement type="multiTextOption" profile="multiTextOptionSettings" position="20px 526px" onClick="onClickPlayerSpeed" onCreate="onCreatePlayerSpeed" toolTip="Change the player waliking speed" onFocus="onFocusElement" onLeave="onLeaveElement" focusId="3">
+            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" position="20px 526px" onCreate="onCreateHideHud" toolTip="Hide/Show the heads-up display (HUD)." onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="1" focusChangeBottom="4" focusId="3">
+                <GuiElement type="button" profile="multiTextOptionLeft" />
+                <GuiElement type="button" profile="multiTextOptionRight"/>
+                <GuiElement type="text"   profile="multiTextOptionText" />
+                <GuiElement type="text"   profile="multiTextOptionTitle" text="Heads-up display (HUD)"/>
+                <GuiElement type="bitmap" profile="multiTextOptionBg" />
+            </GuiElement>
+            <GuiElement type="multiTextOption" profile="multiTextOptionSettings" position="20px 446px" onCreate="onCreatePlayerSpeed" toolTip="Change the player waliking speed." onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="3" focusId="4">
                 <GuiElement type="button" profile="multiTextOptionLeft" />
                 <GuiElement type="button" profile="multiTextOptionRight"/>
                 <GuiElement type="text"   profile="multiTextOptionText" />

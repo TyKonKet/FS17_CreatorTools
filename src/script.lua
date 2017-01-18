@@ -232,7 +232,14 @@ end
 function CreatorTools:toggleHud()
     self.hideHud = not self.hideHud;
     g_currentMission:setAllowsHudDisplay(not self.hideHud);
+    self.guis.cTPanelGui:setHideHud(self.hideHud);
     return "hideHud = " .. tostring(self.hideHud);
+end
+
+function CreatorTools:setHud(hide)
+    if (hide and not self.hideHud) or (not hide and self.hideHud) then
+        self:toggleHud();
+    end
 end
 
 function CreatorTools:setWalkingSpeed(speed)

@@ -32,6 +32,7 @@ end
 function CTPanelGui:onClickOk()
 	CTPanelGui:superClass().onClickOk(self);
 	CreatorTools:setWalkingSpeed(self.playerSpeedElement:getState());
+	CreatorTools:setHud(not self.hideHudElement:getIsChecked());
 	self:onClickBack();
 end
 
@@ -61,4 +62,16 @@ end
 
 function CTPanelGui:setSelectedPlayerSpeed(index)
 	self.playerSpeedElement:setState(index, false);
+end
+
+function CTPanelGui:onCreateHideHud(element)
+	self.hideHudElement = element;
+end
+
+function CTPanelGui:setHideHud(index)
+	local i = 1
+	if not index then
+		i = 2;
+	end
+	self.hideHudElement:setState(i, false);
 end
