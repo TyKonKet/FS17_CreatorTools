@@ -19,6 +19,10 @@ end
 function CTPanelGui:onOpen()
 	CTPanelGui:superClass().onOpen(self);
 	FocusManager:setFocus(self.backButton);
+	self:setHideHud(CreatorTools.hideHud);
+	self:setSelectedPlayerSpeed(CreatorTools.walkingSpeed);
+	self.creativeMoneyElement:setDisabled(not g_currentMission.isMasterUser and g_server == nil);
+	self.creativeMoneyElement:setIsChecked(CreatorTools.backup.money ~= -1);
 end
 
 function CTPanelGui:onClose()
@@ -31,8 +35,9 @@ end
 
 function CTPanelGui:onClickOk()
 	CTPanelGui:superClass().onClickOk(self);
-	CreatorTools:setWalkingSpeed(self.playerSpeedElement:getState());
 	CreatorTools:setHud(not self.hideHudElement:getIsChecked());
+	CreatorTools:setWalkingSpeed(self.playerSpeedElement:getState());
+	CreatorTools:setCreativeMoney(self.creativeMoneyElement:getIsChecked());
 	self:onClickBack();
 end
 
@@ -51,6 +56,14 @@ function CTPanelGui:onLeaveElement(element)
 	self:setHelpBoxText("");
 end
 
+function CTPanelGui:onCreateHideHud(element)
+	self.hideHudElement = element;
+end
+
+function CTPanelGui:setHideHud(index)
+	self.hideHudElement:setIsChecked(not index);
+end
+
 function CTPanelGui:onCreatePlayerSpeed(element)
 	self.playerSpeedElement = element;
 	local speeds = {};
@@ -64,14 +77,6 @@ function CTPanelGui:setSelectedPlayerSpeed(index)
 	self.playerSpeedElement:setState(index, false);
 end
 
-function CTPanelGui:onCreateHideHud(element)
-	self.hideHudElement = element;
-end
-
-function CTPanelGui:setHideHud(index)
-	local i = 1
-	if not index then
-		i = 2;
-	end
-	self.hideHudElement:setState(i, false);
+function CTPanelGui:onCreateCreativeMoney(element)
+	self.creativeMoneyElement = element;
 end

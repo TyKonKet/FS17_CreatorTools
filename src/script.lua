@@ -47,6 +47,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.axisInputWalkingSpeed = VirtualAxis:new("AXIS_CT_WALKING_SPEED", true);
     self.backup.fovy = tonumber(g_gameSettings:getValue("fovy"));
     self.backup.camy = 0.73;
+    self.backup.money = -1;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement);
@@ -102,6 +103,7 @@ function CreatorTools:loadSavegame()
         self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed);
         self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy);
         self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
+        self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money);
         delete(xml);
     end
 end
@@ -115,7 +117,8 @@ function CreatorTools:saveSavegame()
     setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair);
     setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed);
     setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
-    setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);
+    setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);   
+    setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
     saveXMLFile(xml);
     delete(xml);
 end
@@ -283,6 +286,34 @@ function CreatorTools:changeDirt(vehicle)
     if vehicle.setDirtAmount ~= nil then
         vehicle.CreatorTools.dirt =  vehicle.CreatorTools.dirt + 1;
         vehicle:setDirtAmount(CreatorTools.DIRT_STEPS[vehicle.CreatorTools.dirt], true);
+    end
+end
+
+function CreatorTools:toggleCreativeMoney()
+    if g_client ~= nil then
+        if self.backup.money ~= -1 then
+            self:addSharedMoney(-(g_currentMission.missionStats.money - self.backup.money));
+            self.backup.money = -1;
+        else
+            self.backup.money = g_currentMission.missionStats.money;
+            self:addSharedMoney(1000000000);
+        end
+    end
+end
+
+function CreatorTools:setCreativeMoney(cm)
+    if (cm and self.backup.money == -1) or (not cm and self.backup.money ~= -1) then
+        self:toggleCreativeMoney();
+    end
+end
+
+function CreatorTools:addSharedMoney(money)
+    if g_client ~= nil then
+        if g_server ~= nil then
+            g_currentMission:addSharedMoney(money, "other");
+        else
+            g_client:getServerConnection():sendEvent(CheatMoneyEvent:new(money));
+        end
     end
 end
 

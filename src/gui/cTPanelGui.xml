@@ -19,11 +19,18 @@ CreatorTools
                 <GuiElement type="text"   profile="multiTextOptionTitle" text="Heads-up display (HUD)"/>
                 <GuiElement type="bitmap" profile="multiTextOptionBg" />
             </GuiElement>
-            <GuiElement type="multiTextOption" profile="multiTextOptionSettings" position="20px 446px" onCreate="onCreatePlayerSpeed" toolTip="Change the player waliking speed." onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="3" focusId="4">
+            <GuiElement type="multiTextOption" profile="multiTextOptionSettings" position="20px 446px" onCreate="onCreatePlayerSpeed" toolTip="Change the player waliking speed." onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="3" focusChangeBottom="5" focusId="4">
                 <GuiElement type="button" profile="multiTextOptionLeft" />
                 <GuiElement type="button" profile="multiTextOptionRight"/>
                 <GuiElement type="text"   profile="multiTextOptionText" />
                 <GuiElement type="text"   profile="multiTextOptionTitle" text="Walking speed"/>
+                <GuiElement type="bitmap" profile="multiTextOptionBg" />
+            </GuiElement>
+            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" position="20px 366px" onCreate="onCreateCreativeMoney" toolTip="Enable/disable creative money (one billion)." onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="4" focusId="5">
+                <GuiElement type="button" profile="multiTextOptionLeft" />
+                <GuiElement type="button" profile="multiTextOptionRight"/>
+                <GuiElement type="text"   profile="multiTextOptionText" />
+                <GuiElement type="text"   profile="multiTextOptionTitle" text="Creative money"/>
                 <GuiElement type="bitmap" profile="multiTextOptionBg" />
             </GuiElement>
             <GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">
