@@ -102,6 +102,29 @@ CreatorTools
             <en>Open Creator Tools panel</en>
             <it>Apri il pannello di Creator Tools</it>
         </text>
+        <text name="gui_CT_HUD_TEXT">
+            <en>Heads-up displays (HUDs)</en>
+        </text>
+        <text name="gui_CT_HUD_TOOLTIP">
+            <en>Hides or shows the heads-up displays (HUDs).</en>
+            <it>Nasconde o mostra gli heads-up displays (HUDs).</it>
+        </text>
+        <text name="gui_CT_PLAYER_SPEED_TEXT">
+            <en>Walking speed</en>
+            <it>Velocità di movimento</it>
+        </text>
+        <text name="gui_CT_PLAYER_SPEED_TOOLTIP">
+            <en>Changes the player walking speed.</en>
+            <it>Cambia la velocità di movimento.</it>
+        </text>
+        <text name="gui_CT_CREATIVE_MONEY_TEXT">
+            <en>Creative money</en>
+            <it>Soldi infiniti</it>
+        </text>
+        <text name="gui_CT_CREATIVE_MONEY_TOOLTIP">
+            <en>Enables or disables creative money (one billion).</en>
+            <it>Abilita o disabilita i soldi "infiniti" (un miliardo).</it>
+        </text>
     </l10n>
     <git>
         <host>GitHub</host>
