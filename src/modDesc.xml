@@ -20,7 +20,7 @@ CreatorTools
         <sourceFile filename="virtualAxis.lua" />
         <sourceFile filename="extensions.lua" />
         <sourceFile filename="cTPanelGui.lua" />
-        <sourceFile filename="script.lua" />     
+        <sourceFile filename="creatorTools.lua" />     
     </extraSourceFiles>
     <inputBindings>
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
