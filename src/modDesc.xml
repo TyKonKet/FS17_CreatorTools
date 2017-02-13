@@ -24,10 +24,10 @@ CreatorTools
     </extraSourceFiles>
     <inputBindings>
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
-        <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_2" key2="KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
-        <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_3" device="1" visible="true" />
-        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lshift KEY_1" key2="KEY_lshift KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
-        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
+        <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
+        <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
+        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_rctrl KEY_1" key2="KEY_rctrl KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
+        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_rctrl KEY_3" device="1" visible="true" />
         <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
         <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
