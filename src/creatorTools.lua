@@ -168,12 +168,18 @@ function CreatorTools:checkInputs(dt)
         if fovyAxis ~= nil then
             self:addFovy(fovyAxis * 0.375);
         end
-        if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) then
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT_2, true) then
             self:setCamy(self.backup.camy);
         end
         local camyAxis = self.axisInputCamy:getVirtualAxis(dt);
         if camyAxis ~= nil then
             self:addCamy(camyAxis * 0.075);
+        end
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) then
+            self:addCamy(1 * 0.075);
+        end
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) then
+            self:addCamy(-1 * 0.075);
         end
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
             self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED);

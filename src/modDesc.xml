@@ -29,7 +29,10 @@ CreatorTools
         <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_rctrl KEY_1" key2="KEY_rctrl KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
         <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_rctrl KEY_3" device="1" visible="true" />
         <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
+        <input name="CT_CAMY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_UP" visible="true" />
+        <input name="CT_CAMY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
         <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
+        <input name="CT_CAMY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_MIDDLE" visible="true" />
         <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
         <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_c" device="1" visible="true" />
 </inputBindings>
@@ -82,11 +85,23 @@ CreatorTools
             <en>Set the camera height to default value</en>
             <it>Imposta l'altezza della camera al valore predefinito</it>
         </text>
+        <text name="input_CT_CAMY_DEFAULT_2">
+            <en>Set the camera height to default value</en>
+            <it>Imposta l'altezza della camera al valore predefinito</it>
+        </text>
         <text name="input_AXIS_CT_CAMY_1">
             <en>Increase the camera height</en>
             <it>Aumenta l'altezza della camera</it>
         </text>
         <text name="input_AXIS_CT_CAMY_2">
+            <en>Decrease the camera height</en>
+            <it>Diminuisci l'altezza della camera</it>
+        </text>
+        <text name="input_CT_CAMY_UP">
+            <en>Increase the camera height</en>
+            <it>Aumenta l'altezza della camera</it>
+        </text>
+        <text name="input_CT_CAMY_DOWN">
             <en>Decrease the camera height</en>
             <it>Diminuisci l'altezza della camera</it>
         </text>
