@@ -16,7 +16,8 @@ CreatorTools
     </description>
     <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true" />
-    <extraSourceFiles>
+    <extraSourceFiles>       
+        <sourceFile filename="helpLineLoader.lua" />
         <sourceFile filename="virtualAxis.lua" />
         <sourceFile filename="extensions.lua" />
         <sourceFile filename="cTPanelGui.lua" />
@@ -162,6 +163,19 @@ CreatorTools
         <text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP">
             <en>Enables or disables buttons help in the help box.</en>
             <it>Abilita o disabilita i sugerimenti dei pulsanti nel box dei suggerimenti.</it>
+        </text>
+        <!-- HelpLine texts -->
+        <text name="hl_CT_CATEGORY">
+            <en>Custom helpline</en>
+            <it></it>
+        </text>
+        <text name="hl_CT_TITLE_01">
+            <en>Custom title</en>
+            <it></it>
+        </text>
+        <text name="hl_CT_TEXT_01_01">
+            <en>Custom text</en>
+            <it></it>
         </text>
     </l10n>
     <git>

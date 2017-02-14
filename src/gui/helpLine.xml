@@ -1,0 +1,14 @@
+<!--
+CreatorTools
+
+@author  TyKonKet
+@date 14/02/2017
+-->
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<helpLines>
+    <helpLineCategory title="hl_CT_CATEGORY">
+        <helpLine title="hl_CT_TITLE_01">
+            <item type="text" value="hl_CT_TEXT_01_01"/>
+        </helpLine>
+    </helpLineCategory>
+</helpLines>
