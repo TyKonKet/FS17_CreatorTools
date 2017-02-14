@@ -161,12 +161,18 @@ function CreatorTools:checkInputs(dt)
     end
     if g_currentMission.controlledVehicle == nil then
         -- check only onfoot inputs
-        if InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT, true) then
+        if InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT_2, true) then
             self:setFovy(self.backup.fovy);
         end
         local fovyAxis = self.axisInputFovy:getVirtualAxis(dt);
         if fovyAxis ~= nil then
             self:addFovy(fovyAxis * 0.375);
+        end
+        if InputBinding.hasEvent(InputBinding.CT_FOVY_UP, true) then
+            self:addFovy(1 * 0.75);
+        end
+        if InputBinding.hasEvent(InputBinding.CT_FOVY_DOWN, true) then
+            self:addFovy(-1 * 0.75);
         end
         if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT_2, true) then
             self:setCamy(self.backup.camy);
@@ -176,10 +182,10 @@ function CreatorTools:checkInputs(dt)
             self:addCamy(camyAxis * 0.075);
         end
         if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) then
-            self:addCamy(1 * 0.075);
+            self:addCamy(1 * 0.25);
         end
         if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) then
-            self:addCamy(-1 * 0.075);
+            self:addCamy(-1 * 0.25);
         end
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
             self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED);

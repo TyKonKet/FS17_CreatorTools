@@ -27,7 +27,10 @@ CreatorTools
         <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
         <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_rctrl KEY_1" key2="KEY_rctrl KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
+        <input name="CT_FOVY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
+        <input name="CT_FOVY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_UP" visible="true" />
         <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_rctrl KEY_3" device="1" visible="true" />
+        <input name="CT_FOVY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE" visible="true" />
         <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_CAMY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_UP" visible="true" />
         <input name="CT_CAMY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
@@ -69,11 +72,23 @@ CreatorTools
             <en>Set the camera FOV to default value</en>
             <it>Imposta il FOV della camera al valore predefinito</it>
         </text>
+        <text name="input_CT_FOVY_DEFAULT_2">
+            <en>Set the camera FOV to default value</en>
+            <it>Imposta il FOV della camera al valore predefinito</it>
+        </text>
         <text name="input_AXIS_CT_FOVY_1">
             <en>Increase the camera FOV</en>
             <it>Aumenta il FOV della camera</it>
         </text>
         <text name="input_AXIS_CT_FOVY_2">
+            <en>Decrease the camera FOV</en>
+            <it>Diminuisci il FOV della camera</it>
+        </text>
+        <text name="input_CT_FOVY_UP">
+            <en>Increase the camera FOV</en>
+            <it>Aumenta il FOV della camera</it>
+        </text>
+        <text name="input_CT_FOVY_DOWN">
             <en>Decrease the camera FOV</en>
             <it>Diminuisci il FOV della camera</it>
         </text>
