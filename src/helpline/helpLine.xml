@@ -9,6 +9,8 @@ CreatorTools
     <helpLineCategory title="hl_CT_CATEGORY">
         <helpLine title="hl_CT_TITLE_01">
             <item type="text" value="hl_CT_TEXT_01_01"/>
+            <item type="image" value="hl_CT_IMAGE_01_01.dds"/>
+            <item type="text" value="hl_CT_TEXT_01_01"/>
         </helpLine>
     </helpLineCategory>
 </helpLines>
