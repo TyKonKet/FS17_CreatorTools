@@ -4,7 +4,7 @@
 -- @author  TyKonKet
 -- @date 14/02/2017
 
-function loadHelpLine(xml, helpLineCategories, helpLineCategorySelectorElement)
+function loadHelpLine(xml, helpLineCategories, helpLineCategorySelectorElement, modDirectory)
     xml = loadXMLFile("customHelpLineViewContentXML", xml);
     local categoriesIndex = 0;
     while true do
@@ -35,6 +35,9 @@ function loadHelpLine(xml, helpLineCategories, helpLineCategorySelectorElement)
                 end
                 local itemType = getXMLString(xml, string.format("%s#type", itemQuery));
                 local itemValue = getXMLString(xml, string.format("%s#value", itemQuery));
+                if itemType == "image" then
+                    itemValue = modDirectory .. itemValue;
+                end
                 if (itemType == "text" or itemType == "image") and itemValue ~= nil then
 					table.insert(helpLine.items, {
 						type = itemType,
