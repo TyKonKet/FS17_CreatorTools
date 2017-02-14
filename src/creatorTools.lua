@@ -40,6 +40,7 @@ end
 function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self = CreatorTools;
     self:print("initialize()");
+    self:margeI18N();
     self.backup = {};
     self.hideCrosshair = true;
     self.hideHud = true;
@@ -58,6 +59,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.guis = {};
     self.guis["cTPanelGui"] = CTPanelGui:new();
     g_gui:loadGui(self.dir .. "cTPanelGui.xml", "CTPanelGui", self.guis.cTPanelGui);
+    loadHelpLine(self.dir .. "helpLine.xml", g_inGameMenu.helpLineCategories, g_inGameMenu.helpLineCategorySelectorElement);
 end
 g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
 
@@ -133,6 +135,12 @@ end
 
 function CreatorTools:deleteMap()
     self:print("deleteMap()");
+end
+
+function CreatorTools:margeI18N()
+    for k,v in pairs(g_i18n.texts) do
+        g_i18n.globalI18N:setText(k, v);
+    end
 end
 
 function CreatorTools:keyEvent(unicode, sym, modifier, isDown)

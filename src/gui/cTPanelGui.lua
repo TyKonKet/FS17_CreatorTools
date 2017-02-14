@@ -60,8 +60,6 @@ end
 
 function CTPanelGui:onCreateHideHud(element)
 	self.hideHudElement = element;
-	element.elements[4]:setText(g_i18n:getText("gui_CT_HUD_TEXT"));
-	element.toolTip = g_i18n:getText("gui_CT_HUD_TOOLTIP");
 end
 
 function CTPanelGui:setHideHud(index)
@@ -70,8 +68,6 @@ end
 
 function CTPanelGui:onCreatePlayerSpeed(element)
 	self.playerSpeedElement = element;
-	element.elements[4]:setText(g_i18n:getText("gui_CT_PLAYER_SPEED_TEXT"));
-	element.toolTip = g_i18n:getText("gui_CT_PLAYER_SPEED_TOOLTIP");
 	local speeds = {};
 	for i=1, CreatorTools.WALKING_SPEEDs_COUNT, 1 do
 		 speeds[i] = "x" .. tostring(CreatorTools.WALKING_SPEEDS[i]);
@@ -81,8 +77,6 @@ end
 
 function CTPanelGui:onCreateCreativeMoney(element)
 	self.creativeMoneyElement = element;
-	element.elements[4]:setText(g_i18n:getText("gui_CT_CREATIVE_MONEY_TEXT"));
-	element.toolTip = g_i18n:getText("gui_CT_CREATIVE_MONEY_TOOLTIP");
 end
 
 function CTPanelGui:setSelectedPlayerSpeed(index)
@@ -91,6 +85,4 @@ end
 
 function CTPanelGui:onCreateShowButtonsHelp(element)
 	self.showButtonsHelpElement = element;
-	element.elements[4]:setText(g_i18n:getText("gui_CT_SHOW_BUTTONS_HELP_TEXT"));
-	element.toolTip = g_i18n:getText("gui_CT_SHOW_BUTTONS_HELP_TOOLTIP");
 end
