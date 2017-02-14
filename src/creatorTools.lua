@@ -70,6 +70,7 @@ function CreatorTools:load(missionInfo, missionDynamicInfo, loadingScreen)
     g_currentMission.loadMapFinished = Utils.appendedFunction(g_currentMission.loadMapFinished, self.loadMapFinished);
     g_currentMission.onStartMission = Utils.appendedFunction(g_currentMission.onStartMission, self.afterLoad);
     g_currentMission.missionInfo.saveToXML = Utils.appendedFunction(g_currentMission.missionInfo.saveToXML, self.saveSavegame);
+    self:setHelpBoxWidth(1.08);
 end
 g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.load);
 
@@ -346,6 +347,14 @@ function CreatorTools:addSharedMoney(money)
             g_client:getServerConnection():sendEvent(CheatMoneyEvent:new(money));
         end
     end
+end
+
+function CreatorTools:setHelpBoxWidth(multiplier)
+    g_currentMission.helpBoxContentOverlay.width = g_currentMission.helpBoxContentOverlay.width * multiplier;
+    g_currentMission.helpBoxHeaderBgOverlay.width = g_currentMission.helpBoxHeaderBgOverlay.width * multiplier;
+    g_currentMission.helpBoxTriggerOverlay.width = g_currentMission.helpBoxTriggerOverlay.width * multiplier;
+    g_currentMission.helpBoxSeparatorOverlay.width = g_currentMission.helpBoxSeparatorOverlay.width * multiplier;
+    g_currentMission.helpBoxTextPos2X = g_currentMission.helpBoxTextPos2X * multiplier;
 end
 
 addModEventListener(CreatorTools)
