@@ -53,6 +53,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.backup.money = -1;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
+    self.showButtonsHelp = true;
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement);
     self.guis = {};
     self.guis["cTPanelGui"] = CTPanelGui:new();
@@ -108,6 +109,7 @@ function CreatorTools:loadSavegame()
         self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy);
         self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
         self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money);
+        self.showButtonsHelp = Utils.getNoNil(getXMLBool(xml, "creatorTools#showButtonsHelp"), self.showButtonsHelp);
         delete(xml);
     end
 end
@@ -124,6 +126,7 @@ function CreatorTools:saveSavegame()
     setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
     setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);   
     setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
+    setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp);
     saveXMLFile(xml);
     delete(xml);
 end
@@ -206,6 +209,9 @@ function CreatorTools:checkInputs(dt)
 end
 
 function CreatorTools:drawHelpButtons(dt)
+    if not self.showButtonsHelp then
+        return;
+    end
     -- show all button helps
     if self.hideHud then
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);

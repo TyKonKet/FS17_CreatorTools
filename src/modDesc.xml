@@ -155,6 +155,14 @@ CreatorTools
             <en>Enables or disables creative money (one billion).</en>
             <it>Abilita o disabilita i soldi "infiniti" (un miliardo).</it>
         </text>
+        <text name="gui_CT_SHOW_BUTTONS_HELP_TEXT">
+            <en>Show help</en>
+            <it>Mostra aiuto</it>
+        </text>
+        <text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP">
+            <en>Enables or disables buttons help in the help box.</en>
+            <it>Abilita o disabilita i sugerimenti dei pulsanti nel box dei suggerimenti.</it>
+        </text>
     </l10n>
     <git>
         <host>GitHub</host>

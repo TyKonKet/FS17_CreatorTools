@@ -23,6 +23,7 @@ function CTPanelGui:onOpen()
 	self:setSelectedPlayerSpeed(CreatorTools.walkingSpeed);
 	self.creativeMoneyElement:setDisabled(not g_currentMission.isMasterUser and g_server == nil);
 	self.creativeMoneyElement:setIsChecked(CreatorTools.backup.money ~= -1);
+	self.showButtonsHelpElement:setIsChecked(CreatorTools.showButtonsHelp);
 end
 
 function CTPanelGui:onClose()
@@ -38,6 +39,7 @@ function CTPanelGui:onClickOk()
 	CreatorTools:setHud(not self.hideHudElement:getIsChecked());
 	CreatorTools:setWalkingSpeed(self.playerSpeedElement:getState());
 	CreatorTools:setCreativeMoney(self.creativeMoneyElement:getIsChecked());
+	CreatorTools.showButtonsHelp = self.showButtonsHelpElement:getIsChecked();
 	self:onClickBack();
 end
 
@@ -85,4 +87,10 @@ end
 
 function CTPanelGui:setSelectedPlayerSpeed(index)
 	self.playerSpeedElement:setState(index, false);
+end
+
+function CTPanelGui:onCreateShowButtonsHelp(element)
+	self.showButtonsHelpElement = element;
+	element.elements[4]:setText(g_i18n:getText("gui_CT_SHOW_BUTTONS_HELP_TEXT"));
+	element.toolTip = g_i18n:getText("gui_CT_SHOW_BUTTONS_HELP_TOOLTIP");
 end
