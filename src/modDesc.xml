@@ -183,7 +183,7 @@ CreatorTools
             <it></it>
         </text>
         <text name="hl_CT_TEXT_01_03">
-            <en>Custom text input( $input_CT_WALKING_SPEED_DEFAULT; ) third part.</en>
+            <en>Custom text axis( $input_AXIS_CT_CAMY; ) mouse($input_CT_CAMY_DEFAULT_2;) mouse2($input_CT_FOVY_DOWN;) third part.</en>
             <it></it>
         </text>
     </l10n>

@@ -40,6 +40,7 @@ end
 function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self = CreatorTools;
     self:print("initialize()");
+    parseI18N();
     margeI18N();
     self.backup = {};
     self.hideCrosshair = true;
