@@ -110,3 +110,25 @@ function Utils.getTimeScaleString(timeScaleIndex)
 		return string.format("%dx", Utils.getTimeScaleFromIndex(timeScaleIndex));
 	end
 end
+
+function InputBinding.getKeysNamesOfDigitalAction(actionIndex)
+	local actionData = InputBinding.actions[actionIndex];
+	local k1 = nil;
+	local k2 = nil;
+	if actionData.keys1 then
+		k1 = InputBinding.getKeyNames(actionData.keys1);
+	end
+	if actionData.keys2 then
+		k2 = InputBinding.getKeyNames(actionData.keys2);
+	end
+	if k1 ~= nil and k2 ~= nil then
+		return string.format("%s and %s", k1, k2);
+	end
+	if k1 ~= nil then
+		return k1;
+	end
+	if k2 ~= nil then
+		return k2;
+	end
+	return "";
+end
