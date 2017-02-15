@@ -29,17 +29,6 @@ function CreatorToolsExtensions:setAllowsHudDisplay(v)
 end
 
 -- real extension methods
-InputBinding.getKeyNamesOfDigitalAction = function(actionIndex)
-    local actionData = InputBinding.actions[actionIndex];
-    if actionData.keys1 then
-        return InputBinding.getKeyNames(actionData.keys1);
-    elseif actionData.keys2 then
-        return InputBinding.getKeyNames(actionData.keys2);
-    else
-        return "";
-    end
-end
-
 function Utils.getTimeScaleIndex(timeScale)
     if 15360 <= timeScale then
         return 13;
@@ -131,12 +120,12 @@ function InputBinding.getKeysNamesOfDigitalAction(actionIndex)
     if k2 ~= nil then
         return k2;
     end
-		if m1 ~= nil then
-			return m1
-		end  
+    if m1 ~= nil then
+        return m1
+    end
     return "";
 end
 
 function InputBinding.getMouseButtonNames(mouseButtons)
-		return g_i18n:getText("ui_mouse") .. " " .. MouseHelper.getButtonNames(mouseButtons);
+    return g_i18n:getText("ui_mouse") .. " " .. MouseHelper.getButtonNames(mouseButtons);
 end

@@ -16,13 +16,13 @@ CreatorTools
     </description>
     <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true" />
-    <extraSourceFiles>       
+    <extraSourceFiles>
         <sourceFile filename="i18nUtils.lua" />
         <sourceFile filename="helpLineLoader.lua" />
         <sourceFile filename="virtualAxis.lua" />
         <sourceFile filename="extensions.lua" />
         <sourceFile filename="cTPanelGui.lua" />
-        <sourceFile filename="creatorTools.lua" />     
+        <sourceFile filename="creatorTools.lua" />
     </extraSourceFiles>
     <inputBindings>
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
@@ -40,8 +40,8 @@ CreatorTools
         <input name="CT_CAMY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_MIDDLE" visible="true" />
         <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
         <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_c" device="1" visible="true" />
-</inputBindings>
-     <l10n>   
+    </inputBindings>
+    <l10n>
         <text name="input_CT_HUD_TOGGLE">
             <en>Hide/Show HUD</en>
             <it>Nascondi/Mostra gli HUD</it>

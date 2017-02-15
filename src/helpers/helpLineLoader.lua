@@ -3,7 +3,6 @@
 --
 -- @author  TyKonKet
 -- @date 14/02/2017
-
 function loadHelpLine(xml, helpLineCategories, helpLineCategorySelectorElement, modDirectory)
     xml = loadXMLFile("customHelpLineViewContentXML", xml);
     local categoriesIndex = 0;
@@ -39,17 +38,17 @@ function loadHelpLine(xml, helpLineCategories, helpLineCategorySelectorElement, 
                     itemValue = modDirectory .. itemValue;
                 end
                 if (itemType == "text" or itemType == "image") and itemValue ~= nil then
-					table.insert(helpLine.items, {
-						type = itemType,
-						value = itemValue,
-						heightScale = Utils.getNoNil(getXMLFloat(xml, string.format("%s#heightScale", itemQuery)), 1)
-					});
-				end
+                    table.insert(helpLine.items, {
+                        type = itemType,
+                        value = itemValue,
+                        heightScale = Utils.getNoNil(getXMLFloat(xml, string.format("%s#heightScale", itemQuery)), 1)
+                    });
+                end
                 itemsIndex = itemsIndex + 1;
             end
             table.insert(category.helpLines, helpLine);
             helpLinesIndex = helpLinesIndex + 1;
-        end 
+        end
         table.insert(helpLineCategories, category);
         categoriesIndex = categoriesIndex + 1;
     end

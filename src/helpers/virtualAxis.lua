@@ -3,7 +3,6 @@
 --
 -- @author  TyKonKet
 -- @date 16/01/2017
-
 VirtualAxis = {};
 VirtualAxis_mt = Class(VirtualAxis);
 
@@ -70,7 +69,7 @@ function VirtualAxis.getVirtualAxis(self, dt)
             inputW = InputBinding.getAnalogInputAxis(self.axis);
             if inputW ~= 0 then
                 self.changeCurrentDelay = self.changeCurrentDelay - dt * 10;
-                if self.changeCurrentDelay <= 0 then             
+                if self.changeCurrentDelay <= 0 then
                     if inputW > (g_analogStickVTolerance / 2) or inputW < -(g_analogStickVTolerance / 2) then
                         self.changeCurrentDelay = self.changeDelay;
                         return inputW;
@@ -99,5 +98,5 @@ function VirtualAxis.getVirtualAxis(self, dt)
             end
         end
     end
-	return nil;
+    return nil;
 end

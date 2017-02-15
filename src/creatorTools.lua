@@ -3,7 +3,6 @@
 --
 -- @author  TyKonKet
 -- @date 11/01/2017
-
 CreatorTools = {};
 CreatorTools.name = "CreatorTools";
 CreatorTools.debug = true;
@@ -128,7 +127,7 @@ function CreatorTools:saveSavegame()
     setXMLBool(xml, "creatorTools.hud.helpbox#show", self.backup.showHelpBox);
     setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed);
     setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
-    setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);   
+    setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);
     setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
     setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp);
     saveXMLFile(xml);
@@ -207,7 +206,7 @@ function CreatorTools:checkInputs(dt)
     else
         -- check only onvehicle inputs
         if InputBinding.hasEvent(InputBinding.CT_CHANGE_DIRT, true) then
-             self:changeDirt(g_currentMission.controlledVehicle);
+            self:changeDirt(g_currentMission.controlledVehicle);
         end
     end
 end
@@ -221,25 +220,25 @@ function CreatorTools:drawHelpButtons(dt)
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
     else
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_HIDE_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
-    end    
+    end
     g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_OPEN_PANEL"), InputBinding.CT_OPEN_PANEL, nil, GS_PRIO_HIGH);
     if g_currentMission.controlledVehicle == nil then
         -- show only onfoot button helps
         g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_FOVY_HELP"), InputBinding.AXIS_CT_FOVY, nil, GS_PRIO_NORMAL);
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil,  GS_PRIO_LOW);
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil, GS_PRIO_LOW);
         g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_CAMY_HELP"), InputBinding.AXIS_CT_CAMY, nil, GS_PRIO_NORMAL);
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CAMY_DEFAULT"), InputBinding.CT_CAMY_DEFAULT, nil,  GS_PRIO_LOW);
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CAMY_DEFAULT"), InputBinding.CT_CAMY_DEFAULT, nil, GS_PRIO_LOW);
         --g_currentMission:addExtraPrintText(g_i18n:getText("CT_WALKING_SPEED_HELP"):format(InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DOWN), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DEFAULT), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_UP)));
         g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_WALKING_SPEED_HELP"), InputBinding.AXIS_CT_WALKING_SPEED, nil, GS_PRIO_NORMAL);
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil,  GS_PRIO_LOW);
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil, GS_PRIO_LOW);
     else
         -- show only vehicle button helps
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CHANGE_DIRT"), InputBinding.CT_CHANGE_DIRT, nil, GS_PRIO_HIGH);     
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CHANGE_DIRT"), InputBinding.CT_CHANGE_DIRT, nil, GS_PRIO_HIGH);
     end
 end
 
 function CreatorTools:TestCommand(args)
-    --return self:setWalkingSpeed(math.floor(tonumber(args)));
+--return self:setWalkingSpeed(math.floor(tonumber(args)));
 end
 
 function CreatorTools:toggleCrosshair()
@@ -289,7 +288,7 @@ function CreatorTools:setFovy(fovy)
 end
 
 function CreatorTools:addFovy(fovy)
-    self.fovy =  math.max(math.min(self.fovy + fovy, 120), 0.1);
+    self.fovy = math.max(math.min(self.fovy + fovy, 120), 0.1);
     setFovy(g_currentMission.player.cameraNode, self.fovy);
 end
 
@@ -311,7 +310,7 @@ function CreatorTools:changeDirt(vehicle)
         vehicle.CreatorTools.dirt = 0;
     end
     if vehicle.setDirtAmount ~= nil then
-        vehicle.CreatorTools.dirt =  vehicle.CreatorTools.dirt + 1;
+        vehicle.CreatorTools.dirt = vehicle.CreatorTools.dirt + 1;
         vehicle:setDirtAmount(CreatorTools.DIRT_STEPS[vehicle.CreatorTools.dirt], true);
     end
 end
