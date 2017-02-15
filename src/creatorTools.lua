@@ -187,10 +187,10 @@ function CreatorTools:checkInputs(dt)
         if camyAxis ~= nil then
             self:addCamy(camyAxis * 0.075);
         end
-        if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) then
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) and not g_gui:getIsGuiVisible() then
             self:addCamy(1 * 0.55);
         end
-        if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) then
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) and not g_gui:getIsGuiVisible() then
             self:addCamy(-1 * 0.55);
         end
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
