@@ -70,7 +70,7 @@ function CreatorTools:load(missionInfo, missionDynamicInfo, loadingScreen)
     g_currentMission.loadMapFinished = Utils.appendedFunction(g_currentMission.loadMapFinished, self.loadMapFinished);
     g_currentMission.onStartMission = Utils.appendedFunction(g_currentMission.onStartMission, self.afterLoad);
     g_currentMission.missionInfo.saveToXML = Utils.appendedFunction(g_currentMission.missionInfo.saveToXML, self.saveSavegame);
-    self:setHelpBoxWidth(1.08);
+    self:setHelpBoxWidth(1.12);
 end
 g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.load);
 
