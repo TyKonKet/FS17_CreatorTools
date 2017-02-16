@@ -112,7 +112,7 @@ function InputBinding.getKeysNamesOfDigitalAction(actionIndex)
         m1 = InputBinding.getMouseButtonNames(actionData.mouseButtons);
     end
     if k1 ~= nil and k2 ~= nil then
-        return string.format("%s and %s", k1, k2);
+        return string.format("%s %s %s", k1, g_i18n:getText("ui_and"), k2);
     end
     if k1 ~= nil then
         return k1;
