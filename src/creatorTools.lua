@@ -91,8 +91,6 @@ function CreatorTools:afterLoad()
     self = CreatorTools;
     self:print("afterLoad");
     self.backup.walkingSpeed = g_currentMission.player.walkingSpeed;
-    self.backup.pickedUpObjectWidth = g_currentMission.player.pickedUpObjectWidth;
-    self.backup.pickedUpObjectHeight = g_currentMission.player.pickedUpObjectHeight;
     self:toggleCrosshair();
     self:toggleHud();
     self:setWalkingSpeed(self.walkingSpeed);
@@ -247,18 +245,7 @@ end
 
 function CreatorTools:toggleCrosshair()
     self.hideCrosshair = not self.hideCrosshair;
-    if self.hideCrosshair then
-        -- save old values
-        self.backup.pickedUpObjectWidth = g_currentMission.player.pickedUpObjectWidth;
-        self.backup.pickedUpObjectHeight = g_currentMission.player.pickedUpObjectHeight;
-        -- set new values
-        g_currentMission.player.pickedUpObjectWidth = 0;
-        g_currentMission.player.pickedUpObjectHeight = 0;
-    else
-        -- restore old values
-        g_currentMission.player.pickedUpObjectWidth = self.backup.pickedUpObjectWidth;
-        g_currentMission.player.pickedUpObjectHeight = self.backup.pickedUpObjectHeight;
-    end
+    g_currentMission.player.pickedUpObjectOverlay:setIsVisible(not self.hideCrosshair);
     return "hideCrosshair = " .. tostring(self.hideCrosshair);
 end
 
