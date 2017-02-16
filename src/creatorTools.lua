@@ -102,36 +102,40 @@ end
 
 function CreatorTools:loadSavegame()
     self:print("loadSavegame()");
-    local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile);
-    if fileExists(filePath) then
-        local xml = loadXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
-        self.hideHud = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), self.hideHud);
-        self.hideCrosshair = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.crosshair#hide"), self.hideCrosshair);
-        self.backup.showHelpBox = Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.helpbox#show"), self.backup.showHelpBox);
-        self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed);
-        self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy);
-        self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
-        self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money);
-        self.showButtonsHelp = Utils.getNoNil(getXMLBool(xml, "creatorTools#showButtonsHelp"), self.showButtonsHelp);
-        delete(xml);
+    if g_server ~= nil then
+        local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile);
+        if fileExists(filePath) then
+            local xml = loadXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
+            self.hideHud = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), self.hideHud);
+            self.hideCrosshair = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.crosshair#hide"), self.hideCrosshair);
+            self.backup.showHelpBox = Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.helpbox#show"), self.backup.showHelpBox);
+            self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed);
+            self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy);
+            self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
+            self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money);
+            self.showButtonsHelp = Utils.getNoNil(getXMLBool(xml, "creatorTools#showButtonsHelp"), self.showButtonsHelp);
+            delete(xml);
+        end
     end
 end
 
 function CreatorTools:saveSavegame()
     self = CreatorTools;
     self:print("saveSavegame()");
-    local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile);
-    local xml = createXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
-    setXMLBool(xml, "creatorTools.hud#hide", self.hideHud);
-    setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair);
-    setXMLBool(xml, "creatorTools.hud.helpbox#show", self.backup.showHelpBox);
-    setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed);
-    setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
-    setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);
-    setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
-    setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp);
-    saveXMLFile(xml);
-    delete(xml);
+    if g_server ~= nil then
+        local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile);
+        local xml = createXMLFile("creatorToolsSavegameXML", filePath, "creatorTools");
+        setXMLBool(xml, "creatorTools.hud#hide", self.hideHud);
+        setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair);
+        setXMLBool(xml, "creatorTools.hud.helpbox#show", self.backup.showHelpBox);
+        setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed);
+        setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy);
+        setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);
+        setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
+        setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp);
+        saveXMLFile(xml);
+        delete(xml);
+    end
 end
 
 function CreatorTools:deleteMap()
