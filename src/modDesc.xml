@@ -21,6 +21,7 @@ CreatorTools
         <sourceFile filename="helpLineLoader.lua" />
         <sourceFile filename="virtualAxis.lua" />
         <sourceFile filename="extensions.lua" />
+        <sourceFile filename="fadeEffect.lua" />
         <sourceFile filename="cTPanelGui.lua" />
         <sourceFile filename="creatorTools.lua" />
     </extraSourceFiles>
