@@ -46,6 +46,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.hideHud = true;
     self.backup.showHelpBox = true;
     self.walkingSpeed = CreatorTools.DEFAULT_WALKING_SPEED;
+    self.walkingSpeedFadeEffect = FadeEffect:new({position = {x = 0.5, y = 0.085}, size = 0.038, shadow = true, shadowPosition = {x = 0.0025, y = 0.0035}, statesTime = {0.75, 1, 0.75}});
     self.axisInputWalkingSpeed = VirtualAxis:new("AXIS_CT_WALKING_SPEED", true);
     self.backup.fovy = tonumber(g_gameSettings:getValue("fovy"));
     self.fovy = self.backup.fovy;
@@ -152,11 +153,13 @@ function CreatorTools:mouseEvent(posX, posY, isDown, isUp, button)
 end
 
 function CreatorTools:update(dt)
+    self.walkingSpeedFadeEffect:update(dt);
     self:checkInputs(dt);
     self:drawHelpButtons(dt);
 end
 
 function CreatorTools:draw()
+    self.walkingSpeedFadeEffect:draw();
 end
 
 function CreatorTools:checkInputs(dt)
@@ -275,6 +278,7 @@ function CreatorTools:setWalkingSpeed(speed)
     self.walkingSpeed = speed;
     g_currentMission.player.walkingSpeed = self.backup.walkingSpeed * ws;
     self.guis.cTPanelGui:setSelectedPlayerSpeed(self.walkingSpeed);
+    self.walkingSpeedFadeEffect:play(string.format("x%s", ws));
     return ("walkingSpeed = %s(%s), player.walkingSpeed = %s"):format(speed, ws, g_currentMission.player.walkingSpeed);
 end
 

@@ -3,7 +3,7 @@
 --
 -- @author  TyKonKet
 -- @date 17/01/2017
-CTPanelGui = {}
+CTPanelGui = {};
 local CTPanelGui_mt = Class(CTPanelGui, ScreenElement);
 
 function CTPanelGui:new(target, custom_mt)
