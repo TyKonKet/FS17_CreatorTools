@@ -169,6 +169,14 @@ CreatorTools
             <en>Enables or disables buttons help in the help box.</en>
             <it>Abilita o disabilita i sugerimenti dei pulsanti nel box dei suggerimenti.</it>
         </text>
+        <text name="gui_CT_MUSCLES_MODE_TEXT">
+            <en>Muscles mode</en>
+            <it>Modalità muscoli</it>
+        </text>
+        <text name="gui_CT_MUSCLES_MODE_TOOLTIP">
+            <en>With muscles mode, you can lift objects of any weight.</en>
+            <it>Con la modalità muscoli, puoi sollevare oggetti di qualsiasi peso.</it>
+        </text>
         <!-- HelpLine texts -->
         <text name="hl_CT_CATEGORY">
             <en>Creator Tools</en>

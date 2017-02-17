@@ -55,6 +55,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
     self.showButtonsHelp = true;
+    self.musclesMode = false;
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement);
     self.guis = {};
     self.guis["cTPanelGui"] = CTPanelGui:new();
@@ -91,11 +92,13 @@ function CreatorTools:afterLoad()
     self = CreatorTools;
     self:print("afterLoad");
     self.backup.walkingSpeed = g_currentMission.player.walkingSpeed;
+    self.backup.MAX_PICKABLE_OBJECT_MASS = Player.MAX_PICKABLE_OBJECT_MASS;
     self:toggleCrosshair();
     self:toggleHud();
     self:setWalkingSpeed(self.walkingSpeed);
     self:setFovy(self.fovy);
     self:setCamy(self.camy);
+    self:setMusclesMode(self.musclesMode);
 end
 
 function CreatorTools:loadSavegame()
@@ -112,6 +115,7 @@ function CreatorTools:loadSavegame()
             self.camy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#y"), self.backup.camy);
             self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money);
             self.showButtonsHelp = Utils.getNoNil(getXMLBool(xml, "creatorTools#showButtonsHelp"), self.showButtonsHelp);
+            self.musclesMode = Utils.getNoNil(getXMLBool(xml, "creatorTools.player#musclesMode"), self.musclesMode);
             delete(xml);
         end
     end
@@ -131,6 +135,7 @@ function CreatorTools:saveSavegame()
         setXMLFloat(xml, "creatorTools.player.camera#y", self.camy);
         setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
         setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp);
+        setXMLBool(xml, "creatorTools.player#musclesMode", self.musclesMode);
         saveXMLFile(xml);
         delete(xml);
     end
@@ -340,6 +345,16 @@ function CreatorTools:setHelpBoxWidth(multiplier)
     g_currentMission.helpBoxTriggerOverlay.width = g_currentMission.helpBoxTriggerOverlay.width * multiplier;
     g_currentMission.helpBoxSeparatorOverlay.width = g_currentMission.helpBoxSeparatorOverlay.width * multiplier;
     g_currentMission.helpBoxTextPos2X = g_currentMission.helpBoxTextPos2X * multiplier;
+end
+
+function CreatorTools:setMusclesMode(enabled)
+    self.musclesMode = enabled;
+    if enabled then
+        self.backup.MAX_PICKABLE_OBJECT_MASS = Player.MAX_PICKABLE_OBJECT_MASS;
+        Player.MAX_PICKABLE_OBJECT_MASS = self.backup.MAX_PICKABLE_OBJECT_MASS * 1000;
+    else
+        Player.MAX_PICKABLE_OBJECT_MASS = self.backup.MAX_PICKABLE_OBJECT_MASS;
+    end
 end
 
 addModEventListener(CreatorTools)

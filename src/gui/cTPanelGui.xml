@@ -29,11 +29,17 @@ CreatorTools
                 <GuiElement type="text" profile="multiTextOptionText" />
                 <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_gui_CT_CREATIVE_MONEY_TEXT"/>
                 <GuiElement type="bitmap" profile="multiTextOptionBg" /></GuiElement>
-            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" position="20px 286px" onCreate="onCreateShowButtonsHelp" toolTip="$l10n_gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="4" focusId="5">
+            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" position="20px 206px" onCreate="onCreateShowButtonsHelp" toolTip="$l10n_gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="4" focusId="5">
                 <GuiElement type="button" profile="multiTextOptionLeft" />
                 <GuiElement type="button" profile="multiTextOptionRight"/>
                 <GuiElement type="text" profile="multiTextOptionText" />
                 <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_gui_CT_SHOW_BUTTONS_HELP_TEXT"/>
+                <GuiElement type="bitmap" profile="multiTextOptionBg" /></GuiElement>
+            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" position="20px 286px" onCreate="onCreateMusclesMode" toolTip="$l10n_gui_CT_MUSCLES_MODE_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="4" focusId="5">
+                <GuiElement type="button" profile="multiTextOptionLeft" />
+                <GuiElement type="button" profile="multiTextOptionRight"/>
+                <GuiElement type="text" profile="multiTextOptionText" />
+                <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_gui_CT_MUSCLES_MODE_TEXT"/>
                 <GuiElement type="bitmap" profile="multiTextOptionBg" /></GuiElement>
             <GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">
                 <GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />

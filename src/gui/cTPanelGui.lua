@@ -23,6 +23,7 @@ function CTPanelGui:onOpen()
     self.creativeMoneyElement:setDisabled(not g_currentMission.isMasterUser and g_server == nil);
     self.creativeMoneyElement:setIsChecked(CreatorTools.backup.money ~= -1);
     self.showButtonsHelpElement:setIsChecked(CreatorTools.showButtonsHelp);
+    self.musclesModeElement:setIsChecked(CreatorTools.musclesMode);
 end
 
 function CTPanelGui:onClose()
@@ -39,6 +40,7 @@ function CTPanelGui:onClickOk()
     CreatorTools:setWalkingSpeed(self.playerSpeedElement:getState());
     CreatorTools:setCreativeMoney(self.creativeMoneyElement:getIsChecked());
     CreatorTools.showButtonsHelp = self.showButtonsHelpElement:getIsChecked();
+    CreatorTools:setMusclesMode(self.musclesModeElement:getIsChecked());
     self:onClickBack();
 end
 
@@ -84,4 +86,8 @@ end
 
 function CTPanelGui:onCreateShowButtonsHelp(element)
     self.showButtonsHelpElement = element;
+end
+
+function CTPanelGui:onCreateMusclesMode(element)
+    self.musclesModeElement = element;
 end
