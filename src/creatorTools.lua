@@ -5,7 +5,7 @@
 -- @date 11/01/2017
 CreatorTools = {};
 CreatorTools.name = "CreatorTools";
-CreatorTools.debug = true;
+CreatorTools.debug = false;
 CreatorTools.dir = g_currentModDirectory;
 CreatorTools.savegameFile = "creatorTools.xml";
 CreatorTools.WALKING_SPEEDS = {};
