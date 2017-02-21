@@ -47,7 +47,8 @@ function FadeEffect:new(settings)
         },
         initialAlpha = 0,
         statesTime = {1, 1, 1},
-        statesAlpha = {1, 1, 0}
+        statesAlpha = {1, 1, 0},
+        loop = false
     };
     self.settings = defaultSettings;
     for k, v in pairs(settings) do
@@ -75,6 +76,11 @@ function FadeEffect:alignText()
     end
 end
 
+function FadeEffect:setText(text)
+    self.settings.text = text
+    self:alignText();
+end
+
 function FadeEffect:play(text)
     if text ~= nil then
         self.settings.text = text
@@ -84,6 +90,10 @@ function FadeEffect:play(text)
     self.initialAlpha = self.settings.initialAlpha;
     self.state = FadeEffect.STATES.FADEIN;
     self.tmpStateTime = 0;
+end
+
+function FadeEffect:stop()
+    self.state = FadeEffect.STATES.IDLE;
 end
 
 function FadeEffect:draw()
@@ -108,6 +118,9 @@ function FadeEffect:update(dt)
             self.alpha = self.settings.statesAlpha[self.state];
             self.initialAlpha = self.alpha;
             self.state = self.state + 1;
+            if self.settings.loop and self.state == FadeEffect.STATES.IDLE then
+                self.state = 1;
+            end
         else
             self.tmpStateTime = self.tmpStateTime + dt;
         end
