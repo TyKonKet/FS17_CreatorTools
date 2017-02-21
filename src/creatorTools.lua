@@ -42,6 +42,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     parseI18N();
     margeI18N();
     self.backup = {};
+    self.target = {};
     self.hideCrosshair = true;
     self.hideHud = true;
     self.backup.showHelpBox = true;
@@ -49,9 +50,13 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.walkingSpeedFadeEffect = FadeEffect:new({position = {x = 0.5, y = 0.085}, size = 0.038, shadow = true, shadowPosition = {x = 0.0025, y = 0.0035}, statesTime = {0.75, 1, 0.75}});
     self.axisInputWalkingSpeed = VirtualAxis:new("AXIS_CT_WALKING_SPEED", true);
     self.backup.fovy = tonumber(g_gameSettings:getValue("fovy"));
+    self.target.fovyIntAlpha = 0;
     self.fovy = self.backup.fovy;
+    self.target.fovy = self.fovy;
     self.backup.camy = 0.73;
+    self.target.camyIntAlpha = 0;
     self.camy = self.backup.camy;
+    self.target.camy = self.camy;
     self.backup.money = -1;
     self.axisInputFovy = VirtualAxis:new("AXIS_CT_FOVY");
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY");
@@ -154,6 +159,16 @@ end
 
 function CreatorTools:update(dt)
     self.walkingSpeedFadeEffect:update(dt);
+    self.target.camyIntAlpha = self.target.camyIntAlpha + dt / 300;
+    if self.target.camyIntAlpha > 1 then
+        self.target.camyIntAlpha = 1;
+    end
+    g_currentMission.player.camY = Utils.lerp(g_currentMission.player.camY, self.target.camy, self.target.camyIntAlpha);
+    self.target.fovyIntAlpha = self.target.fovyIntAlpha + dt / 300;
+    if self.target.fovyIntAlpha > 1 then
+        self.target.fovyIntAlpha = 1;
+    end
+    setFovy(g_currentMission.player.cameraNode, Utils.lerp(getFovy(g_currentMission.player.cameraNode), self.target.fovy, self.target.fovyIntAlpha));
     self:checkInputs(dt);
     self:drawHelpButtons();
 end
@@ -182,26 +197,26 @@ function CreatorTools:checkInputs(dt)
         end
         local fovyAxis = self.axisInputFovy:getVirtualAxis(dt);
         if fovyAxis ~= nil then
-            self:addFovy(fovyAxis * 0.375);
+            self:addFovy(fovyAxis * 0.5);
         end
         if InputBinding.hasEvent(InputBinding.CT_FOVY_UP, true) then
-            self:addFovy(1);
+            self:addFovy(1 * 1.5);
         end
         if InputBinding.hasEvent(InputBinding.CT_FOVY_DOWN, true) then
-            self:addFovy(-1);
+            self:addFovy(-1 * 1.5);
         end
         if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT_2, true) then
             self:setCamy(self.backup.camy);
         end
         local camyAxis = self.axisInputCamy:getVirtualAxis(dt);
         if camyAxis ~= nil then
-            self:addCamy(camyAxis * 0.075);
+            self:addCamy(camyAxis * 0.25);
         end
         if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) and not g_gui:getIsGuiVisible() then
-            self:addCamy(1 * 0.55);
+            self:addCamy(1 * 0.75);
         end
         if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) and not g_gui:getIsGuiVisible() then
-            self:addCamy(-1 * 0.55);
+            self:addCamy(-1 * 0.75);
         end
         if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
             self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED);
@@ -284,22 +299,26 @@ end
 
 function CreatorTools:setFovy(fovy)
     self.fovy = math.max(math.min(fovy, 120), 0.1);
-    setFovy(g_currentMission.player.cameraNode, self.fovy);
+    self.target.fovy = self.fovy;
+    self.target.fovyIntAlpha = 0;
 end
 
 function CreatorTools:addFovy(fovy)
     self.fovy = math.max(math.min(self.fovy + fovy, 120), 0.1);
-    setFovy(g_currentMission.player.cameraNode, self.fovy);
+    self.target.fovy = self.fovy;
+    self.target.fovyIntAlpha = 0;
 end
 
 function CreatorTools:setCamy(camy)
     self.camy = math.max(camy, -self.backup.camy * 3);
-    g_currentMission.player.camY = camy;
+    self.target.camy = self.camy;
+    self.target.camyIntAlpha = 0;
 end
 
 function CreatorTools:addCamy(camy)
     self.camy = math.max(camy + self.camy, -self.backup.camy * 3);
-    g_currentMission.player.camY = self.camy;
+    self.target.camy = self.camy;
+    self.target.camyIntAlpha = 0;
 end
 
 function CreatorTools:changeDirt(vehicle)
