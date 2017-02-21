@@ -29,15 +29,15 @@ CreatorTools
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
         <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_less" key2="KEY_z" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_q" device="1" visible="true" />
-        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_rctrl KEY_1" key2="KEY_rctrl KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
+        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lalt KEY_1" key2="KEY_lalt KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
         <input name="CT_FOVY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
         <input name="CT_FOVY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_UP" visible="true" />
-        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_rctrl KEY_3" device="1" visible="true" />
+        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
         <input name="CT_FOVY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE" visible="true" />
-        <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lalt KEY_2" key2="KEY_lalt KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
+        <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_CAMY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
         <input name="CT_CAMY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_UP" visible="true" />
-        <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
+        <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
         <input name="CT_CAMY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_MIDDLE" visible="true" />
         <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
         <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_g" device="1" visible="true" />
