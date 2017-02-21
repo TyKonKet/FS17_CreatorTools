@@ -155,7 +155,7 @@ end
 function CreatorTools:update(dt)
     self.walkingSpeedFadeEffect:update(dt);
     self:checkInputs(dt);
-    self:drawHelpButtons(dt);
+    self:drawHelpButtons();
 end
 
 function CreatorTools:draw()
@@ -221,7 +221,7 @@ function CreatorTools:checkInputs(dt)
     end
 end
 
-function CreatorTools:drawHelpButtons(dt)
+function CreatorTools:drawHelpButtons()
     if not self.showButtonsHelp then
         return;
     end
