@@ -43,9 +43,9 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     margeI18N();
     self.backup = {};
     self.target = {};
-    self.drawAgain = true;
     self.hideCrosshair = true;
     self.hideHud = true;
+    self.showHelpLine = true;
     self.backup.showHelpBox = true;
     self.walkingSpeed = CreatorTools.DEFAULT_WALKING_SPEED;
     self.walkingSpeedFadeEffect = FadeEffect:new({position = {x = 0.5, y = 0.085}, size = 0.038, shadow = true, shadowPosition = {x = 0.0025, y = 0.0035}, statesTime = {0.75, 1, 0.75}});
@@ -97,7 +97,7 @@ end
 
 function CreatorTools:afterLoad()
     self = CreatorTools;
-    self:print("afterLoad");
+    self:print("afterLoad()");
     self.backup.walkingSpeed = g_currentMission.player.walkingSpeed;
     self.backup.MAX_PICKABLE_OBJECT_MASS = Player.MAX_PICKABLE_OBJECT_MASS;
     self:toggleCrosshair();
@@ -107,6 +107,18 @@ function CreatorTools:afterLoad()
     self:setCamy(self.camy);
     self:setMusclesMode(self.musclesMode);
 end
+
+function CreatorTools:onStartMission()
+    self = CreatorTools;
+    self:print("onStartMission()");
+    if self.showHelpLine then
+        g_gui:showGui("InGameMenu");
+        g_inGameMenu.pageSelector:setState(g_inGameMenu.pagingElement:getPageMappingIndex(InGameMenu.PAGE_HELP_LINE), true);
+        g_inGameMenu.helpLineCategorySelectorElement:setState(1000, true);
+        self.showHelpLine = false;
+    end
+end
+g_mpLoadingScreen.buttonOkPC.onClickCallback = Utils.appendedFunction(g_mpLoadingScreen.buttonOkPC.onClickCallback, CreatorTools.onStartMission);
 
 function CreatorTools:loadSavegame()
     self:print("loadSavegame()");
@@ -123,6 +135,7 @@ function CreatorTools:loadSavegame()
             self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money);
             self.showButtonsHelp = Utils.getNoNil(getXMLBool(xml, "creatorTools#showButtonsHelp"), self.showButtonsHelp);
             self.musclesMode = Utils.getNoNil(getXMLBool(xml, "creatorTools.player#musclesMode"), self.musclesMode);
+            self.showHelpLine = Utils.getNoNil(getXMLBool(xml, "creatorTools.helpLine#show"), self.showHelpLine);
             delete(xml);
         end
     end
@@ -143,6 +156,7 @@ function CreatorTools:saveSavegame()
         setXMLInt(xml, "creatorTools.backup#money", self.backup.money);
         setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp);
         setXMLBool(xml, "creatorTools.player#musclesMode", self.musclesMode);
+        setXMLBool(xml, "creatorTools.helpLine#show", self.showHelpLine);
         saveXMLFile(xml);
         delete(xml);
     end
@@ -176,7 +190,6 @@ end
 
 function CreatorTools:draw()
     self.walkingSpeedFadeEffect:draw();
-    self.drawAgain = true;
 end
 
 function CreatorTools:checkInputs(dt)
@@ -239,10 +252,6 @@ function CreatorTools:checkInputs(dt)
 end
 
 function CreatorTools:drawHelpButtons()
-    if not self.drawAgain or not self.showButtonsHelp then
-        return;
-    end
-    self.drawAgain = false;
     -- show all button helps
     if self.hideHud then
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
