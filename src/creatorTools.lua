@@ -43,6 +43,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     margeI18N();
     self.backup = {};
     self.target = {};
+    self.drawAgain = true;
     self.hideCrosshair = true;
     self.hideHud = true;
     self.backup.showHelpBox = true;
@@ -175,6 +176,7 @@ end
 
 function CreatorTools:draw()
     self.walkingSpeedFadeEffect:draw();
+    self.drawAgain = true;
 end
 
 function CreatorTools:checkInputs(dt)
@@ -237,9 +239,10 @@ function CreatorTools:checkInputs(dt)
 end
 
 function CreatorTools:drawHelpButtons()
-    if not self.showButtonsHelp then
+    if not self.drawAgain or not self.showButtonsHelp then
         return;
     end
+    self.drawAgain = false;
     -- show all button helps
     if self.hideHud then
         g_currentMission:addHelpButtonText(g_i18n:getText("CT_SHOW_HUD_HELP"), InputBinding.CT_HUD_TOGGLE, nil, GS_PRIO_HIGH);
@@ -249,13 +252,12 @@ function CreatorTools:drawHelpButtons()
     g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_OPEN_PANEL"), InputBinding.CT_OPEN_PANEL, nil, GS_PRIO_HIGH);
     if g_currentMission.controlledVehicle == nil then
         -- show only onfoot button helps
-        g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_FOVY_HELP"), InputBinding.AXIS_CT_FOVY, nil, GS_PRIO_NORMAL);
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil, GS_PRIO_LOW);
-        g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_CAMY_HELP"), InputBinding.AXIS_CT_CAMY, nil, GS_PRIO_NORMAL);
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CAMY_DEFAULT"), InputBinding.CT_CAMY_DEFAULT, nil, GS_PRIO_LOW);
-        --g_currentMission:addExtraPrintText(g_i18n:getText("CT_WALKING_SPEED_HELP"):format(InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DOWN), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_DEFAULT), InputBinding.getKeyNamesOfDigitalAction(InputBinding.CT_WALKING_SPEED_UP)));
-        g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_WALKING_SPEED_HELP"), InputBinding.AXIS_CT_WALKING_SPEED, nil, GS_PRIO_NORMAL);
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil, GS_PRIO_LOW);
+        --g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_FOVY_HELP"), InputBinding.AXIS_CT_FOVY, nil, GS_PRIO_LOW);
+        --g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_FOVY_DEFAULT"), InputBinding.CT_FOVY_DEFAULT, nil, GS_PRIO_LOW);
+        --g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_CAMY_HELP"), InputBinding.AXIS_CT_CAMY, nil, GS_PRIO_LOW);
+        --g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CAMY_DEFAULT"), InputBinding.CT_CAMY_DEFAULT, nil, GS_PRIO_LOW);
+        --g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_WALKING_SPEED_HELP"), InputBinding.AXIS_CT_WALKING_SPEED, nil, GS_PRIO_LOW);
+        --g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil, GS_PRIO_LOW);
     else
         -- show only vehicle button helps
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CHANGE_DIRT"), InputBinding.CT_CHANGE_DIRT, nil, GS_PRIO_HIGH);
