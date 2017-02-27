@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="34">
-    
     <author>TyKonKet</author>
-    
-    <author_contact> 
-			<host>GitHub</host>
-			<url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>
-	</author_contact>
-
-    <contributors>
-		TyKonKet, Gonimy_Vetrom (Vasyl'ko),
-	</contributors>
-
+    <author_contact>
+        <host>GitHub</host>
+        <url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>
+    </author_contact>
+    <contributors>		TyKonKet, Gonimy_Vetrom (Vasyl'ko),	</contributors>
     <version>1.2.0</version>
-
     <title>
         <en>Creator Tools</en>
     </title>
-   
     <description>
         <en>Creator Tools allow you to do magics with HUD, camera and much more.</en>
         <ru>Creator Tools позволяет расширить стандартные возможности игры.</ru>
     </description>
-
     <iconFilename>icon.dds</iconFilename>
-    
     <multiplayer supported="true"/>
-
-    <l10n filenamePrefix="modDesc_l10n" /> <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
-
+    <l10n filenamePrefix="modDesc_l10n" />
+    <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
     <extraSourceFiles>
         <sourceFile filename="i18nUtils.lua" />
         <sourceFile filename="helpLineLoader.lua" />
@@ -38,8 +27,7 @@
         <sourceFile filename="cTPanelGui.lua" />
         <sourceFile filename="creatorTools.lua" />
     </extraSourceFiles>
-    
-	<inputBindings>
+    <inputBindings>
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
         <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_z" key2="KEY_less" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_q" device="1" visible="true" />
