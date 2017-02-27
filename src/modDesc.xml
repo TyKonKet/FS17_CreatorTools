@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="36">
+<modDesc descVersion="34">
+    
     <author>TyKonKet</author>
+    
+    <author_contact> 
+			<host>GitHub</host>
+			<url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>
+	</author_contact>
+
+    <contributors>
+		TyKonKet, Gonimy_Vetrom (Vasyl'ko),
+	</contributors>
+
     <version>1.2.0</version>
+
     <title>
         <en>Creator Tools</en>
     </title>
+   
     <description>
         <en>Creator Tools allow you to do magics with HUD, camera and much more.</en>
+        <ru>Creator Tools позволяет расширить стандартные возможности игры.</ru>
     </description>
+
     <iconFilename>icon.dds</iconFilename>
-    <multiplayer supported="true" />
+    
+    <multiplayer supported="true"/>
+
+    <l10n filenamePrefix="modDesc_l10n" /> <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
+
     <extraSourceFiles>
         <sourceFile filename="i18nUtils.lua" />
         <sourceFile filename="helpLineLoader.lua" />
@@ -19,7 +38,8 @@
         <sourceFile filename="cTPanelGui.lua" />
         <sourceFile filename="creatorTools.lua" />
     </extraSourceFiles>
-    <inputBindings>
+    
+	<inputBindings>
         <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
         <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_z" key2="KEY_less" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
         <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_q" device="1" visible="true" />
@@ -36,225 +56,4 @@
         <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
         <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_g" device="1" visible="true" />
     </inputBindings>
-    <l10n>
-        <text name="ui_and">
-            <en>and</en>
-            <it>e</it>
-        </text>
-        <text name="input_CT_HUD_TOGGLE">
-            <en>Hide/Show HUD</en>
-            <it>Nascondi/Mostra gli HUD</it>
-        </text>
-        <text name="CT_SHOW_HUD_HELP">
-            <en>Show HUD</en>
-            <it>Mostra gli HUD</it>
-        </text>
-        <text name="CT_HIDE_HUD_HELP">
-            <en>Hide HUD</en>
-            <it>Nascondi gli HUD</it>
-        </text>
-        <text name="input_AXIS_CT_WALKING_SPEED_2">
-            <en>Decrease the walking speed</en>
-            <it>Diminuisci la velocità di movimento</it>
-        </text>
-        <text name="input_AXIS_CT_WALKING_SPEED_1">
-            <en>Increase the walking speed</en>
-            <it>Aumenta la velocità di movimento</it>
-        </text>
-        <text name="AXIS_CT_WALKING_SPEED_HELP">
-            <en>Change the walking speed</en>
-            <it>Cambia la velocità di movimento</it>
-        </text>
-        <text name="input_CT_WALKING_SPEED_DEFAULT">
-            <en>Set to 1x the walking speed</en>
-            <it>Imposta ad 1x la velocità di movimento</it>
-        </text>
-        <text name="input_CT_FOVY_DEFAULT">
-            <en>Set the camera FOV to default value</en>
-            <it>Imposta il FOV della camera al valore predefinito</it>
-        </text>
-        <text name="input_CT_FOVY_DEFAULT_2">
-            <en>Set the camera FOV to default value</en>
-            <it>Imposta il FOV della camera al valore predefinito</it>
-        </text>
-        <text name="input_AXIS_CT_FOVY_1">
-            <en>Increase the camera FOV</en>
-            <it>Aumenta il FOV della camera</it>
-        </text>
-        <text name="input_AXIS_CT_FOVY_2">
-            <en>Decrease the camera FOV</en>
-            <it>Diminuisci il FOV della camera</it>
-        </text>
-        <text name="input_CT_FOVY_UP">
-            <en>Increase the camera FOV</en>
-            <it>Aumenta il FOV della camera</it>
-        </text>
-        <text name="input_CT_FOVY_DOWN">
-            <en>Decrease the camera FOV</en>
-            <it>Diminuisci il FOV della camera</it>
-        </text>
-        <text name="AXIS_CT_FOVY_HELP">
-            <en>Change the camera FOV</en>
-            <it>Cambia il FOV della camera</it>
-        </text>
-        <text name="input_CT_CAMY_DEFAULT">
-            <en>Set the camera height to default value</en>
-            <it>Imposta l'altezza della camera al valore predefinito</it>
-        </text>
-        <text name="input_CT_CAMY_DEFAULT_2">
-            <en>Set the camera height to default value</en>
-            <it>Imposta l'altezza della camera al valore predefinito</it>
-        </text>
-        <text name="input_AXIS_CT_CAMY_1">
-            <en>Increase the camera height</en>
-            <it>Aumenta l'altezza della camera</it>
-        </text>
-        <text name="input_AXIS_CT_CAMY_2">
-            <en>Decrease the camera height</en>
-            <it>Diminuisci l'altezza della camera</it>
-        </text>
-        <text name="input_CT_CAMY_UP">
-            <en>Increase the camera height</en>
-            <it>Aumenta l'altezza della camera</it>
-        </text>
-        <text name="input_CT_CAMY_DOWN">
-            <en>Decrease the camera height</en>
-            <it>Diminuisci l'altezza della camera</it>
-        </text>
-        <text name="AXIS_CT_CAMY_HELP">
-            <en>Change the camera height</en>
-            <it>Cambia l'altezza della camera</it>
-        </text>
-        <text name="input_CT_CHANGE_DIRT">
-            <en>Change the dirt amount</en>
-            <it>Cambia la quantità di sporco</it>
-        </text>
-        <text name="input_CT_OPEN_PANEL">
-            <en>Open Creator Tools panel</en>
-            <it>Apri il pannello di Creator Tools</it>
-        </text>
-        <text name="gui_CT_HUD_TEXT">
-            <en>Heads-up displays (HUDs)</en>
-        </text>
-        <text name="gui_CT_HUD_TOOLTIP">
-            <en>Hides or shows the heads-up displays (HUDs).</en>
-            <it>Nasconde o mostra gli heads-up displays (HUDs).</it>
-        </text>
-        <text name="gui_CT_PLAYER_SPEED_TEXT">
-            <en>Walking speed</en>
-            <it>Velocità di movimento</it>
-        </text>
-        <text name="gui_CT_PLAYER_SPEED_TOOLTIP">
-            <en>Changes the player walking speed.</en>
-            <it>Cambia la velocità di movimento.</it>
-        </text>
-        <text name="gui_CT_CREATIVE_MONEY_TEXT">
-            <en>Creative money</en>
-            <it>Soldi infiniti</it>
-        </text>
-        <text name="gui_CT_CREATIVE_MONEY_TOOLTIP">
-            <en>Enables or disables creative money (one billion).</en>
-            <it>Abilita o disabilita i soldi "infiniti" (un miliardo).</it>
-        </text>
-        <text name="gui_CT_SHOW_BUTTONS_HELP_TEXT">
-            <en>Show help</en>
-            <it>Mostra aiuto</it>
-        </text>
-        <text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP">
-            <en>Enables or disables buttons help in the help box.</en>
-            <it>Abilita o disabilita i sugerimenti dei pulsanti nel box dei suggerimenti.</it>
-        </text>
-        <text name="gui_CT_MUSCLES_MODE_TEXT">
-            <en>Muscles mode</en>
-            <it>Modalità muscoli</it>
-        </text>
-        <text name="gui_CT_MUSCLES_MODE_TOOLTIP">
-            <en>With muscles mode, you can lift objects of any weight.</en>
-            <it>Con la modalità muscoli, puoi sollevare oggetti di qualsiasi peso.</it>
-        </text>
-        <!-- HelpLine texts -->
-        <text name="hl_CT_CATEGORY">
-            <en>Creator Tools</en>
-        </text>
-        <text name="hl_CT_TITLE_00">
-            <en>General</en>
-            <it>Generale</it>
-        </text>
-        <text name="hl_CT_TEXT_00_00">
-            <en>As the name says, this mod is meant for creators (e.g. streamers and videomakers) but is also useful for common players that needs extra tools.</en>
-            <it>Come dice il nome, questa mod è pensata per i creativi (ad es. streamers e videomakers) ma è molto utile anche per giocatori che necessitano qualcosa in più.</it>
-        </text>
-        <text name="hl_CT_TEXT_00_01">
-            <en>The main features are listed and explained here, you can open the mod panel with the $input_CT_OPEN_PANEL;.</en>
-            <it>Le funzionalità principali sono elencate e spiegate qui inoltre puoi aprire il pannello della mod con $input_CT_OPEN_PANEL;.</it>
-        </text>
-        <text name="hl_CT_TITLE_01">
-            <en>HUD hide</en>
-            <it>Nascondere gli HUD</it>
-        </text>
-        <text name="hl_CT_TEXT_01_00">
-            <en>You can hide and show the HUDs (heads-up displays) with the $input_CT_HUD_TOGGLE;.</en>
-            <it>Puoi nascondere e mostrare gli HUD (heads-up displays) con $input_CT_HUD_TOGGLE;.</it>
-        </text>
-        <text name="hl_CT_TITLE_02">
-            <en>Player speed</en>
-            <it>Velocità di movimento</it>
-        </text>
-        <text name="hl_CT_TEXT_02_00">
-            <en>You can increase and decrease the player speed with the $input_AXIS_CT_WALKING_SPEED;.</en>
-            <it>Puoi aumentare e diminuire la velocità di movimento con $input_AXIS_CT_WALKING_SPEED;.</it>
-        </text>
-        <text name="hl_CT_TEXT_02_01">
-            <en>You can also set the default player speed with the $input_CT_WALKING_SPEED_DEFAULT;.</en>
-            <it>Puoi anche impostare la velocità di movimento predefinita con $input_CT_WALKING_SPEED_DEFAULT;.</it>
-        </text>
-        <text name="hl_CT_TITLE_03">
-            <en>Camera height</en>
-            <it>Altezza della telecamera</it>
-        </text>
-        <text name="hl_CT_TEXT_03_00">
-            <en>You can increase and decrease the camera height with the $input_AXIS_CT_CAMY; or with $input_CT_CAMY_UP; and $input_CT_CAMY_DOWN;.</en>
-            <it>Puoi aumentare e diminuire l'altezza della telecamera con $input_AXIS_CT_CAMY; o con $input_CT_CAMY_UP; e $input_CT_CAMY_DOWN;.</it>
-        </text>
-        <text name="hl_CT_TEXT_03_01">
-            <en>You can also set the default camera height with the $input_CT_CAMY_DEFAULT; or with $input_CT_CAMY_DEFAULT_2;.</en>
-            <it>Puoi anche impostare l'altezza della telecamera predefinita con $input_CT_CAMY_DEFAULT; o con $input_CT_CAMY_DEFAULT_2;.</it>
-        </text>
-        <text name="hl_CT_TITLE_04">
-            <en>Camera zoom</en>
-            <it>Zoom della telecamera</it>
-        </text>
-        <text name="hl_CT_TEXT_04_00">
-            <en>You can increase and decrease the camera zoom with the $input_AXIS_CT_FOVY; or with $input_CT_FOVY_UP; and $input_CT_FOVY_DOWN;.</en>
-            <it>Puoi aumentare e diminuire lo zoom della telecamera con $input_AXIS_CT_FOVY; o con $input_CT_FOVY_UP; e $input_CT_FOVY_DOWN;.</it>
-        </text>
-        <text name="hl_CT_TEXT_04_01">
-            <en>You can also set the default camera zoom with the $input_CT_FOVY_DEFAULT; or with $input_CT_FOVY_DEFAULT_2;.</en>
-            <it>Puoi anche impostare lo zoom della telecamera predefinito con $input_CT_FOVY_DEFAULT; o con $input_CT_FOVY_DEFAULT_2;.</it>
-        </text>
-        <text name="hl_CT_TITLE_05">
-            <en>Dirt change</en>
-            <it>Impostazione dello sporco</it>
-        </text>
-        <text name="hl_CT_TEXT_05_00">
-            <en>When you are on a vehicle, you can set his dirt amount with the $input_CT_CHANGE_DIRT;.</en>
-            <it>Quando sei su un veicolo, puoi impostare il suo livello di sporco con $input_CT_CHANGE_DIRT;.</it>
-        </text>
-        <text name="hl_CT_TITLE_06">
-            <en>Additional time scales</en>
-            <it>Time scales addizionali</it>
-        </text>
-        <text name="hl_CT_TEXT_06_00">
-            <en>This mod adds seven new time scales (from 240x to 15360x), you can set them with the $input_INCREASE_TIMESCALE; and $input_DECREASE_TIMESCALE;.</en>
-            <it>Questa mod aggiunge sette nuove velocità del tempo (da 240x a 15360x), puoi sceglierle con $input_INCREASE_TIMESCALE; and $input_DECREASE_TIMESCALE;.</it>
-        </text>
-    </l10n>
-    <translatedBy>
-        <en>TyKonKet</en>
-        <it>TyKonKet</it>
-    </translatedBy>
-    <git>
-        <host>GitHub</host>
-        <url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>
-    </git>
 </modDesc>
