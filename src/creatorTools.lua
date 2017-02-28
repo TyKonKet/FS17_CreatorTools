@@ -66,8 +66,8 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement);
     self.guis = {};
     self.guis["cTPanelGui"] = CTPanelGui:new();
-    g_gui:loadGui(self.dir .. "cTPanelGui.xml", "CTPanelGui", self.guis.cTPanelGui);
-    loadHelpLine(self.dir .. "helpLine.xml", g_inGameMenu.helpLineCategories, g_inGameMenu.helpLineCategorySelectorElement, self.dir);
+    g_gui:loadGui(self.dir .. "gui/cTPanelGui.xml", "CTPanelGui", self.guis.cTPanelGui);
+    loadHelpLine(self.dir .. "helpline/helpLine.xml", g_inGameMenu.helpLineCategories, g_inGameMenu.helpLineCategorySelectorElement, self.dir);
 end
 g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
 
