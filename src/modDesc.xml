@@ -16,15 +16,15 @@
     </description>
     <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true"/>
-    <l10n filenamePrefix="modDesc_l10n" />
+    <l10n filenamePrefix="l10n/modDesc_l10n" />
     <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
     <extraSourceFiles>
-        <sourceFile filename="i18nUtils.lua" />
-        <sourceFile filename="helpLineLoader.lua" />
-        <sourceFile filename="virtualAxis.lua" />
-        <sourceFile filename="extensions.lua" />
-        <sourceFile filename="fadeEffect.lua" />
-        <sourceFile filename="cTPanelGui.lua" />
+        <sourceFile filename="helpers/i18nUtils.lua" />
+        <sourceFile filename="helpers/helpLineLoader.lua" />
+        <sourceFile filename="helpers/virtualAxis.lua" />
+        <sourceFile filename="helpers/extensions.lua" />
+        <sourceFile filename="helpers/fadeEffect.lua" />
+        <sourceFile filename="gui/cTPanelGui.lua" />
         <sourceFile filename="creatorTools.lua" />
     </extraSourceFiles>
     <inputBindings>
