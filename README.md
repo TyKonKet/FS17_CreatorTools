@@ -7,6 +7,7 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [x] Finding better keys for player speed
 - [x] Showing the player speed when changed  
 - [ ] Renaming "Cretive Money" to "Money Cheat"
+- [ ] Set dirt level on selected implement
   
 # Translations
 If you want help with translations, you are welcome.  
