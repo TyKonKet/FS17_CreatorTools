@@ -67,6 +67,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.guis = {};
     self.guis["cTPanelGui"] = CTPanelGui:new();
     g_gui:loadGui(self.dir .. "gui/cTPanelGui.xml", "CTPanelGui", self.guis.cTPanelGui);
+    FocusManager:setGui("MPLoadingScreen");
     loadHelpLine(self.dir .. "helpline/helpLine.xml", g_inGameMenu.helpLineCategories, g_inGameMenu.helpLineCategorySelectorElement, self.dir);
 end
 g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.initialize);
