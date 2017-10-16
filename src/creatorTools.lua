@@ -400,4 +400,4 @@ function CreatorTools:setMusclesMode(enabled)
     end
 end
 
-addModEventListener(CreatorTools)
+addModEventListener(CreatorTools);

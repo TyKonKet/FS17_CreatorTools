@@ -13,7 +13,7 @@ CreatorTools
         </helpLine>
         <helpLine title="hl_CT_TITLE_01">
             <item type="text" value="hl_CT_TEXT_01_00"/>
-            <item type="image" value="hl_CT_IMAGE_01_00.dds"/>
+            <item type="image" value="helpline/images/hl_CT_IMAGE_01_00.dds"/>
         </helpLine>
         <helpLine title="hl_CT_TITLE_02">
             <item type="text" value="hl_CT_TEXT_02_00"/>
@@ -22,20 +22,20 @@ CreatorTools
         <helpLine title="hl_CT_TITLE_03">
             <item type="text" value="hl_CT_TEXT_03_00"/>
             <item type="text" value="hl_CT_TEXT_03_01"/>
-            <item type="image" value="hl_CT_IMAGE_03_00.dds" heightScale="2"/>
+            <item type="image" value="helpline/images/hl_CT_IMAGE_03_00.dds" heightScale="2"/>
         </helpLine>
         <helpLine title="hl_CT_TITLE_04">
             <item type="text" value="hl_CT_TEXT_04_00"/>
             <item type="text" value="hl_CT_TEXT_04_01"/>
-            <item type="image" value="hl_CT_IMAGE_04_00.dds"/>
+            <item type="image" value="helpline/images/hl_CT_IMAGE_04_00.dds"/>
         </helpLine>
         <helpLine title="hl_CT_TITLE_05">
             <item type="text" value="hl_CT_TEXT_05_00"/>
-            <item type="image" value="hl_CT_IMAGE_05_00.dds"/>
+            <item type="image" value="helpline/images/hl_CT_IMAGE_05_00.dds"/>
         </helpLine>
         <helpLine title="hl_CT_TITLE_06">
             <item type="text" value="hl_CT_TEXT_06_00"/>
-            <item type="image" value="hl_CT_IMAGE_06_00.dds" heightScale="0.25"/>
+            <item type="image" value="helpline/images/hl_CT_IMAGE_06_00.dds" heightScale="0.25"/>
         </helpLine>
     </helpLineCategory>
 </helpLines>
