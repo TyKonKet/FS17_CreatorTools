@@ -247,6 +247,9 @@ function CreatorTools:checkInputs(dt)
     else
         -- check only onvehicle inputs
         if InputBinding.hasEvent(InputBinding.CT_CHANGE_DIRT, true) then
+            if g_currentMission.controlledVehicle.selectedImplement ~= nil then
+                self:changeDirt(g_currentMission.controlledVehicle.selectedImplement.object);
+            end
             self:changeDirt(g_currentMission.controlledVehicle);
         end
     end
