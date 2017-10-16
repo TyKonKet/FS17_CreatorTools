@@ -336,7 +336,7 @@ function CreatorTools:setCamy(camy)
 end
 
 function CreatorTools:addCamy(camy)
-    self.camy = math.max(camy + self.camy, -self.backup.camy * 3);
+    self.camy = math.max(camy + self.camy, -self.backup.camy * 10);
     self.target.camy = self.camy;
     self.target.camyIntAlpha = 0;
 end
