@@ -1,7 +1,7 @@
 --
 -- CreatorTools
 --
--- @author  TyKonKet
+-- @author TyKonKet
 -- @date 17/01/2017
 CTPanelGui = {};
 local CTPanelGui_mt = Class(CTPanelGui, ScreenElement);

@@ -1,7 +1,7 @@
 --
 -- CreatorTools
 --
--- @author  TyKonKet
+-- @author TyKonKet
 -- @date 16/01/2017
 VirtualAxis = {};
 VirtualAxis_mt = Class(VirtualAxis);

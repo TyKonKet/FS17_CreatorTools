@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="34">
+<modDesc descVersion="37">
     <author>TyKonKet</author>
-    <author_contact>
-        <host>GitHub</host>
-        <url>https://github.com/TyKonKet/FS17_CreatorTools.git</url>
-    </author_contact>
-    <contributors>		TyKonKet, Gonimy_Vetrom (Vasyl'ko),	</contributors>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <title>
         <en>Creator Tools</en>
+        <de>Creator Tools</de>
+        <fr>Creator Tools</fr>
     </title>
     <description>
-        <en>Creator Tools allow you to do magics with HUD, camera and much more.</en>
-        <ru>Creator Tools позволяет расширить стандартные возможности игры.</ru>
+        <en>
+            <![CDATA[Creator Tools allow you to do magics with HUD, camera and much more.
+
+            Changelog 1.3.0
+            - 
+            - 
+            - 
+]]>
+        </en>
+        <de>
+            <![CDATA[Schöpfer-Werkzeuge erlauben Ihnen, Magie mit HUD, Kamera und viel mehr zu tun.
+
+            Changelog 1.3.0
+            - 
+            - 
+            - 
+]]>
+        </de>
+        <fr>
+            <![CDATA[Les outils Creator vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
+
+            Changelog 1.3.0
+            - 
+            - 
+            - 
+]]>
+        </fr>
     </description>
     <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true"/>
     <l10n filenamePrefix="l10n/modDesc_l10n" />
-    <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
     <extraSourceFiles>
         <sourceFile filename="helpers/i18nUtils.lua" />
         <sourceFile filename="helpers/helpLineLoader.lua" />
@@ -42,6 +63,6 @@
         <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
         <input name="CT_CAMY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_MIDDLE" visible="true" />
         <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
-        <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_g" device="1" visible="true" />
+        <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_l" device="1" visible="true" />
     </inputBindings>
 </modDesc>

@@ -1,7 +1,7 @@
 --
 -- CreatorTools
 --
--- @author  TyKonKet
+-- @author TyKonKet
 -- @date 15/02/2017
 function margeI18N()
     for k, v in pairs(g_i18n.texts) do

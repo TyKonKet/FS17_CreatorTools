@@ -1,7 +1,7 @@
 --
 -- CreatorTools
 --
--- @author  TyKonKet
+-- @author TyKonKet
 -- @date 14/02/2017
 function loadHelpLine(xml, helpLineCategories, helpLineCategorySelectorElement, modDirectory)
     xml = loadXMLFile("customHelpLineViewContentXML", xml);

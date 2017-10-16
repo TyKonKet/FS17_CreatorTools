@@ -1,7 +1,7 @@
 --
 -- CreatorTools
 --
--- @author  TyKonKet
+-- @author TyKonKet
 -- @date 11/01/2017
 CreatorTools = {};
 CreatorTools.name = "CreatorTools";
