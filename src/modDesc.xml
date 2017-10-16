@@ -12,27 +12,39 @@
             <![CDATA[Creator Tools allow you to do magics with HUD, camera and much more.
 
             Changelog 1.3.0
-            - 
-            - 
-            - 
+            - Added new translations
+            - Removed helpline at start
+            - Fixed issues with "Start" button
+            - Dirt also to selected implement
+            - Changed dirt and speed steps
+            - Improved camera smoothness
+            - Increased camera height range
 ]]>
         </en>
         <de>
             <![CDATA[Schöpfer-Werkzeuge erlauben Ihnen, Magie mit HUD, Kamera und viel mehr zu tun.
 
             Changelog 1.3.0
-            - 
-            - 
-            - 
+            - Added new translations
+            - Removed helpline at start
+            - Fixed issues with "Start" button
+            - Dirt also to selected implement
+            - Changed dirt and speed steps
+            - Improved camera smoothness
+            - Increased camera height range
 ]]>
         </de>
         <fr>
             <![CDATA[Les outils Creator vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
 
             Changelog 1.3.0
-            - 
-            - 
-            - 
+            - Added new translations
+            - Removed helpline at start
+            - Fixed issues with "Start" button
+            - Dirt also to selected implement
+            - Changed dirt and speed steps
+            - Improved camera smoothness
+            - Increased camera height range
 ]]>
         </fr>
     </description>
