@@ -180,12 +180,12 @@ end
 
 function CreatorTools:update(dt)
     self.walkingSpeedFadeEffect:update(dt);
-    self.target.camyIntAlpha = self.target.camyIntAlpha + dt / 300;
+    self.target.camyIntAlpha = self.target.camyIntAlpha + dt / 2500;
     if self.target.camyIntAlpha > 1 then
         self.target.camyIntAlpha = 1;
     end
     g_currentMission.player.camY = Utils.lerp(g_currentMission.player.camY, self.target.camy, self.target.camyIntAlpha);
-    self.target.fovyIntAlpha = self.target.fovyIntAlpha + dt / 300;
+    self.target.fovyIntAlpha = self.target.fovyIntAlpha + dt / 2500;
     if self.target.fovyIntAlpha > 1 then
         self.target.fovyIntAlpha = 1;
     end
