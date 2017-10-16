@@ -31,8 +31,8 @@
 		<text name="gui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
 		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>
 		<text name="gui_CT_PLAYER_SPEED_TOOLTIP" text="Changes the player walking speed."/>
-		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Creative money"/>
-		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables creative money (one billion)."/>
+		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Money Cheat"/>
+		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables money cheat (one billion)."/>
 		<text name="gui_CT_SHOW_BUTTONS_HELP_TEXT" text="Show help"/>
 		<text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box."/>
 		<text name="gui_CT_MUSCLES_MODE_TEXT" text="Muscles mode"/>
