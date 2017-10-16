@@ -70,7 +70,7 @@ end
 function CTPanelGui:onCreatePlayerSpeed(element)
     self.playerSpeedElement = element;
     local speeds = {};
-    for i = 1, CreatorTools.WALKING_SPEEDs_COUNT, 1 do
+    for i = 1, CreatorTools.WALKING_SPEEDS_COUNT, 1 do
         speeds[i] = "x" .. tostring(CreatorTools.WALKING_SPEEDS[i]);
     end
     element:setTexts(speeds);
