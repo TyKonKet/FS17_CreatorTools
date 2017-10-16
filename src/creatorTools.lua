@@ -45,7 +45,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.target = {};
     self.hideCrosshair = true;
     self.hideHud = true;
-    self.showHelpLine = true;
+    self.showHelpLine = false;
     self.backup.showHelpBox = true;
     self.walkingSpeed = CreatorTools.DEFAULT_WALKING_SPEED;
     self.walkingSpeedFadeEffect = FadeEffect:new({position = {x = 0.5, y = 0.085}, size = 0.038, shadow = true, shadowPosition = {x = 0.0025, y = 0.0035}, statesTime = {0.75, 1, 0.75}});
