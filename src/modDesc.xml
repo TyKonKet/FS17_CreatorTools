@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="37">
+<modDesc descVersion="38">
     <author>TyKonKet</author>
     <version>1.3.0.0</version>
     <title>
@@ -15,23 +15,23 @@
             - Added new translations
             - Removed helpline at start
             - Fixed issues with "Start" button
-            - Dirt also to selected implement
+            - Dirt applied also to selected implement
             - Changed dirt and speed steps
             - Improved camera smoothness
             - Increased camera height range
 ]]>
         </en>
         <de>
-            <![CDATA[Schöpfer-Werkzeuge erlauben Ihnen, Magie mit HUD, Kamera und viel mehr zu tun.
+            <![CDATA[Creator-Tools erlauben Ihnen Einstellungen am HUD der Kamera und vielem mehr vorzunehmen.
 
             Changelog 1.3.0.0
-            - Added new translations
-            - Removed helpline at start
-            - Fixed issues with "Start" button
-            - Dirt also to selected implement
-            - Changed dirt and speed steps
-            - Improved camera smoothness
-            - Increased camera height range
+            - Neue Übersetzungen hinzugefügt
+            - Hilfestellung am Start entfernt
+            - Fehler mit dem "Start" Button beseitigt
+            - Schmutz wird auch auf ausgewählte Geräte aufgetragen
+            - Geänderte Schmutz- und Geschwindigkeitsstufen
+            - Verbesserte Kameraglätte
+            - Vergrößerter Arbeitsbereich der Kamera
 ]]>
         </de>
         <fr>
@@ -41,7 +41,7 @@
             - Added new translations
             - Removed helpline at start
             - Fixed issues with "Start" button
-            - Dirt also to selected implement
+            - Dirt applied also to selected implement
             - Changed dirt and speed steps
             - Improved camera smoothness
             - Increased camera height range
