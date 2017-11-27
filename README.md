@@ -1,4 +1,5 @@
 # FS17_CreatorTools
+[![Build Status](https://travis-ci.org/TyKonKet/FS17_CreatorTools.svg?branch=master)](https://travis-ci.org/TyKonKet/FS17_CreatorTools)  
 Creator Tools allow you to do magics with HUD, camera and much more.
   
 # TODO
@@ -9,11 +10,3 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [x] Renaming "Cretive Money" to "Money Cheat"
 - [x] Set dirt level on selected implement
 - [ ] Option to show real clock
-  
-# Translations
-If you want help with translations, you are welcome.  
-All translation files are under l10n folder.    
-Feel free to send a pull request and if you want leave your credits, you only need to add your name to modDesc\_l10n_$lang.xml into **translationContributors** section.  
-```xml
-<translationContributors>Some Names, Your Name</translationContributors>
-```
