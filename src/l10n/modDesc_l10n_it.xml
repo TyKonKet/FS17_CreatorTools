@@ -27,16 +27,16 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Diminuisci l'altezza della camera"/>
 		<text name="input_CT_CHANGE_DIRT" text="Cambia l'altezza della camera"/>
 		<text name="input_CT_OPEN_PANEL" text="Cambia la quantità di sporco"/>
-		<text name="gui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
-		<text name="gui_CT_HUD_TOOLTIP" text="Nasconde o mostra gli heads-up displays (HUDs)."/>
-		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Velocità di movimento"/>
-		<text name="gui_CT_PLAYER_SPEED_TOOLTIP" text="Cambia la velocità di movimento."/>
-		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Soldi infiniti"/>
-		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Abilita o disabilita i soldi 'infiniti' (un miliardo)."/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TEXT" text="Mostra aiuto"/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Abilita o disabilita i sugerimenti dei pulsanti nel box dei suggerimenti."/>
-		<text name="gui_CT_MUSCLES_MODE_TEXT" text="Modalità muscoli"/>
-		<text name="gui_CT_MUSCLES_MODE_TOOLTIP" text="Con la modalità muscoli, puoi sollevare oggetti di qualsiasi peso."/>
+		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
+		<text name="ui_CT_HUD_TOOLTIP" text="Nasconde o mostra gli heads-up displays (HUDs)."/>
+		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Velocità di movimento"/>
+		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Cambia la velocità di movimento."/>
+		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Soldi infiniti"/>
+		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Abilita o disabilita i soldi 'infiniti' (un miliardo)."/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Mostra aiuto"/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Abilita o disabilita i sugerimenti dei pulsanti nel box dei suggerimenti."/>
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Modalità muscoli"/>
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Con la modalità muscoli, puoi sollevare oggetti di qualsiasi peso."/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Generale"/>

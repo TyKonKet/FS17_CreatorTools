@@ -27,16 +27,32 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Change the camera height"/>
 		<text name="input_CT_CHANGE_DIRT" text="Change the dirt amount"/>
 		<text name="input_CT_OPEN_PANEL" text="Open Creator Tools panel"/>
-		<text name="gui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
-		<text name="gui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
-		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>
-		<text name="gui_CT_PLAYER_SPEED_TOOLTIP" text="Changes the player walking speed."/>
-		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Money Cheat"/>
-		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables money cheat (one billion)."/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TEXT" text="Show help"/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box."/>
-		<text name="gui_CT_MUSCLES_MODE_TEXT" text="Muscles mode"/>
-		<text name="gui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight."/>
+		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Open commands panel"/>
+		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
+		<text name="ui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
+		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>
+		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Changes the player walking speed."/>
+		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Money Cheat"/>
+		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables money cheat (one billion)."/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Show help"/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box."/>
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Muscles mode"/>
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight."/>
+		<text name="ui_execute" text="Execute"/>
+		<text name="ui_CT_growthStates0" text="Current"/>
+		<text name="ui_CT_growthStates1" text="Sown"/>
+		<text name="ui_CT_growthStates2" text="First stage"/>
+		<text name="ui_CT_growthStates3" text="Second stage"/>
+		<text name="ui_CT_growthStates4" text="Third stage"/>
+		<text name="ui_CT_growthStates5" text="Grown"/>
+		<text name="ui_setFieldFruit" text="Set Field Fruit"/>
+		<text name="ui_CT_setFieldFruitField" text="Field number"/>
+		<text name="ui_CT_setFieldFruitFruit" text="Fruit"/>
+		<text name="ui_CT_setFieldFruitGrowthState" text="Growth state"/>
+		<text name="ui_CT_setFieldFruitFertilizerState" text="Fertilizer state"/>
+		<text name="ui_CT_setFieldFruitPloughingState" text="Plowed"/>
+		<text name="ui_CT_setFieldFruitBuyField" text="Buy field"/>
+		<text name="ui_setFieldGround" text="Set Field Ground"/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="General"/>
