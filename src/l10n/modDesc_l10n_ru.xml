@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
-	<translationContributors>Gonimy_Vetrom (Vasil'ko)</translationContributors>
+	<translationContributors>Gonimy_Vetrom</translationContributors>
 	<description>Creator Tools позволяет расширить стандартные возможности игры.</description>
 	<texts>
 		<text name="ui_and" text="и"/>
@@ -27,6 +27,7 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Изменить высоту камеры"/>
 		<text name="input_CT_CHANGE_DIRT" text="Изменить степень загрязнённости"/>
 		<text name="input_CT_OPEN_PANEL" text="Открыть панель Creator Tools"/>
+		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Открыть командную панель"/>
 		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUD)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Скрывать или отображать элементы дисплея (HUD)."/>
 		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Скорость бега"/>
@@ -35,8 +36,23 @@
 		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Добавляет или вычитает 1 000 000 000 денег."/>
 		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Показывать подсказки"/>
 		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Включает или отключает подсказки кнопок в окне справки."/>
-		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Режим супер силы"/>
-		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме супер силы, вы можете поднять объекты любого веса."/>
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Режим суперсилы"/>
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме суперсилы, вы можете поднять объекты любого веса."/>
+		<text name="ui_execute" text="Выполнить"/>
+		<text name="ui_CT_growthStates0" text="Текущая"/>
+		<text name="ui_CT_growthStates1" text="Посеяно"/>
+		<text name="ui_CT_growthStates2" text="Первая"/>
+		<text name="ui_CT_growthStates3" text="Вторая"/>
+		<text name="ui_CT_growthStates4" text="Третья"/>
+		<text name="ui_CT_growthStates5" text="Созрел"/>
+		<text name="ui_setFieldFruit" text="Управление культурами"/>
+		<text name="ui_CT_setFieldFruitField" text="Номер поля"/>
+		<text name="ui_CT_setFieldFruitFruit" text="Культура"/>
+		<text name="ui_CT_setFieldFruitGrowthState" text="Стадия роста"/>
+		<text name="ui_CT_setFieldFruitFertilizerState" text="Степень удобренности"/>
+		<text name="ui_CT_setFieldFruitPloughingState" text="Вспахано"/>
+		<text name="ui_CT_setFieldFruitBuyField" text="Купить поле"/>
+		<text name="ui_setFieldGround" text="Управление почвой"/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Общие"/>
