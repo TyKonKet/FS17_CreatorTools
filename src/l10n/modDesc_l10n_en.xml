@@ -51,7 +51,9 @@
 		<text name="ui_CT_setFieldFruitGrowthState" text="Growth state"/>
 		<text name="ui_CT_setFieldFruitFertilizerState" text="Fertilizer state"/>
 		<text name="ui_CT_setFieldFruitPloughingState" text="Plowed"/>
+		<text name="ui_CT_setFieldFruitPloughingState_tooltip" text="The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops"/>
 		<text name="ui_CT_setFieldFruitBuyField" text="Buy field"/>
+		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost"/>
 		<text name="ui_setFieldGround" text="Set Field Ground"/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
