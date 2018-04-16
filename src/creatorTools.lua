@@ -194,6 +194,9 @@ function CreatorTools:update(dt)
 end
 
 function CreatorTools:draw()
+    if not g_currentMission.showHudEnv then
+        return
+    end
     self.walkingSpeedFadeEffect:draw()
 end
 
