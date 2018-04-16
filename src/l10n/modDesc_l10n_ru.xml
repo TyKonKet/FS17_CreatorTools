@@ -1,77 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <l10n>
-	<translationContributors>Gonimy_Vetrom</translationContributors>
-	<description>Creator Tools позволяет расширить стандартные возможности игры.</description>
-	<texts>
-		<text name="ui_and" text="и"/>
-		<text name="input_CT_HUD_TOGGLE" text="Скрыть/Показать HUD"/>
-		<text name="CT_SHOW_HUD_HELP" text="Показать HUD"/>
-		<text name="CT_HIDE_HUD_HELP" text="Скрыть HUD"/>
-		<text name="input_AXIS_CT_WALKING_SPEED_2" text="Уменьшить скорость бега"/>
-		<text name="input_AXIS_CT_WALKING_SPEED_1" text="Увеличить скорость бега"/>
-		<text name="AXIS_CT_WALKING_SPEED_HELP" text="Изменить скорость бега"/>
-		<text name="input_CT_WALKING_SPEED_DEFAULT" text="Установить на 1x скорость бега"/>
-		<text name="input_CT_FOVY_DEFAULT" text="Установить FOV камеры в стандартное значение"/>
-		<text name="input_CT_FOVY_DEFAULT_2" text="Установить FOV камеры в стандартное значение"/>
-		<text name="input_AXIS_CT_FOVY_1" text="Увеличить FOV камеры"/>
-		<text name="input_AXIS_CT_FOVY_2" text="Уменьшить FOV камеры"/>
-		<text name="input_CT_FOVY_UP" text="Увеличить FOV камеры"/>
-		<text name="input_CT_FOVY_DOWN" text="Уменьшить FOV камеры"/>
-		<text name="AXIS_CT_FOVY_HELP" text="Изменить FOV камеры"/>
-		<text name="input_CT_CAMY_DEFAULT" text="Установить высоту камеры в стандартное положение"/>
-		<text name="input_CT_CAMY_DEFAULT_2" text="Установить высоту камеры в стандартное положение"/>
-		<text name="input_AXIS_CT_CAMY_1" text="Увеличить высоту камеры"/>
-		<text name="input_AXIS_CT_CAMY_2" text="Уменьшить высоту камеры"/>
-		<text name="input_CT_CAMY_UP" text="Увеличить высоту камеры"/>
-		<text name="input_CT_CAMY_DOWN" text="Уменьшить высоту камеры"/>
-		<text name="AXIS_CT_CAMY_HELP" text="Изменить высоту камеры"/>
-		<text name="input_CT_CHANGE_DIRT" text="Изменить степень загрязнённости"/>
-		<text name="input_CT_OPEN_PANEL_V2" text="Открыть панель Creator Tools"/>
-		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Открыть командную панель"/>
-		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUD)"/>
-		<text name="ui_CT_HUD_TOOLTIP" text="Скрывать или отображать элементы дисплея (HUD)."/>
-		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Скорость бега"/>
-		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Изменяет скорость бега игрока."/>
-		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Добавить денег"/>
-		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Добавляет или вычитает 1 000 000 000 денег."/>
-		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Показывать подсказки"/>
-		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Включает или отключает подсказки кнопок в окне справки."/>
-		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Режим суперсилы"/>
-		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме суперсилы, вы можете поднять объекты любого веса."/>
-		<text name="ui_execute" text="Выполнить"/>
-		<text name="ui_CT_growthStates0" text="Текущая"/>
-		<text name="ui_CT_growthStates1" text="Посеяно"/>
-		<text name="ui_CT_growthStates2" text="Первая"/>
-		<text name="ui_CT_growthStates3" text="Вторая"/>
-		<text name="ui_CT_growthStates4" text="Третья"/>
-		<text name="ui_CT_growthStates5" text="Созрел"/>
-		<text name="ui_setFieldFruit" text="Управление культурами"/>
-		<text name="ui_CT_setFieldFruitField" text="Номер поля"/>
-		<text name="ui_CT_setFieldFruitFruit" text="Культура"/>
-		<text name="ui_CT_setFieldFruitGrowthState" text="Стадия роста"/>
-		<text name="ui_CT_setFieldFruitFertilizerState" text="Степень удобренности"/>
-		<text name="ui_CT_setFieldFruitPloughingState" text="Вспахано"/>
-		<text name="ui_CT_setFieldFruitBuyField" text="Купить поле"/>
-		<text name="ui_setFieldGround" text="Управление почвой"/>
-		<!-- HelpLine texts -->
-		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
-		<text name="hl_CT_TITLE_00" text="Общие"/>
-		<text name="hl_CT_TEXT_00_00" text="Как следует из названия, этот мод предназначен для создателей (например, стримеров и создателей видео), но также полезен для обычных игроков, которым необходимы дополнительные инструменты."/>
-		<text name="hl_CT_TEXT_00_01" text="Основные особенности перечислены и объяснены здесь, вы можете открыть панель мода через $input_CT_OPEN_PANEL_V2;."/>
-		<text name="hl_CT_TITLE_01" text="Скрытие HUD"/>
-		<text name="hl_CT_TEXT_01_00" text="Вы можете скрыть или отбразить HUDs (heads-up displays) нажав $input_CT_HUD_TOGGLE;."/>
-		<text name="hl_CT_TITLE_02" text="Скорость передвижения"/>
-		<text name="hl_CT_TEXT_02_00" text="Вы можете увеличивать или уменьшать скорость передвижения $input_AXIS_CT_WALKING_SPEED;."/>
-		<text name="hl_CT_TEXT_02_01" text="Вы также можете вернуть скорость к стандартному значению $input_CT_WALKING_SPEED_DEFAULT;."/>
-		<text name="hl_CT_TITLE_03" text="Поднятие камеры"/>
-		<text name="hl_CT_TEXT_03_00" text="Вы можете поднять и опустить камеру $input_AXIS_CT_CAMY; или $input_CT_CAMY_UP; и $input_CT_CAMY_DOWN;."/>
-		<text name="hl_CT_TEXT_03_01" text="Вы также можете вернуться к стандартной высоте $input_CT_CAMY_DEFAULT; или $input_CT_CAMY_DEFAULT_2;."/>
-		<text name="hl_CT_TITLE_04" text="Приближение камеры"/>
-		<text name="hl_CT_TEXT_04_00" text="Вы можете приближать и отдалять камеру $input_AXIS_CT_FOVY; или $input_CT_FOVY_UP; и $input_CT_FOVY_DOWN;."/>
-		<text name="hl_CT_TEXT_04_01" text="Вы можете вернуться к стандартному значению $input_CT_FOVY_DEFAULT; или $input_CT_FOVY_DEFAULT_2;."/>
-		<text name="hl_CT_TITLE_05" text="Изменение загрязнённости"/>
-		<text name="hl_CT_TEXT_05_00" text="Когда вы находитесь на транспортном средстве, вы можете изменять степень его загрязнённости $input_CT_CHANGE_DIRT;."/>
-		<text name="hl_CT_TITLE_06" text="Доп. ускорение времени"/>
-		<text name="hl_CT_TEXT_06_00" text="Этот мод добавляет семь новых шкал времени (от 240x до 15360x), вы можете установить их $input_INCREASE_TIMESCALE; и $input_DECREASE_TIMESCALE;."/>
-	</texts>
+    <translationContributors>Gonimy_Vetrom</translationContributors>
+    <texts>
+        <text name="input_CT_HUD_TOGGLE" text="Скрыть/Показать HUD" />
+        <text name="CT_SHOW_HUD_HELP" text="Показать HUD" />
+        <text name="CT_HIDE_HUD_HELP" text="Скрыть HUD" />
+        <text name="input_AXIS_CT_WALKING_SPEED_2" text="Уменьшить скорость бега" />
+        <text name="input_AXIS_CT_WALKING_SPEED_1" text="Увеличить скорость бега" />
+        <text name="AXIS_CT_WALKING_SPEED_HELP" text="Изменить скорость бега" />
+        <text name="input_CT_WALKING_SPEED_DEFAULT" text="Установить на 1x скорость бега" />
+        <text name="input_CT_FOVY_DEFAULT" text="Установить FOV камеры в стандартное значение" />
+        <text name="input_CT_FOVY_DEFAULT_2" text="Установить FOV камеры в стандартное значение" />
+        <text name="input_AXIS_CT_FOVY_1" text="Увеличить FOV камеры" />
+        <text name="input_AXIS_CT_FOVY_2" text="Уменьшить FOV камеры" />
+        <text name="input_CT_FOVY_UP" text="Увеличить FOV камеры" />
+        <text name="input_CT_FOVY_DOWN" text="Уменьшить FOV камеры" />
+        <text name="AXIS_CT_FOVY_HELP" text="Изменить FOV камеры" />
+        <text name="input_CT_CAMY_DEFAULT" text="Установить высоту камеры в стандартное положение" />
+        <text name="input_CT_CAMY_DEFAULT_2" text="Установить высоту камеры в стандартное положение" />
+        <text name="input_AXIS_CT_CAMY_1" text="Увеличить высоту камеры" />
+        <text name="input_AXIS_CT_CAMY_2" text="Уменьшить высоту камеры" />
+        <text name="input_CT_CAMY_UP" text="Увеличить высоту камеры" />
+        <text name="input_CT_CAMY_DOWN" text="Уменьшить высоту камеры" />
+        <text name="AXIS_CT_CAMY_HELP" text="Изменить высоту камеры" />
+        <text name="input_CT_CHANGE_DIRT" text="Изменить степень загрязнённости" />
+        <text name="input_CT_OPEN_PANEL_V2" text="Открыть панель Creator Tools" />
+        <text name="input_CT_OPEN_COMMANDS_PANEL" text="Открыть командную панель" />
+        <text name="ui_and" text="и" />
+        <!-- Missing translation of "This action can be done only by admins, please do login to keep going" -->
+        <text name="ui_CT_ADMIN_ONLY_ACTION" text="" />
+        <text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUD)" />
+        <text name="ui_CT_HUD_TOOLTIP" text="Скрывать или отображать элементы дисплея (HUD)." />
+        <text name="ui_CT_PLAYER_SPEED_TEXT" text="Скорость бега" />
+        <text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Изменяет скорость бега игрока." />
+        <text name="ui_CT_CREATIVE_MONEY_TEXT" text="Добавить денег" />
+        <text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Добавляет или вычитает 1 000 000 000 денег." />
+        <text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Показывать подсказки" />
+        <text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Включает или отключает подсказки кнопок в окне справки." />
+        <text name="ui_CT_MUSCLES_MODE_TEXT" text="Режим суперсилы" />
+        <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме суперсилы, вы можете поднять объекты любого веса." />
+        <!-- Missing translation of "Real clock" -->
+        <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="" />
+        <!-- Missing translation of "Hides or shows the real clock." -->
+        <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="" />
+        <text name="ui_execute" text="Выполнить" />
+        <text name="ui_CT_growthStates0" text="Текущая" />
+        <text name="ui_CT_growthStates1" text="Посеяно" />
+        <text name="ui_CT_growthStates2" text="Первая" />
+        <text name="ui_CT_growthStates3" text="Вторая" />
+        <text name="ui_CT_growthStates4" text="Третья" />
+        <text name="ui_CT_growthStates5" text="Созрел" />
+        <text name="ui_setFieldFruit" text="Управление культурами" />
+        <text name="ui_CT_setFieldFruitField" text="Номер поля" />
+        <text name="ui_CT_setFieldFruitFruit" text="Культура" />
+        <text name="ui_CT_setFieldFruitGrowthState" text="Стадия роста" />
+        <text name="ui_CT_setFieldFruitFertilizerState" text="Степень удобренности" />
+        <text name="ui_CT_setFieldFruitPloughingState" text="Вспахано" />
+        <!-- Missing translation of "The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." -->
+        <text name="ui_CT_setFieldFruitPloughingState_tooltip" text="" />
+        <text name="ui_CT_setFieldFruitBuyField" text="Купить поле" />
+        <!-- Missing translation of "If you don't own this field, it will become yours at no additional cost." -->
+        <text name="ui_CT_setFieldFruitBuyField_tooltip" text="" />
+        <text name="ui_setFieldGround" text="Управление почвой" />
+        <text name="hl_CT_CATEGORY" text="Creator Tools" />
+        <text name="hl_CT_TITLE_00" text="Общие" />
+        <text name="hl_CT_TEXT_00_00" text="Как следует из названия, этот мод предназначен для создателей (например, стримеров и создателей видео), но также полезен для обычных игроков, которым необходимы дополнительные инструменты." />
+        <text name="hl_CT_TEXT_00_01" text="Основные особенности перечислены и объяснены здесь, вы можете открыть панель мода через $input_CT_OPEN_PANEL_V2;." />
+        <text name="hl_CT_TITLE_01" text="Скрытие HUD" />
+        <text name="hl_CT_TEXT_01_00" text="Вы можете скрыть или отбразить HUDs (heads-up displays) нажав $input_CT_HUD_TOGGLE;." />
+        <text name="hl_CT_TITLE_02" text="Скорость передвижения" />
+        <text name="hl_CT_TEXT_02_00" text="Вы можете увеличивать или уменьшать скорость передвижения $input_AXIS_CT_WALKING_SPEED;." />
+        <text name="hl_CT_TEXT_02_01" text="Вы также можете вернуть скорость к стандартному значению $input_CT_WALKING_SPEED_DEFAULT;." />
+        <text name="hl_CT_TITLE_03" text="Поднятие камеры" />
+        <text name="hl_CT_TEXT_03_00" text="Вы можете поднять и опустить камеру $input_AXIS_CT_CAMY; или $input_CT_CAMY_UP; и $input_CT_CAMY_DOWN;." />
+        <text name="hl_CT_TEXT_03_01" text="Вы также можете вернуться к стандартной высоте $input_CT_CAMY_DEFAULT; или $input_CT_CAMY_DEFAULT_2;." />
+        <text name="hl_CT_TITLE_04" text="Приближение камеры" />
+        <text name="hl_CT_TEXT_04_00" text="Вы можете приближать и отдалять камеру $input_AXIS_CT_FOVY; или $input_CT_FOVY_UP; и $input_CT_FOVY_DOWN;." />
+        <text name="hl_CT_TEXT_04_01" text="Вы можете вернуться к стандартному значению $input_CT_FOVY_DEFAULT; или $input_CT_FOVY_DEFAULT_2;." />
+        <text name="hl_CT_TITLE_05" text="Изменение загрязнённости" />
+        <text name="hl_CT_TEXT_05_00" text="Когда вы находитесь на транспортном средстве, вы можете изменять степень его загрязнённости $input_CT_CHANGE_DIRT;." />
+        <text name="hl_CT_TITLE_06" text="Доп. ускорение времени" />
+        <text name="hl_CT_TEXT_06_00" text="Этот мод добавляет семь новых шкал времени (от 240x до 15360x), вы можете установить их $input_INCREASE_TIMESCALE; и $input_DECREASE_TIMESCALE;." />
+    </texts>
 </l10n>
