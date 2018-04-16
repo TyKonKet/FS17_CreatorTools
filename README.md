@@ -9,4 +9,4 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [x] Showing the player speed when changed  
 - [x] Renaming "Cretive Money" to "Money Cheat"
 - [x] Set dirt level on selected implement
-- [ ] Option to show real clock
+- [x] Option to show real clock

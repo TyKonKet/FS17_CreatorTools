@@ -32,7 +32,7 @@ CreatorTools.DIRT_STEPS_COUNT = 9
 
 function CreatorTools:print(text, ...)
     if self.debug then
-        local start = string.format("%s[%s] -> ", self.name, getDate("%H:%M:%S"), pre)
+        local start = string.format("%s[%s] -> ", self.name, getDate("%H:%M:%S"))
         local ptext = string.format(text, ...)
         print(string.format("%s%s", start, ptext))
     end
@@ -65,6 +65,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.axisInputCamy = VirtualAxis:new("AXIS_CT_CAMY")
     self.showButtonsHelp = true
     self.musclesMode = false
+    self.showRealClock = true
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement)
     self.guis = {}
     self.guis["cTPanelGui"] = CTPanelGui:new()
@@ -140,6 +141,7 @@ function CreatorTools:loadSavegame()
             self.backup.money = Utils.getNoNil(getXMLInt(xml, "creatorTools.backup#money"), self.backup.money)
             self.showButtonsHelp = Utils.getNoNil(getXMLBool(xml, "creatorTools#showButtonsHelp"), self.showButtonsHelp)
             self.musclesMode = Utils.getNoNil(getXMLBool(xml, "creatorTools.player#musclesMode"), self.musclesMode)
+            self.showRealClock = Utils.getNoNil(getXMLBool(xml, "creatorTools#showRealClock"), self.showRealClock)
             self.showHelpLine = Utils.getNoNil(getXMLBool(xml, "creatorTools.helpLine#show"), self.showHelpLine)
             delete(xml)
         end
@@ -161,6 +163,7 @@ function CreatorTools:saveSavegame()
         setXMLInt(xml, "creatorTools.backup#money", self.backup.money)
         setXMLBool(xml, "creatorTools#showButtonsHelp", self.showButtonsHelp)
         setXMLBool(xml, "creatorTools.player#musclesMode", self.musclesMode)
+        setXMLBool(xml, "creatorTools#showRealClock", self.showRealClock)
         setXMLBool(xml, "creatorTools.helpLine#show", self.showHelpLine)
         saveXMLFile(xml)
         delete(xml)
@@ -194,10 +197,23 @@ function CreatorTools:update(dt)
 end
 
 function CreatorTools:draw()
-    if not g_currentMission.showHudEnv then
+    if not g_currentMission.showHudEnv or not g_currentMission.renderTime then
         return
     end
     self.walkingSpeedFadeEffect:draw()
+
+    self:renderRealClock()
+end
+
+function CreatorTools:renderRealClock()
+    if not self.showRealClock then
+        return
+    end
+    local fontSize = g_gameSettings:getValue("uiScale") * 0.027
+    local time = getDate("%H:%M:%S")
+    posX = 0.9975 - getTextWidth(fontSize, time)
+    posY = 0.9999 - getTextHeight(fontSize, time)
+    renderText(posX, posY, fontSize, time)
 end
 
 function CreatorTools:checkInputs(dt)
@@ -214,6 +230,7 @@ function CreatorTools:checkInputs(dt)
         end
     end
     if InputBinding.hasEvent(InputBinding.CT_OPEN_COMMANDS_PANEL, true) then
+        --TODO: show warning in mp if not master user
         if self.guis.cTCommandsPanel.isOpen then
             self.guis.cTCommandsPanel:onClickBack()
         elseif g_gui.currentGui == nil then

@@ -24,6 +24,7 @@ function CTPanelGui:onOpen()
     self.creativeMoneyElement:setIsChecked(CreatorTools.backup.money ~= -1)
     self.showButtonsHelpElement:setIsChecked(CreatorTools.showButtonsHelp)
     self.musclesModeElement:setIsChecked(CreatorTools.musclesMode)
+    self.showRealClockElement:setIsChecked(CreatorTools.showRealClock)
 end
 
 function CTPanelGui:onClose()
@@ -41,6 +42,7 @@ function CTPanelGui:onClickOk()
     CreatorTools:setCreativeMoney(self.creativeMoneyElement:getIsChecked())
     CreatorTools.showButtonsHelp = self.showButtonsHelpElement:getIsChecked()
     CreatorTools:setMusclesMode(self.musclesModeElement:getIsChecked())
+    CreatorTools.showRealClock = self.showRealClockElement:getIsChecked()
     self:onClickBack()
 end
 
@@ -90,4 +92,8 @@ end
 
 function CTPanelGui:onCreateMusclesMode(element)
     self.musclesModeElement = element
+end
+
+function CTPanelGui:onCreateShowRealClock(element)
+    self.showRealClockElement = element
 end

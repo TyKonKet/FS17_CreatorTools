@@ -38,6 +38,8 @@
 		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box."/>
 		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Muscles mode"/>
 		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight."/>
+		<text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Real clock"/>
+		<text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Hides or shows the real clock."/>
 		<text name="ui_execute" text="Execute"/>
 		<text name="ui_CT_growthStates0" text="Current"/>
 		<text name="ui_CT_growthStates1" text="Sown"/>
@@ -51,9 +53,9 @@
 		<text name="ui_CT_setFieldFruitGrowthState" text="Growth state"/>
 		<text name="ui_CT_setFieldFruitFertilizerState" text="Fertilizer state"/>
 		<text name="ui_CT_setFieldFruitPloughingState" text="Plowed"/>
-		<text name="ui_CT_setFieldFruitPloughingState_tooltip" text="The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops"/>
+		<text name="ui_CT_setFieldFruitPloughingState_tooltip" text="The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops."/>
 		<text name="ui_CT_setFieldFruitBuyField" text="Buy field"/>
-		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost"/>
+		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost."/>
 		<text name="ui_setFieldGround" text="Set Field Ground"/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
