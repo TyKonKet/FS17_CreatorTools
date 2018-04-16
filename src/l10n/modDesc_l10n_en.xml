@@ -3,7 +3,6 @@
 	<translationContributors>TyKonKet</translationContributors>
 	<description>Creator Tools allow you to do magics with HUD, camera and much more.</description>
 	<texts>
-		<text name="ui_and" text="and"/>
 		<text name="input_CT_HUD_TOGGLE" text="Hide/Show HUD"/>
 		<text name="CT_SHOW_HUD_HELP" text="Show HUD"/>
 		<text name="CT_HIDE_HUD_HELP" text="Hide HUD"/>
@@ -28,6 +27,8 @@
 		<text name="input_CT_CHANGE_DIRT" text="Change the dirt amount"/>
 		<text name="input_CT_OPEN_PANEL_V2" text="Open Creator Tools panel"/>
 		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Open commands panel"/>
+		<text name="ui_and" text="and"/>
+		<text name="ui_CT_ADMIN_ONLY_ACTION" text="This action can be done only by admins, please do login to keep going"/>
 		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
 		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>

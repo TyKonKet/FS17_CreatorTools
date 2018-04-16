@@ -231,10 +231,14 @@ function CreatorTools:checkInputs(dt)
     end
     if InputBinding.hasEvent(InputBinding.CT_OPEN_COMMANDS_PANEL, true) then
         --TODO: show warning in mp if not master user
-        if self.guis.cTCommandsPanel.isOpen then
-            self.guis.cTCommandsPanel:onClickBack()
-        elseif g_gui.currentGui == nil then
-            g_gui:showGui("CTCommandsPanel")
+        if g_currentMission.missionDynamicInfo.isMultiplayer and not g_currentMission.isMasterUser then
+            g_currentMission:showBlinkingWarning(g_i18n:getText("ui_CT_ADMIN_ONLY_ACTION"), 2000)
+        else
+            if self.guis.cTCommandsPanel.isOpen then
+                self.guis.cTCommandsPanel:onClickBack()
+            elseif g_gui.currentGui == nil then
+                g_gui:showGui("CTCommandsPanel")
+            end
         end
     end
     if g_currentMission.controlledVehicle == nil then
