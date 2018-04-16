@@ -206,14 +206,14 @@ function CreatorTools:checkInputs(dt)
     if InputBinding.hasEvent(InputBinding.CT_OPEN_PANEL_V2, true) then
         if self.guis.cTPanelGui.isOpen then
             self.guis.cTPanelGui:onClickBack()
-        else
+        elseif g_gui.currentGui == nil then
             g_gui:showGui("CTPanelGui")
         end
     end
     if InputBinding.hasEvent(InputBinding.CT_OPEN_COMMANDS_PANEL, true) then
         if self.guis.cTCommandsPanel.isOpen then
             self.guis.cTCommandsPanel:onClickBack()
-        else
+        elseif g_gui.currentGui == nil then
             g_gui:showGui("CTCommandsPanel")
         end
     end
