@@ -27,16 +27,16 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Change the camera height"/>
 		<text name="input_CT_CHANGE_DIRT" text="Change the dirt amount"/>
 		<text name="input_CT_OPEN_PANEL" text="Open Creator Tools panel"/>
-		<text name="gui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
-		<text name="gui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
-		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>
-		<text name="gui_CT_PLAYER_SPEED_TOOLTIP" text="Changes the player walking speed."/>
-		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Creative money"/>
-		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables creative money (one billion)."/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TEXT" text="Show help"/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box."/>
-		<text name="gui_CT_MUSCLES_MODE_TEXT" text="Muscles mode"/>
-		<text name="gui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight."/>
+		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
+		<text name="ui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
+		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>
+		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Changes the player walking speed."/>
+		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Creative money"/>
+		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables creative money (one billion)."/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Show help"/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box."/>
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Muscles mode"/>
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight."/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="General"/>

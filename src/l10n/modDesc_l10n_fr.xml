@@ -27,16 +27,16 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Modifier la hauteur de la caméra"/>
 		<text name="input_CT_CHANGE_DIRT" text="Creator Tools : Modifier la quantité de salissure"/>
 		<text name="input_CT_OPEN_PANEL" text="Creator Tools : Ouvrir le menu Creator Tools"/>
-		<text name="gui_CT_HUD_TEXT" text="Affichage tête haute (ATH / HUDs)"/>
-		<text name="gui_CT_HUD_TOOLTIP" text="Afficher ou masquer l'affichage tête haute (ATH / HUDs)."/>
-		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Vitesse à pied"/>
-		<text name="gui_CT_PLAYER_SPEED_TOOLTIP" text="Modifier la vitesse du joueur à pied."/>
-		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Triche solde du compte"/>
-		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Activer ou désactiver la triche du solde du compte (un milliard)"/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TEXT" text="Afficher l'aide"/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Activer ou désactiver les bouttons d'aides dans la fenêtre d'aide."/>
-		<text name="gui_CT_MUSCLES_MODE_TEXT" text="Mode muscles"/>
-		<text name="gui_CT_MUSCLES_MODE_TOOLTIP" text="Avec le mode muscles, vous pouvez porter des objets quelque soit leur poids."/>
+		<text name="ui_CT_HUD_TEXT" text="Affichage tête haute (ATH / HUDs)"/>
+		<text name="ui_CT_HUD_TOOLTIP" text="Afficher ou masquer l'affichage tête haute (ATH / HUDs)."/>
+		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Vitesse à pied"/>
+		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Modifier la vitesse du joueur à pied."/>
+		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Triche solde du compte"/>
+		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Activer ou désactiver la triche du solde du compte (un milliard)"/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Afficher l'aide"/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Activer ou désactiver les bouttons d'aides dans la fenêtre d'aide."/>
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Mode muscles"/>
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Avec le mode muscles, vous pouvez porter des objets quelque soit leur poids."/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Général"/>

@@ -27,16 +27,16 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Ändern Sie die Kamerahöhe"/>
 		<text name="input_CT_CHANGE_DIRT" text="Ändern Sie die Schmutzmenge"/>
 		<text name="input_CT_OPEN_PANEL" text="Öffnen Sie das Creator-Tools"/>
-		<text name="gui_CT_HUD_TEXT" text="Heads-Up-Displays (HUDs)"/>
-		<text name="gui_CT_HUD_TOOLTIP" text="Zeigt die Heads-Up-Displays (HUDs) an."/>
-		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Gehgeschwindigkeit"/>
-		<text name="gui_CT_PLAYER_SPEED_TOOLTIP" text="Ändert die Geschwindigkeit des Spielers."/>
-		<text name="gui_CT_CREATIVE_MONEY_TEXT" text="Geld Cheat"/>
-		<text name="gui_CT_CREATIVE_MONEY_TOOLTIP" text="Aktiviert oder deaktiviert unendliches Geld (eine Milliarde)."/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TEXT" text="Zeig Hilfe"/>
-		<text name="gui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Aktiviert oder deaktiviert die Schaltflächenhilfe in der Hilfe."/>
-		<text name="gui_CT_MUSCLES_MODE_TEXT" text="Muskeln Modus"/>
-		<text name="gui_CT_MUSCLES_MODE_TOOLTIP" text="Mit dem Muskelmodus können Sie Objekte mit beliebigem Gewicht anheben."/>
+		<text name="ui_CT_HUD_TEXT" text="Heads-Up-Displays (HUDs)"/>
+		<text name="ui_CT_HUD_TOOLTIP" text="Zeigt die Heads-Up-Displays (HUDs) an."/>
+		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Gehgeschwindigkeit"/>
+		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Ändert die Geschwindigkeit des Spielers."/>
+		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Geld Cheat"/>
+		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Aktiviert oder deaktiviert unendliches Geld (eine Milliarde)."/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Zeig Hilfe"/>
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Aktiviert oder deaktiviert die Schaltflächenhilfe in der Hilfe."/>
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Muskeln Modus"/>
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Mit dem Muskelmodus können Sie Objekte mit beliebigem Gewicht anheben."/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="General"/>
