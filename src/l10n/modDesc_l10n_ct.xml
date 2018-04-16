@@ -26,7 +26,7 @@
 		<text name="input_CT_CAMY_DOWN" text="Decrease the camera height"/>
 		<text name="AXIS_CT_CAMY_HELP" text="Change the camera height"/>
 		<text name="input_CT_CHANGE_DIRT" text="Change the dirt amount"/>
-		<text name="input_CT_OPEN_PANEL" text="Open Creator Tools panel"/>
+		<text name="input_CT_OPEN_PANEL_V2" text="Open Creator Tools panel"/>
 		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)."/>
 		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Walking speed"/>
@@ -41,7 +41,7 @@
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="General"/>
 		<text name="hl_CT_TEXT_00_00" text="As the name says, this mod is meant for creators (e.g. streamers and videomakers) but is also useful for common players that needs extra tools."/>
-		<text name="hl_CT_TEXT_00_01" text="The main features are listed and explained here, you can open the mod panel with the $input_CT_OPEN_PANEL;."/>
+		<text name="hl_CT_TEXT_00_01" text="The main features are listed and explained here, you can open the mod panel with the $input_CT_OPEN_PANEL_V2;."/>
 		<text name="hl_CT_TITLE_01" text="HUD hide"/>
 		<text name="hl_CT_TEXT_01_00" text="You can hide and show the HUDs (heads-up displays) with the $input_CT_HUD_TOGGLE;."/>
 		<text name="hl_CT_TITLE_02" text="Player speed"/>

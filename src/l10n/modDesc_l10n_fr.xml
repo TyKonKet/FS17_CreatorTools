@@ -26,7 +26,7 @@
 		<text name="input_CT_CAMY_DOWN" text="Creator Tools : Diminuer la hauteur de la caméra"/>
 		<text name="AXIS_CT_CAMY_HELP" text="Modifier la hauteur de la caméra"/>
 		<text name="input_CT_CHANGE_DIRT" text="Creator Tools : Modifier la quantité de salissure"/>
-		<text name="input_CT_OPEN_PANEL" text="Creator Tools : Ouvrir le menu Creator Tools"/>
+		<text name="input_CT_OPEN_PANEL_V2" text="Creator Tools : Ouvrir le menu Creator Tools"/>
 		<text name="ui_CT_HUD_TEXT" text="Affichage tête haute (ATH / HUDs)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Afficher ou masquer l'affichage tête haute (ATH / HUDs)."/>
 		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Vitesse à pied"/>
@@ -41,7 +41,7 @@
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Général"/>
 		<text name="hl_CT_TEXT_00_00" text="Comme son nom l'indique, ce mod est fait pour les créateurs (les streamers et créateurs de vidéo par exemple) mais aussi très utile pour les joueurs qui ont besoin d'outil supplémentaire."/>
-		<text name="hl_CT_TEXT_00_01" text="Les fonctionnalitées principales sont listées et expliquées içi, vous pouvez ouvrir le menu du mod avec : $input_CT_OPEN_PANEL;."/>
+		<text name="hl_CT_TEXT_00_01" text="Les fonctionnalitées principales sont listées et expliquées içi, vous pouvez ouvrir le menu du mod avec : $input_CT_OPEN_PANEL_V2;."/>
 		<text name="hl_CT_TITLE_01" text="Masquer l'ATH (HUD)"/>
 		<text name="hl_CT_TEXT_01_00" text="Vous pouvez masquer et afficher l'ATH (HUDs) avec : $input_CT_HUD_TOGGLE;."/>
 		<text name="hl_CT_TITLE_02" text="Vitesse à pied"/>

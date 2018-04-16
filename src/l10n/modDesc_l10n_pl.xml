@@ -26,7 +26,7 @@
 		<text name="input_CT_CAMY_DOWN" text="Zmniejsz wysokość kamery"/>
 		<text name="AXIS_CT_CAMY_HELP" text="Zmiana wysokości kamery"/>
 		<text name="input_CT_CHANGE_DIRT" text="Zmiana poziomu zabrudzeń"/>
-		<text name="input_CT_OPEN_PANEL" text="Otwórz panel Creator Tools"/>
+		<text name="input_CT_OPEN_PANEL_V2" text="Otwórz panel Creator Tools"/>
 		<text name="gui_CT_HUD_TEXT" text="Wyświetlacze przezierne (HUDy)"/>
 		<text name="gui_CT_HUD_TOOLTIP" text="Ukrywa lub pokazuje wyświetlacze przezierne (HUDy)."/>
 		<text name="gui_CT_PLAYER_SPEED_TEXT" text="Prędkość chodu"/>
@@ -41,7 +41,7 @@
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Ogólne"/>
 		<text name="hl_CT_TEXT_00_00" text="Jak sama nazwa mów, ten mod jest przeznaczony dla twórców (np. streamer'ów i videomaker'ów), ale jest również przydatny dla zwykłych graczy, którzy potrzebują dodatkowych narzędzi."/>
-		<text name="hl_CT_TEXT_00_01" text="Główne funkcje zostały wymienione i wyjaśnione tutaj, możesz otworzyć panel modu za pomocą $input_CT_OPEN_PANEL;."/>
+		<text name="hl_CT_TEXT_00_01" text="Główne funkcje zostały wymienione i wyjaśnione tutaj, możesz otworzyć panel modu za pomocą $input_CT_OPEN_PANEL_V2;."/>
 		<text name="hl_CT_TITLE_01" text="Ukrywanie HUDa"/>
 		<text name="hl_CT_TEXT_01_00" text="Możesz ukryć i pokazać HUDy (wyświetlacze przezierne) za pomocą $input_CT_HUD_TOGGLE;."/>
 		<text name="hl_CT_TITLE_02" text="Prędkość gracza"/>

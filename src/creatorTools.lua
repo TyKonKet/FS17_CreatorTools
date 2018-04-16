@@ -203,7 +203,7 @@ function CreatorTools:checkInputs(dt)
         self:toggleHud()
         self:toggleCrosshair()
     end
-    if InputBinding.hasEvent(InputBinding.CT_OPEN_PANEL, true) then
+    if InputBinding.hasEvent(InputBinding.CT_OPEN_PANEL_V2, true) then
         if self.guis.cTPanelGui.isOpen then
             self.guis.cTPanelGui:onClickBack()
         else
@@ -281,7 +281,7 @@ function CreatorTools:drawHelpButtons()
         --g_currentMission:addHelpButtonText(g_i18n:getText("AXIS_CT_WALKING_SPEED_HELP"), InputBinding.AXIS_CT_WALKING_SPEED, nil, GS_PRIO_LOW);
         --g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_WALKING_SPEED_DEFAULT"), InputBinding.CT_WALKING_SPEED_DEFAULT, nil, GS_PRIO_LOW);
         -- show only onfoot button helps
-        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_OPEN_PANEL"), InputBinding.CT_OPEN_PANEL, nil, GS_PRIO_NORMAL)
+        g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_OPEN_PANEL_V2"), InputBinding.CT_OPEN_PANEL_V2, nil, GS_PRIO_NORMAL)
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_OPEN_COMMANDS_PANEL"), InputBinding.CT_OPEN_COMMANDS_PANEL, nil, GS_PRIO_NORMAL)
     else
         -- show only vehicle button helps

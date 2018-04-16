@@ -26,7 +26,7 @@
 		<text name="input_CT_CAMY_DOWN" text="Aumenta l'altezza della camera"/>
 		<text name="AXIS_CT_CAMY_HELP" text="Diminuisci l'altezza della camera"/>
 		<text name="input_CT_CHANGE_DIRT" text="Cambia l'altezza della camera"/>
-		<text name="input_CT_OPEN_PANEL" text="Cambia la quantità di sporco"/>
+		<text name="input_CT_OPEN_PANEL_V2" text="Cambia la quantità di sporco"/>
 		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Nasconde o mostra gli heads-up displays (HUDs)."/>
 		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Velocità di movimento"/>
@@ -41,7 +41,7 @@
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Generale"/>
 		<text name="hl_CT_TEXT_00_00" text="Come dice il nome, questa mod è pensata per i creativi (ad es. streamers e videomakers) ma è molto utile anche per giocatori che necessitano qualcosa in più."/>
-		<text name="hl_CT_TEXT_00_01" text="Le funzionalità principali sono elencate e spiegate qui inoltre puoi aprire il pannello della mod con $input_CT_OPEN_PANEL;."/>
+		<text name="hl_CT_TEXT_00_01" text="Le funzionalità principali sono elencate e spiegate qui inoltre puoi aprire il pannello della mod con $input_CT_OPEN_PANEL_V2;."/>
 		<text name="hl_CT_TITLE_01" text="Nascondere gli HUD"/>
 		<text name="hl_CT_TEXT_01_00" text="Puoi nascondere e mostrare gli HUD (heads-up displays) con $input_CT_HUD_TOGGLE;."/>
 		<text name="hl_CT_TITLE_02" text="Velocità di movimento"/>

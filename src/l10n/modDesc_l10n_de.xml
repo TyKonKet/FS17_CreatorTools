@@ -26,7 +26,7 @@
 		<text name="input_CT_CAMY_DOWN" text="Verringern Sie die Kamerahöhe"/>
 		<text name="AXIS_CT_CAMY_HELP" text="Ändern Sie die Kamerahöhe"/>
 		<text name="input_CT_CHANGE_DIRT" text="Ändern Sie die Schmutzmenge"/>
-		<text name="input_CT_OPEN_PANEL" text="Öffnen Sie das Creator-Tools"/>
+		<text name="input_CT_OPEN_PANEL_V2" text="Öffnen Sie das Creator-Tools"/>
 		<text name="ui_CT_HUD_TEXT" text="Heads-Up-Displays (HUDs)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Zeigt die Heads-Up-Displays (HUDs) an."/>
 		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Gehgeschwindigkeit"/>
@@ -41,7 +41,7 @@
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="General"/>
 		<text name="hl_CT_TEXT_00_00" text="Wie der Name schon sagt, ist dieser Mod für Entwickler (z. B. Streamer und Videomaker) gedacht, ist aber auch für gewöhnliche Spieler nützlich, die zusätzliche Tools benötigen."/>
-		<text name="hl_CT_TEXT_00_01" text="Die wichtigsten Funktionen sind hier aufgelistet und erklärt, Sie können das Mod-Panel mit dem $input_CT_OPEN_PANEL;."/>
+		<text name="hl_CT_TEXT_00_01" text="Die wichtigsten Funktionen sind hier aufgelistet und erklärt, Sie können das Mod-Panel mit dem $input_CT_OPEN_PANEL_V2;."/>
 		<text name="hl_CT_TITLE_01" text="HUD verstecken"/>
 		<text name="hl_CT_TEXT_01_00" text="Sie können die HUDs (Heads-Up-Displays) mit der $input_CT_HUD_TOGGLE;."/>
 		<text name="hl_CT_TITLE_02" text="Spielergeschwindigkeit"/>

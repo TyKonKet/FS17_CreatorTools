@@ -26,7 +26,7 @@
 		<text name="input_CT_CAMY_DOWN" text="Уменьшить высоту камеры"/>
 		<text name="AXIS_CT_CAMY_HELP" text="Изменить высоту камеры"/>
 		<text name="input_CT_CHANGE_DIRT" text="Изменить степень загрязнённости"/>
-		<text name="input_CT_OPEN_PANEL" text="Открыть панель Creator Tools"/>
+		<text name="input_CT_OPEN_PANEL_V2" text="Открыть панель Creator Tools"/>
 		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Открыть командную панель"/>
 		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUD)"/>
 		<text name="ui_CT_HUD_TOOLTIP" text="Скрывать или отображать элементы дисплея (HUD)."/>
@@ -57,7 +57,7 @@
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="Общие"/>
 		<text name="hl_CT_TEXT_00_00" text="Как следует из названия, этот мод предназначен для создателей (например, стримеров и создателей видео), но также полезен для обычных игроков, которым необходимы дополнительные инструменты."/>
-		<text name="hl_CT_TEXT_00_01" text="Основные особенности перечислены и объяснены здесь, вы можете открыть панель мода через $input_CT_OPEN_PANEL;."/>
+		<text name="hl_CT_TEXT_00_01" text="Основные особенности перечислены и объяснены здесь, вы можете открыть панель мода через $input_CT_OPEN_PANEL_V2;."/>
 		<text name="hl_CT_TITLE_01" text="Скрытие HUD"/>
 		<text name="hl_CT_TEXT_01_00" text="Вы можете скрыть или отбразить HUDs (heads-up displays) нажав $input_CT_HUD_TOGGLE;."/>
 		<text name="hl_CT_TITLE_02" text="Скорость передвижения"/>
