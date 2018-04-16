@@ -10,6 +10,11 @@ const run = require('gulp-run');
 const replace = require('gulp-replace');
 const execFile = require('child_process').execFile;
 const ftp = require("vinyl-ftp");
+const xmlbuilder = require("xmlbuilder");
+const _ = require("lodash");
+const xml2js = require("xml2js");
+const Promise = require("bluebird");
+const xmlescape = require('xml-escape');
 
 var mod = JSON.parse(fs.readFileSync("mod.json"));
 var package = JSON.parse(fs.readFileSync("package.json"));
@@ -48,8 +53,8 @@ gulp.task("startMode", () => {
 
 gulp.task("build:out", ["clean:out"], () => {
   return gulp.src(zipSources, { cwd: './src/' })
-    .pipe(replace(/{package_author}/g, package.author))  
-    .pipe(replace(/{package_version}/g, package.version + ".0"))  
+    .pipe(replace(/{package_author}/g, package.author))
+    .pipe(replace(/{package_version}/g, package.version + ".0"))
     .pipe(size())
     .pipe(zip(zipName))
     .pipe(size())
@@ -137,6 +142,150 @@ function serverStart() {
     .pipe(gutil.noop());
 }
 
-gulp.task("translation", () => {
-
+// translations generator from Realismus Modding https://github.com/RealismusModding
+gulp.task("translations", () => {
+  const languages = ["br", "cs", "ct", "cz", "de", "en", "es", "fr", "hu", "it", "jp", "kr", "nl", "pl", "pt", "ro", "ru", "tr"];
+  Promise.reduce(languages, (result, language) => {
+    return loadXML(language).then((data) => {
+      result[language] = data;
+      console.log(`result[${language}] = ${data};`)
+      return result;
+    });
+  }, {})
+    .then((data) => Promise.map(languages, (language) => {
+      if (language === "en") {
+        return Promise.resolve();
+      }
+      const path = pathForTranslation(language);
+      return createXML(data, language).then((xml) => {
+        console.log(`Writing XML file for '${language}'`);
+        return writeXML(xml, path);
+      });
+    }))
+    .then(() => {
+      console.log("Finished!");
+    })
+    .catch((err) => {
+      console.log("Error", err);
+    })
 });
+
+function createXML(data, language) {
+  if (!data[language]) {
+    data[language] = {
+      translations: {},
+      contributors: []
+    }
+  }
+  const xmlTexts = _.reduce(data["en"].translations, (result, value, key) => {
+    const trValue = data[language].translations[key];
+    if (language !== "en" && !trValue) {
+      console.log("Missing translation of '" + key + "' for", language);
+      result.push({
+        "#comment": `Missing translation of "${data["en"].translations[key]}"`
+      });
+    }
+    result.push({
+      "text": {
+        "@name": key,
+        "@text": !!trValue ? trValue : ""
+      }
+    });
+    return result
+  }, []);
+  const xmlHeader = {
+    version: "1.0",
+    encoding: "utf-8",
+    standalone: false
+  };
+  const xmlOptions = {
+    stringify: {
+      convertCommentKey: "#comment"
+    }
+  };
+  const root = xmlbuilder.create("l10n", xmlHeader, {}, xmlOptions);
+  root.ele("translationContributors", {}, data[language].contributors.join(", "));
+  root.ele("texts").ele(xmlTexts);
+  let text = root.end({
+    pretty: true,
+    indent: "    "
+  }) + "\n";
+  let newlines = data["en"].newlines;
+  const searchReg = new RegExp(/^\s*<text\s+name=\"(.*)\"\s+text=\"(.*)\"\s*\/>$\n/, "igm");
+  const padding = " ".repeat(8);
+  text = text.replace(searchReg, (match, name, value, offset, string) => {
+    if (newlines.includes(name)) {
+      return padding + "<text name=\"" + name + "\" text=\"" + value + "\" />\n\n";
+    } else {
+      return padding + "<text name=\"" + name + "\" text=\"" + value + "\" />\n";
+    }
+  });
+  return Promise.resolve(text);
+}
+
+function pathForTranslation(language) {
+  return path.join(".", "src", "l10n", `modDesc_l10n_${language}.xml`)
+}
+
+function readXML(path) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, { encoding: "utf8" }, (err, data) => {
+      if (err) {
+        return reject(err);
+      }
+      xml2js.parseString(data, (err, data) => {
+        if (err) {
+          console.log(path);
+          return reject(err);
+        }
+        resolve(data)
+      });
+    });
+  });
+}
+
+function loadXML(language) {
+  if (!fs.existsSync(pathForTranslation(language))) {
+    console.error("Failed loading " + pathForTranslation(language));
+    return Promise.resolve();
+  }
+  return readXML(pathForTranslation(language)).then((xml) => {
+    console.log(`Read XML file for '${language}'`);
+    let data = {
+      translations: {},
+      contributors: [],
+      newlines: [],
+    };
+    if (!xml.l10n) {
+      return data;
+    }
+    let contribs = _.get(xml, "l10n.translationContributors", [""])[0];
+    data.contributors = _.map(contribs.split(","), _.trim);
+    let items = _.get(xml, "l10n.texts.0.text");
+    data.translations = _.reduce(items, (result, value) => {
+      if (_.has(value, "$.name")) {
+        result[_.get(value, "$.name")] = _.get(value, "$.text", "");
+      }
+      return result;
+    }, {});
+    const fileText = fs.readFileSync(pathForTranslation(language), "utf8");
+    const reg = new RegExp(/^\s*<text\s+name=\"(.*)\"\s+text=\".*\"\s*\/>$\n\n/, "igm");
+    let match = reg.exec(fileText);
+    while (match !== null) {
+      data.newlines.push(match[1]);
+      match = reg.exec(fileText);
+    }
+    return data;
+  })
+}
+
+function writeXML(xml, path) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(path, xml, { encoding: "utf8" }, (err) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve();
+    });
+  });
+}
