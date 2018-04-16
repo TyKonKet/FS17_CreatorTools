@@ -53,8 +53,8 @@ gulp.task("startMode", () => {
 
 gulp.task("build:out", ["clean:out"], () => {
   return gulp.src(zipSources, { cwd: './src/' })
-    .pipe(replace(/{package_author}/g, package.author))
-    .pipe(replace(/{package_version}/g, package.version + ".0"))
+    .pipe(replace(/{package_author}/g, package.author, { skipBinary: true }))
+    .pipe(replace(/{package_version}/g, package.version + ".0", { skipBinary: true }))
     .pipe(size())
     .pipe(zip(zipName))
     .pipe(size())
