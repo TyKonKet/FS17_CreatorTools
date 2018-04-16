@@ -1,82 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="38">
-    <author>TyKonKet</author>
-    <version>1.3.0.0</version>
-    <title>
-        <en>Creator Tools</en>
-        <de>Creator Tools</de>
-        <fr>Creator Tools</fr>
-    </title>
-    <description>
+<modDesc descVersion="39">
+   <author>{package_author}</author>
+   <version>{package_version}</version>
+   <title>
+      <en>Creator Tools</en>
+      <de>Creator Tools</de>
+      <fr>Creator Tools</fr>
+   </title>
+   <description>
         <en>
             <![CDATA[Creator Tools allow you to do magics with HUD, camera and much more.
 
-            Changelog 1.3.0.0
+            Changelog {package_version}
             - Added new translations
             - Removed helpline at start
             - Fixed issues with "Start" button
             - Dirt applied also to selected implement
             - Changed dirt and speed steps
             - Improved camera smoothness
-            - Increased camera height range
-]]>
+            - Increased camera height range]]>
         </en>
         <de>
             <![CDATA[Creator-Tools erlauben Ihnen Einstellungen am HUD der Kamera und vielem mehr vorzunehmen.
 
-            Changelog 1.3.0.0
+            Changelog {package_version}
             - Neue Übersetzungen hinzugefügt
             - Hilfestellung am Start entfernt
             - Fehler mit dem "Start" Button beseitigt
             - Schmutz wird auch auf ausgewählte Geräte aufgetragen
             - Geänderte Schmutz- und Geschwindigkeitsstufen
             - Verbesserte Kameraglätte
-            - Vergrößerter Arbeitsbereich der Kamera
-]]>
+            - Vergrößerter Arbeitsbereich der Kamera]]>
         </de>
         <fr>
             <![CDATA[Les outils Creator vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
 
-            Changelog 1.3.0.0
+            Changelog {package_version}
             - Added new translations
             - Removed helpline at start
             - Fixed issues with "Start" button
             - Dirt applied also to selected implement
             - Changed dirt and speed steps
             - Improved camera smoothness
-            - Increased camera height range
-]]>
+            - Increased camera height range]]>
         </fr>
-    </description>
-    <iconFilename>icon.dds</iconFilename>
-    <multiplayer supported="true"/>
-    <l10n filenamePrefix="l10n/modDesc_l10n" />
-    <extraSourceFiles>
-        <sourceFile filename="helpers/i18nUtils.lua" />
-        <sourceFile filename="helpers/helpLineLoader.lua" />
-        <sourceFile filename="helpers/virtualAxis.lua" />
-        <sourceFile filename="helpers/extensions.lua" />
-        <sourceFile filename="helpers/fadeEffect.lua" />
-        <sourceFile filename="gui/cTPanelGui.lua" />
-        <sourceFile filename="gui/cTCommandsPanel.lua" />
-        <sourceFile filename="creatorTools.lua" />
-    </extraSourceFiles>
-    <inputBindings>
-        <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
-        <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_z" key2="KEY_less" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
-        <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_q" device="1" visible="true" />
-        <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lalt KEY_1" key2="KEY_lalt KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true"/>
-        <input name="CT_FOVY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
-        <input name="CT_FOVY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_UP" visible="true" />
-        <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
-        <input name="CT_FOVY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE" visible="true" />
-        <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true"/>
-        <input name="CT_CAMY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
-        <input name="CT_CAMY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_UP" visible="true" />
-        <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
-        <input name="CT_CAMY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_MIDDLE" visible="true" />
-        <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
-        <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_l" device="1" visible="true" />
-        <input name="CT_OPEN_COMMANDS_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_c" device="1" visible="true" />
-    </inputBindings>
+   </description>
+   <iconFilename>icon.dds</iconFilename>
+   <multiplayer supported="true" />
+   <l10n filenamePrefix="l10n/modDesc_l10n" />
+   <extraSourceFiles>
+      <sourceFile filename="helpers/i18nUtils.lua" />
+      <sourceFile filename="helpers/helpLineLoader.lua" />
+      <sourceFile filename="helpers/virtualAxis.lua" />
+      <sourceFile filename="helpers/extensions.lua" />
+      <sourceFile filename="helpers/fadeEffect.lua" />
+      <sourceFile filename="gui/cTPanelGui.lua" />
+      <sourceFile filename="gui/cTCommandsPanel.lua" />
+      <sourceFile filename="creatorTools.lua" />
+   </extraSourceFiles>
+   <inputBindings>
+      <input name="CT_HUD_TOGGLE" category="ONFOOT VEHICLE" key1="KEY_lshift KEY_h" device="1" visible="true" />
+      <axis name="AXIS_CT_WALKING_SPEED" category="ONFOOT" key1="KEY_z" key2="KEY_less" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true" />
+      <input name="CT_WALKING_SPEED_DEFAULT" category="ONFOOT" key1="KEY_q" device="1" visible="true" />
+      <axis name="AXIS_CT_FOVY" category="ONFOOT" key1="KEY_lalt KEY_1" key2="KEY_lalt KEY_2" device="1" invert="false" isHalfAxis="false" mouseInvert="false" visible="true" />
+      <input name="CT_FOVY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
+      <input name="CT_FOVY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_WHEEL_UP" visible="true" />
+      <input name="CT_FOVY_DEFAULT" category="ONFOOT" key1="KEY_lalt KEY_3" device="1" visible="true" />
+      <input name="CT_FOVY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE" visible="true" />
+      <axis name="AXIS_CT_CAMY" category="ONFOOT" key1="KEY_lshift KEY_2" key2="KEY_lshift KEY_1" device="1" invert="true" isHalfAxis="false" mouseInvert="true" visible="true" />
+      <input name="CT_CAMY_UP" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_DOWN" visible="true" />
+      <input name="CT_CAMY_DOWN" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_WHEEL_UP" visible="true" />
+      <input name="CT_CAMY_DEFAULT" category="ONFOOT" key1="KEY_lshift KEY_3" device="1" visible="true" />
+      <input name="CT_CAMY_DEFAULT_2" category="ONFOOT" device="1" mouse="MOUSE_BUTTON_MIDDLE" visible="true" />
+      <input name="CT_CHANGE_DIRT" category="VEHICLE" key1="KEY_lctrl KEY_d" device="1" visible="true" />
+      <input name="CT_OPEN_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_l" device="1" visible="true" />
+      <input name="CT_OPEN_COMMANDS_PANEL" category="ONFOOT VEHICLE" key1="KEY_lalt KEY_c" device="1" visible="true" />
+   </inputBindings>
 </modDesc>

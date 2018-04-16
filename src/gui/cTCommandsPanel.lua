@@ -119,9 +119,10 @@ end
 
 function CTCommandsPanel:onOpenSetFieldFruitFertilizerState(element)
     local fertilizerStates = {}
-    fertilizerStates[1] = "30%"
-    fertilizerStates[2] = "60%"
-    fertilizerStates[3] = "90%"
+    fertilizerStates[1] = "0%"
+    fertilizerStates[2] = "30%"
+    fertilizerStates[3] = "60%"
+    fertilizerStates[4] = "90%"
     self.setFieldFruitFertilizerState:setTexts(fertilizerStates)
 end
 
@@ -129,7 +130,7 @@ function CTCommandsPanel:SetFieldFruit()
     local field = self.setFieldFruitField:getState()
     local fruit = FruitUtil.fruitIndexToDesc[self.setFieldFruitFruit:getState()].name
     local growthState = self.setFieldFruitGrowthState:getState()
-    local fertilizerState = self.setFieldFruitFertilizerState:getState()
+    local fertilizerState = self.setFieldFruitFertilizerState:getState() - 1
     local ploughingState = 0
     if self.setFieldFruitPloughingState:getIsChecked() then
         ploughingState = 1

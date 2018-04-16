@@ -7,7 +7,7 @@ env:
 before_install:
   - pip install hererocks
   - hererocks lua_install -r^ --$LUA
-  - export PATH=$PATH:$PWD/lua_install/bin # Add directory with all installed binaries to PATH
+  - export PATH=$PATH:$PWD/lua_install/bin
 
 install:
   - luarocks install luacheck
@@ -22,4 +22,4 @@ branches:
 notifications:
   email:
     on_success: change
-    on_failure: always
+    on_failure: change
