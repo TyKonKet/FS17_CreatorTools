@@ -90,9 +90,6 @@ g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFu
 
 function CreatorTools:loadMap(name)
     self:print("loadMap(name:%s)", name)
-    if self.debug then
-        addConsoleCommand("AAACreatorToolseTestCommand", "", "TestCommand", self)
-    end
     self:loadSavegame()
 end
 
@@ -230,7 +227,6 @@ function CreatorTools:checkInputs(dt)
         end
     end
     if InputBinding.hasEvent(InputBinding.CT_OPEN_COMMANDS_PANEL, true) then
-        --TODO: show warning in mp if not master user
         if g_currentMission.missionDynamicInfo.isMultiplayer and not g_currentMission.isMasterUser then
             g_currentMission:showBlinkingWarning(g_i18n:getText("ui_CT_ADMIN_ONLY_ACTION"), 2000)
         else
@@ -269,14 +265,16 @@ function CreatorTools:checkInputs(dt)
         if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) and not g_gui:getIsGuiVisible() then
             self:addCamy(-1 * 0.75)
         end
-        if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT, true) then
-            self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED)
-        end
-        local walkingSpeedAxis = self.axisInputWalkingSpeed:getVirtualAxis(dt)
-        if walkingSpeedAxis ~= nil then
-            local wp = self.walkingSpeed + walkingSpeedAxis
-            if self.WALKING_SPEEDS[wp] ~= nil then
-                self:setWalkingSpeed(wp)
+        if g_gui.currentGuiName ~= "PlacementScreen" then
+            if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT) then
+                self:setWalkingSpeed(self.DEFAULT_WALKING_SPEED)
+            end
+            local walkingSpeedAxis = self.axisInputWalkingSpeed:getVirtualAxis(dt)
+            if walkingSpeedAxis ~= nil then
+                local wp = self.walkingSpeed + walkingSpeedAxis
+                if self.WALKING_SPEEDS[wp] ~= nil then
+                    self:setWalkingSpeed(wp)
+                end
             end
         end
     else
@@ -311,10 +309,6 @@ function CreatorTools:drawHelpButtons()
         -- show only vehicle button helps
         g_currentMission:addHelpButtonText(g_i18n:getText("input_CT_CHANGE_DIRT"), InputBinding.CT_CHANGE_DIRT, nil, GS_PRIO_HIGH)
     end
-end
-
-function CreatorTools:TestCommand(args)
-    --return self:setWalkingSpeed(math.floor(tonumber(args)));
 end
 
 function CreatorTools:toggleCrosshair()
