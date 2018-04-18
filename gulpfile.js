@@ -148,7 +148,6 @@ gulp.task("translations", () => {
   Promise.reduce(languages, (result, language) => {
     return loadXML(language).then((data) => {
       result[language] = data;
-      console.log(`result[${language}] = ${data};`)
       return result;
     });
   }, {})
@@ -179,16 +178,17 @@ function createXML(data, language) {
   }
   const xmlTexts = _.reduce(data["en"].translations, (result, value, key) => {
     const trValue = data[language].translations[key];
-    if (language !== "en" && !trValue) {
+    const enTrValue = data["en"].translations[key];
+    if (language !== "en" && (!trValue || trValue === enTrValue)) {
       console.log("Missing translation of '" + key + "' for", language);
       result.push({
-        "#comment": `Missing translation of "${data["en"].translations[key]}"`
+        "#comment": `Missing translation of "${enTrValue}"`
       });
     }
     result.push({
       "text": {
         "@name": key,
-        "@text": !!trValue ? trValue : ""
+        "@text": !!trValue ? trValue : enTrValue
       }
     });
     return result

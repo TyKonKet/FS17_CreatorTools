@@ -17,6 +17,7 @@
         <text name="input_CT_FOVY_DOWN" text="Diminuisci il FOV della camera" />
         <text name="AXIS_CT_FOVY_HELP" text="Cambia il FOV della camera" />
         <text name="input_CT_CAMY_DEFAULT" text="Imposta l'altezza della camera al valore predefinito" />
+        <!-- Missing translation of "Set the camera height to default value" -->
         <text name="input_CT_CAMY_DEFAULT_2" text="Set the camera height to default value" />
         <text name="input_AXIS_CT_CAMY_1" text="Imposta l'altezza della camera al valore predefinito" />
         <text name="input_AXIS_CT_CAMY_2" text="Aumenta l'altezza della camera" />
@@ -26,10 +27,11 @@
         <text name="input_CT_CHANGE_DIRT" text="Cambia l'altezza della camera" />
         <text name="input_CT_OPEN_PANEL_V2" text="Cambia la quantità di sporco" />
         <!-- Missing translation of "Open commands panel" -->
-        <text name="input_CT_OPEN_COMMANDS_PANEL" text="" />
+        <text name="input_CT_OPEN_COMMANDS_PANEL" text="Open commands panel" />
         <text name="ui_and" text="e" />
         <!-- Missing translation of "This action can be done only by admins, please do login to keep going" -->
-        <text name="ui_CT_ADMIN_ONLY_ACTION" text="" />
+        <text name="ui_CT_ADMIN_ONLY_ACTION" text="This action can be done only by admins, please do login to keep going" />
+        <!-- Missing translation of "Heads-up displays (HUDs)" -->
         <text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)" />
         <text name="ui_CT_HUD_TOOLTIP" text="Nasconde o mostra gli heads-up displays (HUDs)." />
         <text name="ui_CT_PLAYER_SPEED_TEXT" text="Velocità di movimento" />
@@ -41,43 +43,58 @@
         <text name="ui_CT_MUSCLES_MODE_TEXT" text="Modalità muscoli" />
         <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Con la modalità muscoli, puoi sollevare oggetti di qualsiasi peso." />
         <!-- Missing translation of "Real clock" -->
-        <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="" />
+        <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Real clock" />
         <!-- Missing translation of "Hides or shows the real clock." -->
-        <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="" />
+        <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Hides or shows the real clock." />
         <!-- Missing translation of "Execute" -->
-        <text name="ui_execute" text="" />
+        <text name="ui_execute" text="Execute" />
         <!-- Missing translation of "Current" -->
-        <text name="ui_CT_growthStates0" text="" />
+        <text name="ui_CT_growthStates0" text="Current" />
         <!-- Missing translation of "Sown" -->
-        <text name="ui_CT_growthStates1" text="" />
+        <text name="ui_CT_growthStates1" text="Sown" />
         <!-- Missing translation of "First stage" -->
-        <text name="ui_CT_growthStates2" text="" />
+        <text name="ui_CT_growthStates2" text="First stage" />
         <!-- Missing translation of "Second stage" -->
-        <text name="ui_CT_growthStates3" text="" />
+        <text name="ui_CT_growthStates3" text="Second stage" />
         <!-- Missing translation of "Third stage" -->
-        <text name="ui_CT_growthStates4" text="" />
+        <text name="ui_CT_growthStates4" text="Third stage" />
         <!-- Missing translation of "Grown" -->
-        <text name="ui_CT_growthStates5" text="" />
+        <text name="ui_CT_growthStates5" text="Grown" />
         <!-- Missing translation of "Set Field Fruit" -->
-        <text name="ui_setFieldFruit" text="" />
+        <text name="ui_setFieldFruit" text="Set Field Fruit" />
         <!-- Missing translation of "Field number" -->
-        <text name="ui_CT_setFieldFruitField" text="" />
+        <text name="ui_CT_setFieldFruitField" text="Field number" />
         <!-- Missing translation of "Fruit" -->
-        <text name="ui_CT_setFieldFruitFruit" text="" />
+        <text name="ui_CT_setFieldFruitFruit" text="Fruit" />
         <!-- Missing translation of "Growth state" -->
-        <text name="ui_CT_setFieldFruitGrowthState" text="" />
+        <text name="ui_CT_setFieldFruitGrowthState" text="Growth state" />
         <!-- Missing translation of "Fertilizer state" -->
-        <text name="ui_CT_setFieldFruitFertilizerState" text="" />
+        <text name="ui_CT_setFieldFruitFertilizerState" text="Fertilizer state" />
         <!-- Missing translation of "Plowed" -->
-        <text name="ui_CT_setFieldFruitPloughingState" text="" />
+        <text name="ui_CT_setFieldFruitPloughingState" text="Plowed" />
         <!-- Missing translation of "The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." -->
-        <text name="ui_CT_setFieldFruitPloughingState_tooltip" text="" />
+        <text name="ui_CT_setFieldFruitPloughingState_tooltip" text="The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." />
         <!-- Missing translation of "Buy field" -->
-        <text name="ui_CT_setFieldFruitBuyField" text="" />
+        <text name="ui_CT_setFieldFruitBuyField" text="Buy field" />
         <!-- Missing translation of "If you don't own this field, it will become yours at no additional cost." -->
-        <text name="ui_CT_setFieldFruitBuyField_tooltip" text="" />
+        <text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost." />
         <!-- Missing translation of "Set Field Ground" -->
-        <text name="ui_setFieldGround" text="" />
+        <text name="ui_setFieldGround" text="Set Field Ground" />
+        <!-- Missing translation of "Ground" -->
+        <text name="ui_CT_setFieldGroundGround" text="Ground" />
+        <!-- Missing translation of "Cultivated" -->
+        <text name="ui_CT_setFieldGroundStates_cultivator" text="Cultivated" />
+        <!-- Missing translation of "Plowed" -->
+        <text name="ui_CT_setFieldGroundStates_plough" text="Plowed" />
+        <!-- Missing translation of "Sown" -->
+        <text name="ui_CT_setFieldGroundStates_sowing" text="Sown" />
+        <!-- Missing translation of "Sown Width" -->
+        <text name="ui_CT_setFieldGroundStates_sowing_width" text="Sown Width" />
+        <!-- Missing translation of "Angle" -->
+        <text name="ui_CT_setFieldGroudAngle" text="Angle" />
+        <!-- Missing translation of "The rotation angle of the terrain texture." -->
+        <text name="ui_CT_setFieldGroudAngle_tooltip" text="The rotation angle of the terrain texture." />
+        <!-- Missing translation of "Creator Tools" -->
         <text name="hl_CT_CATEGORY" text="Creator Tools" />
         <text name="hl_CT_TITLE_00" text="Generale" />
         <text name="hl_CT_TEXT_00_00" text="Come dice il nome, questa mod è pensata per i creativi (ad es. streamers e videomakers) ma è molto utile anche per giocatori che necessitano qualcosa in più." />

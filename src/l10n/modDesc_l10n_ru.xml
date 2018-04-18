@@ -28,7 +28,7 @@
         <text name="input_CT_OPEN_COMMANDS_PANEL" text="Открыть командную панель" />
         <text name="ui_and" text="и" />
         <!-- Missing translation of "This action can be done only by admins, please do login to keep going" -->
-        <text name="ui_CT_ADMIN_ONLY_ACTION" text="" />
+        <text name="ui_CT_ADMIN_ONLY_ACTION" text="This action can be done only by admins, please do login to keep going" />
         <text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUD)" />
         <text name="ui_CT_HUD_TOOLTIP" text="Скрывать или отображать элементы дисплея (HUD)." />
         <text name="ui_CT_PLAYER_SPEED_TEXT" text="Скорость бега" />
@@ -40,9 +40,9 @@
         <text name="ui_CT_MUSCLES_MODE_TEXT" text="Режим суперсилы" />
         <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме суперсилы, вы можете поднять объекты любого веса." />
         <!-- Missing translation of "Real clock" -->
-        <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="" />
+        <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Real clock" />
         <!-- Missing translation of "Hides or shows the real clock." -->
-        <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="" />
+        <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Hides or shows the real clock." />
         <text name="ui_execute" text="Выполнить" />
         <text name="ui_CT_growthStates0" text="Текущая" />
         <text name="ui_CT_growthStates1" text="Посеяно" />
@@ -57,11 +57,26 @@
         <text name="ui_CT_setFieldFruitFertilizerState" text="Степень удобренности" />
         <text name="ui_CT_setFieldFruitPloughingState" text="Вспахано" />
         <!-- Missing translation of "The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." -->
-        <text name="ui_CT_setFieldFruitPloughingState_tooltip" text="" />
+        <text name="ui_CT_setFieldFruitPloughingState_tooltip" text="The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." />
         <text name="ui_CT_setFieldFruitBuyField" text="Купить поле" />
         <!-- Missing translation of "If you don't own this field, it will become yours at no additional cost." -->
-        <text name="ui_CT_setFieldFruitBuyField_tooltip" text="" />
+        <text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost." />
         <text name="ui_setFieldGround" text="Управление почвой" />
+        <!-- Missing translation of "Ground" -->
+        <text name="ui_CT_setFieldGroundGround" text="Ground" />
+        <!-- Missing translation of "Cultivated" -->
+        <text name="ui_CT_setFieldGroundStates_cultivator" text="Cultivated" />
+        <!-- Missing translation of "Plowed" -->
+        <text name="ui_CT_setFieldGroundStates_plough" text="Plowed" />
+        <!-- Missing translation of "Sown" -->
+        <text name="ui_CT_setFieldGroundStates_sowing" text="Sown" />
+        <!-- Missing translation of "Sown Width" -->
+        <text name="ui_CT_setFieldGroundStates_sowing_width" text="Sown Width" />
+        <!-- Missing translation of "Angle" -->
+        <text name="ui_CT_setFieldGroudAngle" text="Angle" />
+        <!-- Missing translation of "The rotation angle of the terrain texture." -->
+        <text name="ui_CT_setFieldGroudAngle_tooltip" text="The rotation angle of the terrain texture." />
+        <!-- Missing translation of "Creator Tools" -->
         <text name="hl_CT_CATEGORY" text="Creator Tools" />
         <text name="hl_CT_TITLE_00" text="Общие" />
         <text name="hl_CT_TEXT_00_00" text="Как следует из названия, этот мод предназначен для создателей (например, стримеров и создателей видео), но также полезен для обычных игроков, которым необходимы дополнительные инструменты." />
