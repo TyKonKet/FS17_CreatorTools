@@ -88,6 +88,9 @@ g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFu
 
 function CreatorTools:loadMap(name)
     self:loadSavegame()
+    if CreatorToolsCustomCommands ~= nil and CreatorToolsCustomCommands.registerCommands ~= nil then
+        CreatorToolsCustomCommands.registerCommands()
+    end
 end
 
 function CreatorTools:loadMapFinished()
@@ -160,6 +163,9 @@ function CreatorTools:saveSavegame()
 end
 
 function CreatorTools:deleteMap()
+    if CreatorToolsCustomCommands ~= nil and CreatorToolsCustomCommands.removeCommands ~= nil then
+        CreatorToolsCustomCommands.removeCommands()
+    end
 end
 
 function CreatorTools:keyEvent(unicode, sym, modifier, isDown)
