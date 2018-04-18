@@ -145,6 +145,51 @@ function CTCommandsPanel:onCreatePageSetFieldGround(element)
     self.commands[CTCommandsPanel.PAGE_SET_FIELD_GROUND] = self.SetFieldGround
 end
 
+function CTCommandsPanel:onOpenSetFieldGroundField(element)
+    local fields = {}
+    for i, v in ipairs(g_currentMission.fieldDefinitionBase.fieldDefs) do
+        fields[i] = v.fieldNumber
+    end
+    self.setFieldGroundField:setTexts(fields)
+end
+
+function CTCommandsPanel:onOpenSetFieldGroundGround(element)
+    local grounds = {}
+    local groundStates = {"cultivator", "plough", "sowing", "sowing_width"}
+    for i, v in ipairs(groundStates) do
+        grounds[i] = g_i18n:getText(string.format("ui_CT_setFieldGroundStates_%s", v))
+    end
+    self.setFieldGroundGround:setTexts(grounds)
+end
+
+function CTCommandsPanel:onOpenSetFieldGroundAngle(element)
+    local angles = {}
+    for i = 1, g_currentMission.terrainDetailAngleMaxValue + 1 do
+        angles[i] = tostring(i - 1)
+    end
+    self.setFieldGroudAngle:setTexts(angles)
+end
+
+function CTCommandsPanel:onOpenSetFieldGroundFertilizerState(element)
+    local fertilizerStates = {}
+    fertilizerStates[1] = "0%"
+    fertilizerStates[2] = "30%"
+    fertilizerStates[3] = "60%"
+    fertilizerStates[4] = "90%"
+    self.setFieldGroundFertilizerState:setTexts(fertilizerStates)
+end
+
 function CTCommandsPanel:SetFieldGround()
-    print("CTCommandsPanel:SetFieldGround()")
+    local field = self.setFieldGroundField:getState()
+    local groundStates = {"cultivator", "plough", "sowing", "sowing_width"}
+    local ground = groundStates[self.setFieldGroundGround:getState()]
+    local angle = self.setFieldGroudAngle:getState() - 1
+    local fertilizerState = self.setFieldGroundFertilizerState:getState() - 1
+    local ploughingState = 0
+    if self.setFieldGroundPloughingState:getIsChecked() then
+        ploughingState = 1
+    end
+    local buyField = self.setFieldGroundBuyField:getIsChecked()
+    print(("gsSetFieldGround %s %s %s %s %s %s"):format(field, ground, angle, fertilizerState, ploughingState, buyField))
+    g_currentMission:consoleCommandSetFieldGround(field, ground, angle, fertilizerState, ploughingState, buyField)
 end

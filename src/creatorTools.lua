@@ -40,7 +40,6 @@ end
 
 function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self = CreatorTools
-    self:print("initialize()")
     parseI18N()
     margeI18N()
     self.backup = {}
@@ -79,7 +78,6 @@ g_mpLoadingScreen.loadFunction = Utils.prependedFunction(g_mpLoadingScreen.loadF
 
 function CreatorTools:load(missionInfo, missionDynamicInfo, loadingScreen)
     self = CreatorTools
-    self:print("load()")
     CreatorToolsExtensions:load()
     g_currentMission.loadMapFinished = Utils.appendedFunction(g_currentMission.loadMapFinished, self.loadMapFinished)
     g_currentMission.onStartMission = Utils.appendedFunction(g_currentMission.onStartMission, self.afterLoad)
@@ -89,18 +87,15 @@ end
 g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFunction, CreatorTools.load)
 
 function CreatorTools:loadMap(name)
-    self:print("loadMap(name:%s)", name)
     self:loadSavegame()
 end
 
 function CreatorTools:loadMapFinished()
     self = CreatorTools
-    self:print("loadMapFinished()")
 end
 
 function CreatorTools:afterLoad()
     self = CreatorTools
-    self:print("afterLoad()")
     self.backup.walkingSpeed = g_currentMission.player.walkingSpeed
     self.backup.MAX_PICKABLE_OBJECT_MASS = Player.MAX_PICKABLE_OBJECT_MASS
     self:toggleCrosshair()
@@ -113,7 +108,6 @@ end
 
 function CreatorTools:onStartMission()
     self = CreatorTools
-    self:print("onStartMission()")
     if self.showHelpLine then
         g_gui:showGui("InGameMenu")
         g_inGameMenu.pageSelector:setState(g_inGameMenu.pagingElement:getPageMappingIndex(InGameMenu.PAGE_HELP_LINE), true)
@@ -124,7 +118,6 @@ end
 g_mpLoadingScreen.buttonOkPC.onClickCallback = Utils.appendedFunction(g_mpLoadingScreen.buttonOkPC.onClickCallback, CreatorTools.onStartMission)
 
 function CreatorTools:loadSavegame()
-    self:print("loadSavegame()")
     if g_server ~= nil then
         local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile)
         if fileExists(filePath) then
@@ -147,7 +140,6 @@ end
 
 function CreatorTools:saveSavegame()
     self = CreatorTools
-    self:print("saveSavegame()")
     if g_server ~= nil then
         local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile)
         local xml = createXMLFile("creatorToolsSavegameXML", filePath, "creatorTools")
@@ -168,7 +160,6 @@ function CreatorTools:saveSavegame()
 end
 
 function CreatorTools:deleteMap()
-    self:print("deleteMap()")
 end
 
 function CreatorTools:keyEvent(unicode, sym, modifier, isDown)
@@ -339,7 +330,6 @@ function CreatorTools:setWalkingSpeed(speed)
     g_currentMission.player.walkingSpeed = self.backup.walkingSpeed * ws
     self.guis.cTPanelGui:setSelectedPlayerSpeed(self.walkingSpeed)
     self.walkingSpeedFadeEffect:play(string.format("x%s", ws))
-    return ("walkingSpeed = %s(%s), player.walkingSpeed = %s"):format(speed, ws, g_currentMission.player.walkingSpeed)
 end
 
 function CreatorTools:setFovy(fovy)

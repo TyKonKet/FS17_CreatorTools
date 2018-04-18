@@ -58,6 +58,13 @@
 		<text name="ui_CT_setFieldFruitBuyField" text="Buy field"/>
 		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost."/>
 		<text name="ui_setFieldGround" text="Set Field Ground"/>
+		<text name="ui_CT_setFieldGroundGround" text="Ground"/>
+		<text name="ui_CT_setFieldGroundStates_cultivator" text="Cultivated"/>
+		<text name="ui_CT_setFieldGroundStates_plough" text="Plowed"/>
+		<text name="ui_CT_setFieldGroundStates_sowing" text="Sown"/>
+		<text name="ui_CT_setFieldGroundStates_sowing_width" text="Sown Width"/>
+		<text name="ui_CT_setFieldGroudAngle" text="Angle"/>
+		<text name="ui_CT_setFieldGroudAngle_tooltip" text="The rotation angle of the terrain texture."/>
 		<!-- HelpLine texts -->
 		<text name="hl_CT_CATEGORY" text="Creator Tools"/>
 		<text name="hl_CT_TITLE_00" text="General"/>
