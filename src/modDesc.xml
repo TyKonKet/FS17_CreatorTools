@@ -12,37 +12,46 @@
             <![CDATA[Creator Tools allow you to do magics with HUD, camera and much more.
 
             Changelog {package_version}
-            - Added new translations
-            - Removed helpline at start
-            - Fixed issues with "Start" button
-            - Dirt applied also to selected implement
-            - Changed dirt and speed steps
-            - Improved camera smoothness
-            - Increased camera height range]]>
+            - New window with useful commands
+                - Set field fruit
+                - Set field ground
+            - New useful commands with "ct" prefix
+            - New real clock option
+            - Fixed compatibility issue with Manual Attach
+            - Fixed issue with ingame menù
+            - Fixed issue with placement screen
+            - Fixed some input overlapping
+            - Fixed walkspeed text visibility]]>
         </en>
         <de>
             <![CDATA[Creator-Tools erlauben Ihnen Einstellungen am HUD der Kamera und vielem mehr vorzunehmen.
 
             Changelog {package_version}
-            - Neue Übersetzungen hinzugefügt
-            - Hilfestellung am Start entfernt
-            - Fehler mit dem "Start" Button beseitigt
-            - Schmutz wird auch auf ausgewählte Geräte aufgetragen
-            - Geänderte Schmutz- und Geschwindigkeitsstufen
-            - Verbesserte Kameraglätte
-            - Vergrößerter Arbeitsbereich der Kamera]]>
+            - Neues Fenster mit nützlichen Befehlen
+                - Setze Feldfrüchte ein
+                - Feldboden einstellen
+            - Neue nützliche Befehle mit Präfix "ct"
+            - Neue echte Uhr Option
+            - Kompatibilitätsproblem mit Manual Attach behoben
+            - Problem mit Ingame-Menü behoben
+            - Problem mit Placement-Bildschirm behoben
+            - Einige Eingangsüberlappungen wurden behoben
+            - Die Sichtbarkeit von Text im Laufschritt wurde korrigiert]]>
         </de>
         <fr>
             <![CDATA[Les outils Creator vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
 
             Changelog {package_version}
-            - Added new translations
-            - Removed helpline at start
-            - Fixed issues with "Start" button
-            - Dirt applied also to selected implement
-            - Changed dirt and speed steps
-            - Improved camera smoothness
-            - Increased camera height range]]>
+            - Nouvelle fenêtre avec des commandes utiles
+                - Définir les fruits du champ
+                - Définir le terrain
+            - Nouvelles commandes utiles avec le préfixe "ct"
+            - Nouvelle option d'horloge réelle
+            - Correction d'un problème de compatibilité avec Manual Attach
+            - Correction d'un problème avec ingame menù
+            - Correction d'un problème avec l'écran de placement
+            - Correction de certains chevauchements d'entrée
+            - Visibilité du texte de la vitesse de marche fixe]]>
         </fr>
    </description>
    <iconFilename>icon.dds</iconFilename>
