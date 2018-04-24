@@ -1,128 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <!--
 CreatorTools
 
 @author TyKonKet
 @date 13/04/2018
 -->
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
-   <GuiElement type="bitmap" profile="backgroundImageIngame" />
-   <GuiElement type="bitmap" profile="uiElementBg">
-      <GuiElement type="bitmap" profile="uiElementMainBg">
-         <GuiElement type="bitmap" profile="uiElementBaseHeader">
-            <GuiElement type="multiTextOption" profile="headerBoxSelector" onClick="onClickPageSelection" id="pageSelector" focusId="1" focusChangeBottom="2">
-               <GuiElement type="button" profile="headerBoxSelectorLeft" />
-               <GuiElement type="button" profile="headerBoxSelectorRight" />
-               <GuiElement type="text" profile="headerText" text="Paging" />
-            </GuiElement>
-         </GuiElement>
-         <GuiElement type="paging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
-            <!-- Command setFieldFruit -->
-            <GuiElement type="empty" profile="page" name="setFieldFruit" onCreate="onCreatePageSetFieldFruit">
-                <GuiElement type="boxLayout" profile="settingsBox" position="20px 536px" >
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitField" id="setFieldFruitField" focusId="1_1" focusChangeBottom="1_2">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitField" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitFruit" id="setFieldFruitFruit" focusId="1_2" focusChangeBottom="1_3" focusChangeTop="1_1">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitFruit" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitGrowthState" id="setFieldFruitGrowthState" focusId="1_3" focusChangeBottom="1_4" focusChangeTop="1_2">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitGrowthState" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitFertilizerState" id="setFieldFruitFertilizerState" focusId="1_4" focusChangeBottom="1_5" focusChangeTop="1_3">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitFertilizerState" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldFruitPloughingState" focusId="1_5" focusChangeBottom="1_6" focusChangeTop="1_4" toolTip="$l10n_ui_CT_setFieldFruitPloughingState_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitPloughingState" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldFruitBuyField" focusId="1_6" focusChangeTop="1_5" toolTip="$l10n_ui_CT_setFieldFruitBuyField_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitBuyField" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                </GuiElement>
-            </GuiElement>
-            <!-- Command setFieldGround -->
-            <GuiElement type="empty" profile="page" name="setFieldGround" onCreate="onCreatePageSetFieldGround">
-                <GuiElement type="boxLayout" profile="settingsBox" position="20px 536px" >
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundField" id="setFieldGroundField" focusId="1_1" focusChangeBottom="1_2">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitField" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundGround" id="setFieldGroundGround" focusId="1_2" focusChangeBottom="1_3" focusChangeTop="1_1">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldGroundGround" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundAngle" id="setFieldGroudAngle" focusId="1_3" focusChangeBottom="1_4" focusChangeTop="1_2" toolTip="$l10n_ui_CT_setFieldGroudAngle_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldGroudAngle" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundFertilizerState" id="setFieldGroundFertilizerState" focusId="1_4" focusChangeBottom="1_5" focusChangeTop="1_3">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitFertilizerState" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldGroundPloughingState" focusId="1_5" focusChangeBottom="1_6" focusChangeTop="1_4" toolTip="$l10n_ui_CT_setFieldFruitPloughingState_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitPloughingState" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                    <GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldGroundBuyField" focusId="1_6" focusChangeTop="1_5" toolTip="$l10n_ui_CT_setFieldFruitBuyField_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
-                        <GuiElement type="button" profile="multiTextOptionLeft" />
-                        <GuiElement type="button" profile="multiTextOptionRight" />
-                        <GuiElement type="text" profile="multiTextOptionText" />
-                        <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitBuyField" />
-                        <GuiElement type="bitmap" profile="multiTextOptionBg" />
-                    </GuiElement>
-                </GuiElement>
-            </GuiElement>
-         </GuiElement>
-         <GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="panelHelpBox" visible="false">
-            <GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
-            <GuiElement type="text" profile="ingameMenuHelpRowText" id="panelHelpBoxText" text="" />
-         </GuiElement>
-         <GuiElement type="flowLayout" profile="ingameMenuPageStateBg" id="pageStateBox">
-            <GuiElement type="bitmap" profile="ingameMenuPageState" id="pageStateElement" />
-         </GuiElement>
-         <GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC">
-            <GuiElement type="button" profile="buttonBack" size="499px 40px" text="$l10n_button_back" onClick="onClickBack" id="backButton" focusId="2" focusChangeRight="3" focusChangeTop="1" />
-            <GuiElement type="button" profile="buttonOK" size="499px 40px" text="$l10n_ui_execute" onClick="onClickActivate" id="activateButton" focusId="3" focusChangeLeft="2" focusChangeTop="1" focusInit="onOpen" />
-         </GuiElement>
-      </GuiElement>
-   </GuiElement>
+	<GuiElement type="bitmap" profile="backgroundImageIngame" />
+	<GuiElement type="bitmap" profile="uiElementBg">
+		<GuiElement type="bitmap" profile="uiElementMainBg">
+			<GuiElement type="bitmap" profile="uiElementBaseHeader">
+				<GuiElement type="multiTextOption" profile="headerBoxSelector" onClick="onClickPageSelection" id="pageSelector" focusId="1" focusChangeBottom="2">
+					<GuiElement type="button" profile="headerBoxSelectorLeft" />
+					<GuiElement type="button" profile="headerBoxSelectorRight" />
+					<GuiElement type="text" profile="headerText" text="Paging" />
+				</GuiElement>
+			</GuiElement>
+			<GuiElement type="paging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
+				<!-- Command setFieldFruit -->
+				<GuiElement type="empty" profile="page" name="setFieldFruit" onCreate="onCreatePageSetFieldFruit">
+					<GuiElement type="boxLayout" profile="settingsBox" position="20px 536px" >
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitField" id="setFieldFruitField" focusId="1_1" focusChangeBottom="1_2">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitField" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitFruit" id="setFieldFruitFruit" focusId="1_2" focusChangeBottom="1_3" focusChangeTop="1_1">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitFruit" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitGrowthState" id="setFieldFruitGrowthState" focusId="1_3" focusChangeBottom="1_4" focusChangeTop="1_2">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitGrowthState" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitFertilizerState" id="setFieldFruitFertilizerState" focusId="1_4" focusChangeBottom="1_5" focusChangeTop="1_3">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitFertilizerState" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldFruitPloughingState" focusId="1_5" focusChangeBottom="1_6" focusChangeTop="1_4" toolTip="$l10n_ui_CT_setFieldFruitPloughingState_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitPloughingState" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldFruitBuyField" focusId="1_6" focusChangeTop="1_5" toolTip="$l10n_ui_CT_setFieldFruitBuyField_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitBuyField" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+					</GuiElement>
+				</GuiElement>
+				<!-- Command setFieldGround -->
+				<GuiElement type="empty" profile="page" name="setFieldGround" onCreate="onCreatePageSetFieldGround">
+					<GuiElement type="boxLayout" profile="settingsBox" position="20px 536px" >
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundField" id="setFieldGroundField" focusId="1_1" focusChangeBottom="1_2">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitField" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundGround" id="setFieldGroundGround" focusId="1_2" focusChangeBottom="1_3" focusChangeTop="1_1">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldGroundGround" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundAngle" id="setFieldGroudAngle" focusId="1_3" focusChangeBottom="1_4" focusChangeTop="1_2" toolTip="$l10n_ui_CT_setFieldGroudAngle_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldGroudAngle" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundFertilizerState" id="setFieldGroundFertilizerState" focusId="1_4" focusChangeBottom="1_5" focusChangeTop="1_3">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitFertilizerState" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldGroundPloughingState" focusId="1_5" focusChangeBottom="1_6" focusChangeTop="1_4" toolTip="$l10n_ui_CT_setFieldFruitPloughingState_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitPloughingState" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+						<GuiElement type="toggleButton2" profile="multiTextOptionSettings" id="setFieldGroundBuyField" focusId="1_6" focusChangeTop="1_5" toolTip="$l10n_ui_CT_setFieldFruitBuyField_tooltip" onFocus="onFocusElement" onLeave="onLeaveElement">
+							<GuiElement type="button" profile="multiTextOptionLeft" />
+							<GuiElement type="button" profile="multiTextOptionRight" />
+							<GuiElement type="text" profile="multiTextOptionText" />
+							<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_setFieldFruitBuyField" />
+							<GuiElement type="bitmap" profile="multiTextOptionBg" />
+						</GuiElement>
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>
+			<GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="panelHelpBox" visible="false">
+				<GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
+				<GuiElement type="text" profile="ingameMenuHelpRowText" id="panelHelpBoxText" text="" />
+			</GuiElement>
+			<GuiElement type="flowLayout" profile="ingameMenuPageStateBg" id="pageStateBox">
+				<GuiElement type="bitmap" profile="ingameMenuPageState" id="pageStateElement" />
+			</GuiElement>
+			<GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC">
+				<GuiElement type="button" profile="buttonBack" size="499px 40px" text="$l10n_button_back" onClick="onClickBack" id="backButton" focusId="2" focusChangeRight="3" focusChangeTop="1" />
+				<GuiElement type="button" profile="buttonOK" size="499px 40px" text="$l10n_ui_execute" onClick="onClickActivate" id="activateButton" focusId="3" focusChangeLeft="2" focusChangeTop="1" focusInit="onOpen" />
+			</GuiElement>
+		</GuiElement>
+	</GuiElement>
 </GUI>

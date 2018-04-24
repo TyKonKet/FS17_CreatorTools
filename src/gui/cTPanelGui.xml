@@ -1,73 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <!--
 CreatorTools
 
 @author TyKonKet
 @date 17/01/2017
 -->
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
-   <GuiElement type="bitmap" profile="backgroundImageIngame" />
-   <GuiElement type="bitmap" profile="uiElementBg">
-      <GuiElement type="bitmap" profile="uiElementMainBg">
-         <GuiElement type="bitmap" profile="uiElementBaseHeader">
-            <GuiElement type="text" profile="headerText" text="Creator Tools" />
-         </GuiElement>
-         <GuiElement type="boxLayout" profile="settingsBox" position="20px 576px">
-            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateHideHud" toolTip="$l10n_ui_CT_HUD_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="1" focusChangeBottom="4" focusId="3">
-               <GuiElement type="button" profile="multiTextOptionLeft" />
-               <GuiElement type="button" profile="multiTextOptionRight" />
-               <GuiElement type="text" profile="multiTextOptionText" />
-               <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_HUD_TEXT" />
-               <GuiElement type="bitmap" profile="multiTextOptionBg" />
-            </GuiElement>
-            <GuiElement type="multiTextOption" profile="multiTextOptionSettings" onCreate="onCreatePlayerSpeed" toolTip="$l10n_ui_CT_PLAYER_SPEED_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="3" focusChangeBottom="5" focusId="4">
-               <GuiElement type="button" profile="multiTextOptionLeft" />
-               <GuiElement type="button" profile="multiTextOptionRight" />
-               <GuiElement type="text" profile="multiTextOptionText" />
-               <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_PLAYER_SPEED_TEXT" />
-               <GuiElement type="bitmap" profile="multiTextOptionBg" />
-            </GuiElement>
-            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateCreativeMoney" toolTip="$l10n_ui_CT_CREATIVE_MONEY_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="4" focusChangeBottom="6" focusId="5">
-               <GuiElement type="button" profile="multiTextOptionLeft" />
-               <GuiElement type="button" profile="multiTextOptionRight" />
-               <GuiElement type="text" profile="multiTextOptionText" />
-               <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_CREATIVE_MONEY_TEXT" />
-               <GuiElement type="bitmap" profile="multiTextOptionBg" />
-            </GuiElement>
-            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateMusclesMode" toolTip="$l10n_ui_CT_MUSCLES_MODE_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="5" focusChangeBottom="7" focusId="6">
-               <GuiElement type="button" profile="multiTextOptionLeft" />
-               <GuiElement type="button" profile="multiTextOptionRight" />
-               <GuiElement type="text" profile="multiTextOptionText" />
-               <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_MUSCLES_MODE_TEXT" />
-               <GuiElement type="bitmap" profile="multiTextOptionBg" />
-            </GuiElement>
-            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateShowRealClock" toolTip="$l10n_ui_CT_SHOW_REALCLOCK_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="7" focusChangeBottom="1" focusId="8">
-               <GuiElement type="button" profile="multiTextOptionLeft" />
-               <GuiElement type="button" profile="multiTextOptionRight" />
-               <GuiElement type="text" profile="multiTextOptionText" />
-               <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_SHOW_REALCLOCK_TEXT" />
-               <GuiElement type="bitmap" profile="multiTextOptionBg" />
-            </GuiElement>
-            <GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateShowButtonsHelp" toolTip="$l10n_ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="6" focusChangeBottom="8" focusId="7">
-               <GuiElement type="button" profile="multiTextOptionLeft" />
-               <GuiElement type="button" profile="multiTextOptionRight" />
-               <GuiElement type="text" profile="multiTextOptionText" />
-               <GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_SHOW_BUTTONS_HELP_TEXT" />
-               <GuiElement type="bitmap" profile="multiTextOptionBg" />
-            </GuiElement>
-         </GuiElement>
-         <GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">
-            <GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
-            <GuiElement type="text" profile="ingameMenuHelpRowText" id="ingameMenuHelpBoxText" text="" />
-         </GuiElement>
-         <GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC">
-            <GuiElement type="button" id="backButton" profile="buttonBack" size="500px 40px" text="$l10n_button_back" onClick="onClickBack" focusId="1" focusChangeTop="7" focusChangeBottom="3" focusChangeRight="2" />
-            <GuiElement type="button" profile="buttonOK" size="500px 40px" text="$l10n_button_ok" onClick="onClickOk" focusId="2" focusChangeTop="7" focusChangeBottom="3" focusChangeLeft="1" />
-         </GuiElement>
-         <GuiElement type="flowLayout" profile="buttonBoxConsole" id="buttonsConsole">
-            <GuiElement type="button" profile="buttonCircle" size="500px 40px" text="$l10n_button_back" id="backButtonConsole" />
-            <GuiElement type="button" profile="buttonRectangle" size="500px 40px" text="$l10n_button_ok" id="yesButtonConsole" />
-         </GuiElement>
-      </GuiElement>
-   </GuiElement>
+	<GuiElement type="bitmap" profile="backgroundImageIngame" />
+	<GuiElement type="bitmap" profile="uiElementBg">
+		<GuiElement type="bitmap" profile="uiElementMainBg">
+			<GuiElement type="bitmap" profile="uiElementBaseHeader">
+				<GuiElement type="text" profile="headerText" text="Creator Tools" />
+			</GuiElement>
+			<GuiElement type="boxLayout" profile="settingsBox" position="20px 576px">
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateHideHud" toolTip="$l10n_ui_CT_HUD_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="1" focusChangeBottom="4" focusId="3">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_HUD_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onCreate="onCreatePlayerSpeed" toolTip="$l10n_ui_CT_PLAYER_SPEED_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="3" focusChangeBottom="5" focusId="4">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_PLAYER_SPEED_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateCreativeMoney" toolTip="$l10n_ui_CT_CREATIVE_MONEY_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="4" focusChangeBottom="6" focusId="5">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_CREATIVE_MONEY_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateMusclesMode" toolTip="$l10n_ui_CT_MUSCLES_MODE_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="5" focusChangeBottom="7" focusId="6">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_MUSCLES_MODE_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateShowRealClock" toolTip="$l10n_ui_CT_SHOW_REALCLOCK_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="7" focusChangeBottom="1" focusId="8">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_SHOW_REALCLOCK_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateShowButtonsHelp" toolTip="$l10n_ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="6" focusChangeBottom="8" focusId="7">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_SHOW_BUTTONS_HELP_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
+			</GuiElement>
+			<GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">
+				<GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
+				<GuiElement type="text" profile="ingameMenuHelpRowText" id="ingameMenuHelpBoxText" text="" />
+			</GuiElement>
+			<GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC">
+				<GuiElement type="button" id="backButton" profile="buttonBack" size="500px 40px" text="$l10n_button_back" onClick="onClickBack" focusId="1" focusChangeTop="7" focusChangeBottom="3" focusChangeRight="2" />
+				<GuiElement type="button" profile="buttonOK" size="500px 40px" text="$l10n_button_ok" onClick="onClickOk" focusId="2" focusChangeTop="7" focusChangeBottom="3" focusChangeLeft="1" />
+			</GuiElement>
+			<GuiElement type="flowLayout" profile="buttonBoxConsole" id="buttonsConsole">
+				<GuiElement type="button" profile="buttonCircle" size="500px 40px" text="$l10n_button_back" id="backButtonConsole" />
+				<GuiElement type="button" profile="buttonRectangle" size="500px 40px" text="$l10n_button_ok" id="yesButtonConsole" />
+			</GuiElement>
+		</GuiElement>
+	</GuiElement>
 </GUI>
