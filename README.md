@@ -7,3 +7,4 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [ ] Jump scale
 - [ ] Graphic commands working on mp 
 - [ ] Ability to hide golden nuggets from minimap  
+- [ ] Screeshot mode  
