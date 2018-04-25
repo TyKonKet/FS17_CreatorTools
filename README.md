@@ -3,10 +3,7 @@
 Creator Tools allow you to do magics with HUD, camera and much more.
   
 # TODO
-- [x] Adding ability to choose liftable weight (aka Muscles Mode)
-- [x] Making mouse wheel controls more smooth
-- [x] Finding better keys for player speed
-- [x] Showing the player speed when changed  
-- [x] Renaming "Cretive Money" to "Money Cheat"
-- [x] Set dirt level on selected implement
-- [x] Option to show real clock
+- [ ] Run scale
+- [ ] Jump scale
+- [ ] Graphic commands working on mp 
+- [ ] Ability to hide golden nuggets from minimap  
