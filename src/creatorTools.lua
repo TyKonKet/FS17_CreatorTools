@@ -88,6 +88,9 @@ g_mpLoadingScreen.loadFunction = Utils.appendedFunction(g_mpLoadingScreen.loadFu
 
 function CreatorTools:loadMap(name)
     self:loadSavegame()
+    if g_modIsLoaded["FS17_real_clock"] then
+        self.showRealClock = false
+    end
     if CreatorToolsCustomCommands ~= nil and CreatorToolsCustomCommands.registerCommands ~= nil then
         CreatorToolsCustomCommands.registerCommands()
     end
