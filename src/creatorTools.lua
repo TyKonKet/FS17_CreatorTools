@@ -195,7 +195,6 @@ function CreatorTools:draw()
         return
     end
     self.walkingSpeedFadeEffect:draw()
-
     self:renderRealClock()
 end
 
@@ -207,6 +206,7 @@ function CreatorTools:renderRealClock()
     local time = getDate("%H:%M:%S")
     posX = 0.9975 - getTextWidth(fontSize, time)
     posY = 0.9999 - getTextHeight(fontSize, time)
+    setTextColor(1, 1, 1, 1)
     renderText(posX, posY, fontSize, time)
 end
 
