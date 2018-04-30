@@ -25,84 +25,45 @@
 		<text name="AXIS_CT_CAMY_HELP" text="Zmiana wysokości kamery" />
 		<text name="input_CT_CHANGE_DIRT" text="Zmiana poziomu zabrudzeń" />
 		<text name="input_CT_OPEN_PANEL_V2" text="Otwórz panel Creator Tools" />
-		<!-- Missing translation of "Open commands panel" -->
-		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Open commands panel" />
+		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Otórz panel komend" />
 		<text name="ui_and" text="i" />
-		<!-- Missing translation of "This action can be done only by admins, please do login to keep going" -->
-		<text name="ui_CT_ADMIN_ONLY_ACTION" text="This action can be done only by admins, please do login to keep going" />
-		<!-- Missing translation of "Heads-up displays (HUDs)" -->
-		<text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUDs)" />
-		<!-- Missing translation of "Hides or shows the heads-up displays (HUDs)." -->
-		<text name="ui_CT_HUD_TOOLTIP" text="Hides or shows the heads-up displays (HUDs)." />
-		<!-- Missing translation of "Walking speed" -->
-		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Walking speed" />
-		<!-- Missing translation of "Changes the player walking speed." -->
-		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Changes the player walking speed." />
-		<!-- Missing translation of "Money Cheat" -->
-		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Money Cheat" />
-		<!-- Missing translation of "Enables or disables money cheat (one billion)." -->
-		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Enables or disables money cheat (one billion)." />
-		<!-- Missing translation of "Show help" -->
-		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Show help" />
-		<!-- Missing translation of "Enables or disables buttons help in the help box." -->
-		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Enables or disables buttons help in the help box." />
-		<!-- Missing translation of "Muscles mode" -->
-		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Muscles mode" />
-		<!-- Missing translation of "With muscles mode, you can lift objects of any weight." -->
-		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight." />
-		<!-- Missing translation of "Real clock" -->
-		<text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Real clock" />
-		<!-- Missing translation of "Hides or shows the real clock." -->
-		<text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Hides or shows the real clock." />
-		<!-- Missing translation of "Execute" -->
-		<text name="ui_execute" text="Execute" />
-		<!-- Missing translation of "Current" -->
-		<text name="ui_CT_growthStates0" text="Current" />
-		<!-- Missing translation of "Sown" -->
-		<text name="ui_CT_growthStates1" text="Sown" />
-		<!-- Missing translation of "First stage" -->
-		<text name="ui_CT_growthStates2" text="First stage" />
-		<!-- Missing translation of "Second stage" -->
-		<text name="ui_CT_growthStates3" text="Second stage" />
-		<!-- Missing translation of "Third stage" -->
-		<text name="ui_CT_growthStates4" text="Third stage" />
-		<!-- Missing translation of "Grown" -->
-		<text name="ui_CT_growthStates5" text="Grown" />
-		<!-- Missing translation of "Set Field Fruit" -->
-		<text name="ui_setFieldFruit" text="Set Field Fruit" />
-		<!-- Missing translation of "Field number" -->
-		<text name="ui_CT_setFieldFruitField" text="Field number" />
-		<!-- Missing translation of "Fruit" -->
-		<text name="ui_CT_setFieldFruitFruit" text="Fruit" />
-		<!-- Missing translation of "Growth state" -->
-		<text name="ui_CT_setFieldFruitGrowthState" text="Growth state" />
-		<!-- Missing translation of "Fertilizer state" -->
-		<text name="ui_CT_setFieldFruitFertilizerState" text="Fertilizer state" />
-		<!-- Missing translation of "Plowed" -->
-		<text name="ui_CT_setFieldFruitPloughingState" text="Plowed" />
-		<!-- Missing translation of "The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." -->
-		<text name="ui_CT_setFieldFruitPloughingState_tooltip" text="The field will be considered as it have been plowed and will get a 10% bonus production for the next three crops." />
-		<!-- Missing translation of "Buy field" -->
-		<text name="ui_CT_setFieldFruitBuyField" text="Buy field" />
-		<!-- Missing translation of "If you don't own this field, it will become yours at no additional cost." -->
-		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="If you don't own this field, it will become yours at no additional cost." />
-		<!-- Missing translation of "Set Field Ground" -->
-		<text name="ui_setFieldGround" text="Set Field Ground" />
-		<!-- Missing translation of "Ground" -->
-		<text name="ui_CT_setFieldGroundGround" text="Ground" />
-		<!-- Missing translation of "Cultivated" -->
-		<text name="ui_CT_setFieldGroundStates_cultivator" text="Cultivated" />
-		<!-- Missing translation of "Plowed" -->
-		<text name="ui_CT_setFieldGroundStates_plough" text="Plowed" />
-		<!-- Missing translation of "Sown" -->
-		<text name="ui_CT_setFieldGroundStates_sowing" text="Sown" />
-		<!-- Missing translation of "Sown Width" -->
-		<text name="ui_CT_setFieldGroundStates_sowing_width" text="Sown Width" />
-		<!-- Missing translation of "Angle" -->
-		<text name="ui_CT_setFieldGroudAngle" text="Angle" />
-		<!-- Missing translation of "The rotation angle of the terrain texture." -->
-		<text name="ui_CT_setFieldGroudAngle_tooltip" text="The rotation angle of the terrain texture." />
-		<!-- Missing translation of "Creator Tools" -->
+		<text name="ui_CT_ADMIN_ONLY_ACTION" text="Ta czynność może być wykonana tylko przez administratora, zaloguj się, aby kontynuować" />
+		<text name="ui_CT_HUD_TEXT" text="Wyświetlacze przezierne (HUDy)" />
+		<text name="ui_CT_HUD_TOOLTIP" text="Ukrywa lub pokazuje wyświetlacze przezierne (HUDy)." />
+		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Prędkość chodu" />
+		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Zmienia prędkość chodu gracza." />
+		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Drukarnia piędziędzy" />
+		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Włacza lub wyłacza druk pieniędzy (1mld)." />
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Pokaż pomoc" />
+		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Włącza lub wyłącza pokazywanie przycisków w oknie pomocy." />
+		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Strongman" />
+		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Jako strongman możesz podnieść obiekt, o każdej wadze." />
+		<text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Rzeczywisty czas" />
+		<text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Ukrywa lub pokazuje rzeczywisty czas." />
+		<text name="ui_execute" text="Wykonaj" />
+		<text name="ui_CT_growthStates0" text="Obecny" />
+		<text name="ui_CT_growthStates1" text="Śnieg" />
+		<text name="ui_CT_growthStates2" text="Pierwszy etap" />
+		<text name="ui_CT_growthStates3" text="Drugi etap" />
+		<text name="ui_CT_growthStates4" text="Trzeci etap" />
+		<text name="ui_CT_growthStates5" text="Wzrost" />
+		<text name="ui_setFieldFruit" text="Zasiewy pól" />
+		<text name="ui_CT_setFieldFruitField" text="Numer pola" />
+		<text name="ui_CT_setFieldFruitFruit" text="Uprawa" />
+		<text name="ui_CT_setFieldFruitGrowthState" text="Stan wzrostu" />
+		<text name="ui_CT_setFieldFruitFertilizerState" text="Stan nawożenia" />
+		<text name="ui_CT_setFieldFruitPloughingState" text="Zaoraj" />
+		<text name="ui_CT_setFieldFruitPloughingState_tooltip" text="Pole zostanie uznane za zaorane i otrzymasz premię w wysokości 10% za następne trzy sezony." />
+		<text name="ui_CT_setFieldFruitBuyField" text="Zajmij pole" />
+		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="Jeśli nie jesteś właścicielem tego pola, stanie się on Twoim bez dodatkowych kosztów." />
+		<text name="ui_setFieldGround" text="Uprawa pola" />
+		<text name="ui_CT_setFieldGroundGround" text="Gleba" />
+		<text name="ui_CT_setFieldGroundStates_cultivator" text="Zakultywatorowana" />
+		<text name="ui_CT_setFieldGroundStates_plough" text="Zaorana" />
+		<text name="ui_CT_setFieldGroundStates_sowing" text="Śnieg" />
+		<text name="ui_CT_setFieldGroundStates_sowing_width" text="Szerokość śniegu" />
+		<text name="ui_CT_setFieldGroudAngle" text="Kąt" />
+		<text name="ui_CT_setFieldGroudAngle_tooltip" text="Kąt obrotu tekstury gleby." />
 		<text name="hl_CT_CATEGORY" text="Creator Tools" />
 		<text name="hl_CT_TITLE_00" text="Ogólne" />
 		<text name="hl_CT_TEXT_00_00" text="Jak sama nazwa mów, ten mod jest przeznaczony dla twórców (np. streamer'ów i videomaker'ów), ale jest również przydatny dla zwykłych graczy, którzy potrzebują dodatkowych narzędzi." />
