@@ -62,6 +62,7 @@
 		<sourceFile filename="helpers/extensions.lua" />
 		<sourceFile filename="helpers/fadeEffect.lua" />
 		<sourceFile filename="helpers/customCommands.lua" />
+		<sourceFile filename="helpers/goldNuggets.lua" />
 		<sourceFile filename="gui/cTPanelGui.lua" />
 		<sourceFile filename="gui/cTCommandsPanel.lua" />
 		<sourceFile filename="creatorTools.lua" />

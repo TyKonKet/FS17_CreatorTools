@@ -16,6 +16,10 @@ function CreatorToolsCustomCommands:registerCommands()
     addConsoleCommand("ctShowVehicleDistance", "Shows the distance between vehicle and cam", "consoleCommandShowVehicleDistance", g_currentMission)
     addConsoleCommand("ctSuspendApp", "Suspends the game", "consoleCommandSuspendApp")
     addConsoleCommand("ctVerifyI18N", "Checks the I18N", "consoleCommandVerifyAll", g_i18n)
+    addConsoleCommand("ctActivateCameraPath", "Activate camera path", "consoleActivateCameraPath", g_currentMission);
+    if g_currentMission.husbandries["chicken"] ~= nil then
+        addConsoleCommand("ctSpawnPickupObjects", "Spawn pickup objects", "consoleCommandSpawnPickupObjects", g_currentMission.husbandries["chicken"]);
+    end
     if g_currentMission:getIsServer() then
         addConsoleCommand("ctAddBale", "Adds a bale", "consoleCommandAddBale", g_currentMission)
         addConsoleCommand("ctBuyAllFields", "Buys all fields", "consoleCommandBuyAllFields", g_currentMission)
@@ -42,6 +46,8 @@ end
 
 function CreatorToolsCustomCommands:removeCommands()
     removeConsoleCommand("ctAddBale")
+    removeConsoleCommand("ctSpawnPickupObjects")
+    removeConsoleCommand("ctActivateCameraPath")
     removeConsoleCommand("ctBuyAllFields")
     removeConsoleCommand("ctBuyField")
     removeConsoleCommand("ctChangeLanguage")

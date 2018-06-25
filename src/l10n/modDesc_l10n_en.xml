@@ -41,6 +41,8 @@
 		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="With muscles mode, you can lift objects of any weight."/>
 		<text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Real clock"/>
 		<text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Hides or shows the real clock."/>
+		<text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Gold Nuggets"/>
+		<text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Hides or shows the gold nuggets on map."/>
 		<text name="ui_execute" text="Execute"/>
 		<text name="ui_CT_growthStates0" text="Current"/>
 		<text name="ui_CT_growthStates1" text="Sown"/>

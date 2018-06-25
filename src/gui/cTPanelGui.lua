@@ -25,6 +25,7 @@ function CTPanelGui:onOpen()
     self.showButtonsHelpElement:setIsChecked(CreatorTools.showButtonsHelp)
     self.musclesModeElement:setIsChecked(CreatorTools.musclesMode)
     self.showRealClockElement:setIsChecked(CreatorTools.showRealClock)
+    self.showGoldNuggetsElement:setIsChecked(GoldNuggets.enabled)
 end
 
 function CTPanelGui:onClose()
@@ -43,6 +44,7 @@ function CTPanelGui:onClickOk()
     CreatorTools.showButtonsHelp = self.showButtonsHelpElement:getIsChecked()
     CreatorTools:setMusclesMode(self.musclesModeElement:getIsChecked())
     CreatorTools.showRealClock = self.showRealClockElement:getIsChecked()
+    GoldNuggets:activateNuggetHotspots(true, self.showGoldNuggetsElement:getIsChecked())
     self:onClickBack()
 end
 
@@ -96,4 +98,8 @@ end
 
 function CTPanelGui:onCreateShowRealClock(element)
     self.showRealClockElement = element
+end
+
+function CTPanelGui:onCreateShowGoldNuggets(element)
+    self.showGoldNuggetsElement = element
 end
