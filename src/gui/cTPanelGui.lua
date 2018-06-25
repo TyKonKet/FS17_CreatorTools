@@ -18,8 +18,8 @@ end
 function CTPanelGui:onOpen()
     CTPanelGui:superClass().onOpen(self)
     FocusManager:setFocus(self.backButton)
-    self:setHideHud(CreatorTools.hideHud)
-    self:setSelectedPlayerSpeed(CreatorTools.walkingSpeed)
+    self.hideHudElement:setIsChecked(not CreatorTools.hideHud)
+    self.playerSpeedElement:setState(CreatorTools.walkingSpeed, false)
     self.creativeMoneyElement:setDisabled(not g_currentMission.isMasterUser and g_server == nil)
     self.creativeMoneyElement:setIsChecked(CreatorTools.backup.money ~= -1)
     self.showButtonsHelpElement:setIsChecked(CreatorTools.showButtonsHelp)
@@ -28,6 +28,7 @@ function CTPanelGui:onOpen()
     self.showGoldNuggetsElement:setIsChecked(GoldNuggets.enabled)
     self.showScreenShotsModeElement:setIsChecked(CreatorTools.screenShotsMode)
     self.disableMouseWheelElement:setIsChecked(CreatorTools.disableMouseWheel)
+    self.crosshairStateElement:setState(CreatorTools.crosshairState, false)
 end
 
 function CTPanelGui:onClose()
@@ -49,6 +50,7 @@ function CTPanelGui:onClickOk()
     GoldNuggets:activateNuggetHotspots(true, self.showGoldNuggetsElement:getIsChecked())
     CreatorTools:setScreenShotsMode(self.showScreenShotsModeElement:getIsChecked())
     CreatorTools.disableMouseWheel = self.disableMouseWheelElement:getIsChecked()
+    CreatorTools:setCrosshairState(self.crosshairStateElement:getState())
     self:onClickBack()
 end
 
@@ -71,10 +73,6 @@ function CTPanelGui:onCreateHideHud(element)
     self.hideHudElement = element
 end
 
-function CTPanelGui:setHideHud(index)
-    self.hideHudElement:setIsChecked(not index)
-end
-
 function CTPanelGui:onCreatePlayerSpeed(element)
     self.playerSpeedElement = element
     local speeds = {}
@@ -86,10 +84,6 @@ end
 
 function CTPanelGui:onCreateCreativeMoney(element)
     self.creativeMoneyElement = element
-end
-
-function CTPanelGui:setSelectedPlayerSpeed(index)
-    self.playerSpeedElement:setState(index, false)
 end
 
 function CTPanelGui:onCreateShowButtonsHelp(element)
@@ -114,4 +108,9 @@ end
 
 function CTPanelGui:onCreateDisableMouseWheel(element)
     self.disableMouseWheelElement = element
+end
+
+function CTPanelGui:onCreateCrosshairState(element)
+    self.crosshairStateElement = element
+    element:setTexts({g_i18n:getText("ui_auto"), g_i18n:getText("ui_on"), g_i18n:getText("ui_off")})
 end

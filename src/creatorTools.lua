@@ -29,6 +29,10 @@ CreatorTools.DIRT_STEPS[7] = 0.8
 CreatorTools.DIRT_STEPS[8] = 0.95
 CreatorTools.DIRT_STEPS[9] = 1
 CreatorTools.DIRT_STEPS_COUNT = 9
+CreatorTools.CROSSHAIR_STATES = {}
+CreatorTools.CROSSHAIR_STATES.AUTO = 1
+CreatorTools.CROSSHAIR_STATES.SHOW = 2
+CreatorTools.CROSSHAIR_STATES.HIDE = 3
 
 function CreatorTools:print(text, ...)
     if self.debug then
@@ -44,7 +48,6 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     margeI18N()
     self.backup = {}
     self.target = {}
-    self.hideCrosshair = true
     self.hideHud = true
     self.showHelpLine = false
     self.backup.showHelpBox = true
@@ -67,6 +70,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.showRealClock = true
     self.screenShotsMode = false
     self.disableMouseWheel = false
+    self.crosshairState = CreatorTools.CROSSHAIR_STATES.AUTO
 
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement)
     self.guis = {}
@@ -107,8 +111,7 @@ function CreatorTools:afterLoad()
     self = CreatorTools
     self.backup.walkingSpeed = g_currentMission.player.walkingSpeed
     self.backup.MAX_PICKABLE_OBJECT_MASS = Player.MAX_PICKABLE_OBJECT_MASS
-    self:toggleCrosshair()
-    self:toggleHud()
+    self:setHud(self.hideHud)
     self:setWalkingSpeed(self.walkingSpeed)
     self:setFovy(self.fovy)
     self:setCamy(self.camy)
@@ -133,7 +136,6 @@ function CreatorTools:loadSavegame()
         if fileExists(filePath) then
             local xml = loadXMLFile("creatorToolsSavegameXML", filePath, "creatorTools")
             self.hideHud = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), self.hideHud)
-            self.hideCrosshair = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.crosshair#hide"), self.hideCrosshair)
             self.backup.showHelpBox = Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.helpbox#show"), self.backup.showHelpBox)
             self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed)
             self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy)
@@ -145,6 +147,7 @@ function CreatorTools:loadSavegame()
             self.showHelpLine = Utils.getNoNil(getXMLBool(xml, "creatorTools.helpLine#show"), self.showHelpLine)
             self.screenShotsMode = Utils.getNoNil(getXMLBool(xml, "creatorTools#screenShotsMode"), self.screenShotsMode)
             self.disableMouseWheel = Utils.getNoNil(getXMLBool(xml, "creatorTools#disableMouseWheel"), self.disableMouseWheel)
+            self.crosshairState = Utils.getNoNil(getXMLInt(xml, "creatorTools.hud.crosshair#state"), self.crosshairState)
             delete(xml)
         end
     end
@@ -156,7 +159,6 @@ function CreatorTools:saveSavegame()
         local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile)
         local xml = createXMLFile("creatorToolsSavegameXML", filePath, "creatorTools")
         setXMLBool(xml, "creatorTools.hud#hide", self.hideHud)
-        setXMLBool(xml, "creatorTools.hud.crosshair#hide", self.hideCrosshair)
         setXMLBool(xml, "creatorTools.hud.helpbox#show", self.backup.showHelpBox)
         setXMLInt(xml, "creatorTools.player#walkingSpeed", self.walkingSpeed)
         setXMLFloat(xml, "creatorTools.player.camera#fovy", self.fovy)
@@ -168,6 +170,7 @@ function CreatorTools:saveSavegame()
         setXMLBool(xml, "creatorTools.helpLine#show", self.showHelpLine)
         setXMLBool(xml, "creatorTools#screenShotsMode", self.screenShotsMode)
         setXMLBool(xml, "creatorTools#disableMouseWheel", self.disableMouseWheel)
+        setXMLInt(xml, "creatorTools.hud.crosshair#state", self.crosshairState)
         saveXMLFile(xml)
         delete(xml)
     end
@@ -228,8 +231,7 @@ end
 function CreatorTools:checkInputs(dt)
     -- check all inputs
     if InputBinding.hasEvent(InputBinding.CT_HUD_TOGGLE, true) then
-        self:toggleHud()
-        self:toggleCrosshair()
+        self:setHud(not self.hideHud)
     end
     if InputBinding.hasEvent(InputBinding.CT_OPEN_PANEL_V2, true) then
         if self.guis.cTPanelGui.isOpen then
@@ -327,23 +329,21 @@ function CreatorTools:drawHelpButtons()
     end
 end
 
-function CreatorTools:toggleCrosshair()
-    self.hideCrosshair = not self.hideCrosshair
-    g_currentMission.player.pickedUpObjectOverlay:setIsVisible(not self.hideCrosshair)
-    return "hideCrosshair = " .. tostring(self.hideCrosshair)
-end
-
-function CreatorTools:toggleHud()
-    self.hideHud = not self.hideHud
-    g_currentMission:setAllowsHudDisplay(not self.hideHud)
-    self.guis.cTPanelGui:setHideHud(self.hideHud)
-    return "hideHud = " .. tostring(self.hideHud)
+function CreatorTools:setCrosshairState(state)
+    self.crosshairState = state
+    if state == CreatorTools.CROSSHAIR_STATES.SHOW then
+        g_currentMission.player.pickedUpObjectOverlay:setIsVisible(true)
+    elseif state == CreatorTools.CROSSHAIR_STATES.HIDE then
+        g_currentMission.player.pickedUpObjectOverlay:setIsVisible(false)
+    else
+        g_currentMission.player.pickedUpObjectOverlay:setIsVisible(not self.hideHud)
+    end
 end
 
 function CreatorTools:setHud(hide)
-    if (hide and not self.hideHud) or (not hide and self.hideHud) then
-        self:toggleHud()
-    end
+    self.hideHud = hide
+    g_currentMission:setAllowsHudDisplay(not self.hideHud)
+    self:setCrosshairState(self.crosshairState)
 end
 
 function CreatorTools:setWalkingSpeed(speed)
@@ -353,7 +353,6 @@ function CreatorTools:setWalkingSpeed(speed)
     end
     self.walkingSpeed = speed
     g_currentMission.player.walkingSpeed = self.backup.walkingSpeed * ws
-    self.guis.cTPanelGui:setSelectedPlayerSpeed(self.walkingSpeed)
     self.walkingSpeedFadeEffect:play(string.format("x%s", ws))
 end
 
@@ -442,7 +441,6 @@ end
 
 function CreatorTools:setScreenShotsMode(enabled)
     self.screenShotsMode = enabled
-    self:print("%s", enabled)
 end
 
 addModEventListener(CreatorTools)

@@ -47,6 +47,8 @@
 		<text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="With screenshots mode, you'll get a better visual effect."/>
 		<text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Mouse wheel"/>
 		<text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Enables or disables the mouse wheel controls."/>
+		<text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Crosshire"/>
+		<text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshire (with auto state will follow the HUDs visibility)."/>
 		<text name="ui_execute" text="Execute"/>
 		<text name="ui_CT_growthStates0" text="Current"/>
 		<text name="ui_CT_growthStates1" text="Sown"/>
