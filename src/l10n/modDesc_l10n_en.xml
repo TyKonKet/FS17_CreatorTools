@@ -43,6 +43,8 @@
 		<text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Hides or shows the real clock."/>
 		<text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Gold Nuggets"/>
 		<text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Hides or shows the gold nuggets on map."/>
+		<text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Screenshots Mode"/>
+		<text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="With screenshots mode, you'll get a better visual effect."/>
 		<text name="ui_execute" text="Execute"/>
 		<text name="ui_CT_growthStates0" text="Current"/>
 		<text name="ui_CT_growthStates1" text="Sown"/>

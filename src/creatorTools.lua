@@ -5,7 +5,7 @@
 -- @date 11/01/2017
 CreatorTools = {}
 CreatorTools.name = "CreatorTools"
-CreatorTools.debug = false
+CreatorTools.debug = true
 CreatorTools.dir = g_currentModDirectory
 CreatorTools.savegameFile = "creatorTools.xml"
 CreatorTools.WALKING_SPEEDS = {}
@@ -65,6 +65,8 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.showButtonsHelp = true
     self.musclesMode = false
     self.showRealClock = true
+    self.screenShotsMode = false
+
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement)
     self.guis = {}
     self.guis["cTPanelGui"] = CTPanelGui:new()
@@ -110,6 +112,7 @@ function CreatorTools:afterLoad()
     self:setFovy(self.fovy)
     self:setCamy(self.camy)
     self:setMusclesMode(self.musclesMode)
+    self:setScreenShotsMode(self.screenShotsMode)
 end
 
 function CreatorTools:onStartMission()
@@ -139,6 +142,7 @@ function CreatorTools:loadSavegame()
             self.musclesMode = Utils.getNoNil(getXMLBool(xml, "creatorTools.player#musclesMode"), self.musclesMode)
             self.showRealClock = Utils.getNoNil(getXMLBool(xml, "creatorTools#showRealClock"), self.showRealClock)
             self.showHelpLine = Utils.getNoNil(getXMLBool(xml, "creatorTools.helpLine#show"), self.showHelpLine)
+            self.screenShotsMode = Utils.getNoNil(getXMLBool(xml, "creatorTools#screenShotsMode"), self.screenShotsMode)
             delete(xml)
         end
     end
@@ -160,6 +164,7 @@ function CreatorTools:saveSavegame()
         setXMLBool(xml, "creatorTools.player#musclesMode", self.musclesMode)
         setXMLBool(xml, "creatorTools#showRealClock", self.showRealClock)
         setXMLBool(xml, "creatorTools.helpLine#show", self.showHelpLine)
+        setXMLBool(xml, "creatorTools#screenShotsMode", self.screenShotsMode)
         saveXMLFile(xml)
         delete(xml)
     end
@@ -191,6 +196,11 @@ function CreatorTools:update(dt)
     setFovy(g_currentMission.player.cameraNode, Utils.lerp(getFovy(g_currentMission.player.cameraNode), self.target.fovy, self.target.fovyIntAlpha))
     self:checkInputs(dt)
     self:drawHelpButtons()
+    local r, g, b = getLightColor(g_currentMission.environment.sunLightId)
+    local dayMinutes = g_currentMission.environment.dayTime / (60000)
+    if self.screenShotsMode and (dayMinutes > (7 * 60) and dayMinutes < (18 * 60)) then
+        setLightColor(g_currentMission.environment.sunLightId, r * 3, g * 3 - 0.3, b * 3 - 1)
+    end
 end
 
 function CreatorTools:draw()
@@ -422,6 +432,11 @@ function CreatorTools:setMusclesMode(enabled)
     else
         Player.MAX_PICKABLE_OBJECT_MASS = self.backup.MAX_PICKABLE_OBJECT_MASS
     end
+end
+
+function CreatorTools:setScreenShotsMode(enabled)
+    self.screenShotsMode = enabled
+    self:print("%s", enabled)
 end
 
 addModEventListener(CreatorTools)
