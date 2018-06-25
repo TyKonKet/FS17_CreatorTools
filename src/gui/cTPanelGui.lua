@@ -27,6 +27,7 @@ function CTPanelGui:onOpen()
     self.showRealClockElement:setIsChecked(CreatorTools.showRealClock)
     self.showGoldNuggetsElement:setIsChecked(GoldNuggets.enabled)
     self.showScreenShotsModeElement:setIsChecked(CreatorTools.screenShotsMode)
+    self.disableMouseWheelElement:setIsChecked(CreatorTools.disableMouseWheel)
 end
 
 function CTPanelGui:onClose()
@@ -47,6 +48,7 @@ function CTPanelGui:onClickOk()
     CreatorTools.showRealClock = self.showRealClockElement:getIsChecked()
     GoldNuggets:activateNuggetHotspots(true, self.showGoldNuggetsElement:getIsChecked())
     CreatorTools:setScreenShotsMode(self.showScreenShotsModeElement:getIsChecked())
+    CreatorTools.disableMouseWheel = self.disableMouseWheelElement:getIsChecked()
     self:onClickBack()
 end
 
@@ -108,4 +110,8 @@ end
 
 function CTPanelGui:onCreateScreenShotsMode(element)
     self.showScreenShotsModeElement = element
+end
+
+function CTPanelGui:onCreateDisableMouseWheel(element)
+    self.disableMouseWheelElement = element
 end

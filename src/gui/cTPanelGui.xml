@@ -71,6 +71,13 @@ CreatorTools
 					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" />
 					<GuiElement type="bitmap" profile="multiTextOptionBg" />
 				</GuiElement>
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateDisableMouseWheel" toolTip="$l10n_ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="7" focusChangeBottom="1" focusId="11">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_DISABLE_MOUSE_WHEEL_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>
 			</GuiElement>
 			<GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">
 				<GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />

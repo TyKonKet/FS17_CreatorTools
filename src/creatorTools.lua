@@ -66,6 +66,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.musclesMode = false
     self.showRealClock = true
     self.screenShotsMode = false
+    self.disableMouseWheel = false
 
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement)
     self.guis = {}
@@ -143,6 +144,7 @@ function CreatorTools:loadSavegame()
             self.showRealClock = Utils.getNoNil(getXMLBool(xml, "creatorTools#showRealClock"), self.showRealClock)
             self.showHelpLine = Utils.getNoNil(getXMLBool(xml, "creatorTools.helpLine#show"), self.showHelpLine)
             self.screenShotsMode = Utils.getNoNil(getXMLBool(xml, "creatorTools#screenShotsMode"), self.screenShotsMode)
+            self.disableMouseWheel = Utils.getNoNil(getXMLBool(xml, "creatorTools#disableMouseWheel"), self.disableMouseWheel)
             delete(xml)
         end
     end
@@ -165,6 +167,7 @@ function CreatorTools:saveSavegame()
         setXMLBool(xml, "creatorTools#showRealClock", self.showRealClock)
         setXMLBool(xml, "creatorTools.helpLine#show", self.showHelpLine)
         setXMLBool(xml, "creatorTools#screenShotsMode", self.screenShotsMode)
+        setXMLBool(xml, "creatorTools#disableMouseWheel", self.disableMouseWheel)
         saveXMLFile(xml)
         delete(xml)
     end
@@ -197,9 +200,8 @@ function CreatorTools:update(dt)
     self:checkInputs(dt)
     self:drawHelpButtons()
     local r, g, b = getLightColor(g_currentMission.environment.sunLightId)
-    local dayMinutes = g_currentMission.environment.dayTime / (60000)
-    if self.screenShotsMode and (dayMinutes > (7 * 60) and dayMinutes < (18 * 60)) then
-        setLightColor(g_currentMission.environment.sunLightId, r * 3, g * 3 - 0.3, b * 3 - 1)
+    if self.screenShotsMode then
+        setLightColor(g_currentMission.environment.sunLightId, r * 3, g * 2.9, b * 2.67)
     end
 end
 
@@ -249,31 +251,35 @@ function CreatorTools:checkInputs(dt)
     end
     if g_currentMission.controlledVehicle == nil then
         -- check only onfoot inputs
-        if InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT_2, true) then
-            self:setFovy(self.backup.fovy)
-        end
         local fovyAxis = self.axisInputFovy:getVirtualAxis(dt)
         if fovyAxis ~= nil then
             self:addFovy(fovyAxis * 0.5)
         end
-        if InputBinding.hasEvent(InputBinding.CT_FOVY_UP, true) then
-            self:addFovy(1 * 1.5)
+        if not self.disableMouseWheel then
+            if InputBinding.hasEvent(InputBinding.CT_FOVY_UP, true) then
+                self:addFovy(1 * 1.5)
+            end
+            if InputBinding.hasEvent(InputBinding.CT_FOVY_DOWN, true) then
+                self:addFovy(-1 * 1.5)
+            end
         end
-        if InputBinding.hasEvent(InputBinding.CT_FOVY_DOWN, true) then
-            self:addFovy(-1 * 1.5)
-        end
-        if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT_2, true) then
-            self:setCamy(self.backup.camy)
+        if InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_FOVY_DEFAULT_2, true) then
+            self:setFovy(self.backup.fovy)
         end
         local camyAxis = self.axisInputCamy:getVirtualAxis(dt)
         if camyAxis ~= nil then
             self:addCamy(camyAxis * 0.25)
         end
-        if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) and not g_gui:getIsGuiVisible() then
-            self:addCamy(1 * 0.75)
+        if not self.disableMouseWheel then
+            if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) and not g_gui:getIsGuiVisible() then
+                self:addCamy(1 * 0.75)
+            end
+            if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) and not g_gui:getIsGuiVisible() then
+                self:addCamy(-1 * 0.75)
+            end
         end
-        if InputBinding.hasEvent(InputBinding.CT_CAMY_DOWN, true) and not g_gui:getIsGuiVisible() then
-            self:addCamy(-1 * 0.75)
+        if InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT, true) or InputBinding.hasEvent(InputBinding.CT_CAMY_DEFAULT_2, true) then
+            self:setCamy(self.backup.camy)
         end
         if g_gui.currentGuiName ~= "PlacementScreen" then
             if InputBinding.hasEvent(InputBinding.CT_WALKING_SPEED_DEFAULT) then
