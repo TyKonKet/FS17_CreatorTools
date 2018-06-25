@@ -129,3 +129,65 @@ end
 function InputBinding.getMouseButtonNames(mouseButtons)
     return g_i18n:getText("ui_mouse") .. " " .. MouseHelper.getButtonNames(mouseButtons)
 end
+
+function VehicleCamera:getCollisionDistance()
+    if not self.isCollisionEnabled or CreatorTools.disableCameraCollisions then
+        return false, nil, nil, nil, nil, nil
+    end
+    local raycastMask = 32 + 64 + 128 + 256 + 4096
+    local targetCamX, targetCamY, targetCamZ = localToWorld(self.rotateNode, self.transDirX * self.zoomTarget, self.transDirY * self.zoomTarget, self.transDirZ * self.zoomTarget)
+    local hasCollision = false
+    local collisionDistance = -1
+    local normalX, normalY, normalZ
+    local normalDotDir
+    for _, raycastNode in ipairs(self.raycastNodes) do
+        hasCollision = false
+        local nodeX, nodeY, nodeZ = getWorldTranslation(raycastNode)
+        local dirX, dirY, dirZ = targetCamX - nodeX, targetCamY - nodeY, targetCamZ - nodeZ
+        local dirLength = Utils.vector3Length(dirX, dirY, dirZ)
+        dirX = dirX / dirLength
+        dirY = dirY / dirLength
+        dirZ = dirZ / dirLength
+        local startX = nodeX
+        local startY = nodeY
+        local startZ = nodeZ
+        local currentDistance = 0
+        local minDistance = self.transMin
+        while (true) do
+            if (dirLength - currentDistance) <= 0 then
+                break
+            end
+            self.raycastDistance = 0
+            raycastClosest(startX, startY, startZ, dirX, dirY, dirZ, "raycastCallback", dirLength - currentDistance, self, raycastMask, true)
+            if self.raycastDistance ~= 0 then
+                currentDistance = currentDistance + self.raycastDistance + 0.001
+                local ndotd = Utils.dotProduct(self.normalX, self.normalY, self.normalZ, dirX, dirY, dirZ)
+                if self.vehicle.getIsAttachedVehicleNode == nil or self.vehicle.getIsDynamicallyMountedNode == nil then
+                    break
+                end
+                if self.vehicle:getIsAttachedVehicleNode(self.raycastTransformId) or self.vehicle:getIsDynamicallyMountedNode(self.raycastTransformId) then
+                    if ndotd > 0 then
+                        minDistance = math.max(minDistance, currentDistance)
+                    end
+                else
+                    hasCollision = true
+                    if raycastNode == self.rotateNode then
+                        normalX, normalY, normalZ = self.normalX, self.normalY, self.normalZ
+                        collisionDistance = math.max(self.transMin, currentDistance)
+                        normalDotDir = ndotd
+                    end
+                    break
+                end
+                startX = nodeX + dirX * currentDistance
+                startY = nodeY + dirY * currentDistance
+                startZ = nodeZ + dirZ * currentDistance
+            else
+                break
+            end
+        end
+        if not hasCollision then
+            break
+        end
+    end
+    return hasCollision, collisionDistance, normalX, normalY, normalZ, normalDotDir
+end

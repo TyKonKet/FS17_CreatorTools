@@ -71,6 +71,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.screenShotsMode = false
     self.disableMouseWheel = false
     self.crosshairState = CreatorTools.CROSSHAIR_STATES.AUTO
+    self.disableCameraCollisions = false
 
     g_inGameMenu:onCreateTimeScale(g_inGameMenu.timeScaleElement)
     self.guis = {}
@@ -147,6 +148,7 @@ function CreatorTools:loadSavegame()
             self.showHelpLine = Utils.getNoNil(getXMLBool(xml, "creatorTools.helpLine#show"), self.showHelpLine)
             self.screenShotsMode = Utils.getNoNil(getXMLBool(xml, "creatorTools#screenShotsMode"), self.screenShotsMode)
             self.disableMouseWheel = Utils.getNoNil(getXMLBool(xml, "creatorTools#disableMouseWheel"), self.disableMouseWheel)
+            self.disableCameraCollisions = Utils.getNoNil(getXMLBool(xml, "creatorTools#disableCameraCollisions"), self.disableCameraCollisions)
             self.crosshairState = Utils.getNoNil(getXMLInt(xml, "creatorTools.hud.crosshair#state"), self.crosshairState)
             delete(xml)
         end
@@ -170,6 +172,7 @@ function CreatorTools:saveSavegame()
         setXMLBool(xml, "creatorTools.helpLine#show", self.showHelpLine)
         setXMLBool(xml, "creatorTools#screenShotsMode", self.screenShotsMode)
         setXMLBool(xml, "creatorTools#disableMouseWheel", self.disableMouseWheel)
+        setXMLBool(xml, "creatorTools#disableCameraCollisions", self.disableCameraCollisions)
         setXMLInt(xml, "creatorTools.hud.crosshair#state", self.crosshairState)
         saveXMLFile(xml)
         delete(xml)

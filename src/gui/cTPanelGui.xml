@@ -84,6 +84,13 @@ CreatorTools
 					<GuiElement type="text" profile="multiTextOptionText" />
 					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_CROSSHAIR_STATE_TEXT" />
 					<GuiElement type="bitmap" profile="multiTextOptionBg" />
+				</GuiElement>				
+				<GuiElement type="toggleButton2" profile="multiTextOptionSettings" onCreate="onCreateDisableCameraCollisions" toolTip="$l10n_ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" onFocus="onFocusElement" onLeave="onLeaveElement" focusChangeTop="7" focusChangeBottom="1" focusId="13">
+					<GuiElement type="button" profile="multiTextOptionLeft" />
+					<GuiElement type="button" profile="multiTextOptionRight" />
+					<GuiElement type="text" profile="multiTextOptionText" />
+					<GuiElement type="text" profile="multiTextOptionTitle" text="$l10n_ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" />
+					<GuiElement type="bitmap" profile="multiTextOptionBg" />
 				</GuiElement>
 			</GuiElement>
 			<GuiElement type="bitmap" profile="ingameMenuHelpRowBg" id="ingameMenuHelpBox" visible="false" position="0px 40px">

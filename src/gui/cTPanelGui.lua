@@ -29,6 +29,7 @@ function CTPanelGui:onOpen()
     self.showScreenShotsModeElement:setIsChecked(CreatorTools.screenShotsMode)
     self.disableMouseWheelElement:setIsChecked(CreatorTools.disableMouseWheel)
     self.crosshairStateElement:setState(CreatorTools.crosshairState, false)
+    self.disableCameraCollisionsElement:setIsChecked(not CreatorTools.disableCameraCollisions)
 end
 
 function CTPanelGui:onClose()
@@ -51,6 +52,7 @@ function CTPanelGui:onClickOk()
     CreatorTools:setScreenShotsMode(self.showScreenShotsModeElement:getIsChecked())
     CreatorTools.disableMouseWheel = self.disableMouseWheelElement:getIsChecked()
     CreatorTools:setCrosshairState(self.crosshairStateElement:getState())
+    CreatorTools.disableCameraCollisions = not self.disableCameraCollisionsElement:getIsChecked()
     self:onClickBack()
 end
 
@@ -113,4 +115,8 @@ end
 function CTPanelGui:onCreateCrosshairState(element)
     self.crosshairStateElement = element
     element:setTexts({g_i18n:getText("ui_auto"), g_i18n:getText("ui_on"), g_i18n:getText("ui_off")})
+end
+
+function CTPanelGui:onCreateDisableCameraCollisions(element)
+    self.disableCameraCollisionsElement = element
 end
