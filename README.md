@@ -14,7 +14,8 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [x] Hide crosshair separately from huds
 - [ ] Fix to muscle mode, it throw objects back
 - [x] Ability to disable mouse wheel inputs to prevent conflicts with chainsaws
-- [ ] Fix gui focus navigation
+- [x] Fix gui focus navigation
 - [ ] Regenerate translation files
 - [x] Rework hud hider
-- [ ] Reorder gui elements
+- [x] Reorder gui elements
+- [ ] FillVehicle command
