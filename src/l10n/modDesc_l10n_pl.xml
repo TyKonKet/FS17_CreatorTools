@@ -1,87 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <l10n>
-	<translationContributors>Ziuta</translationContributors>
-	<texts>
-		<text name="input_CT_HUD_TOGGLE" text="Ukryj/Pokaż HUD" />
-		<text name="CT_SHOW_HUD_HELP" text="Pokaż HUD" />
-		<text name="CT_HIDE_HUD_HELP" text="Ukryj HUD" />
-		<text name="input_AXIS_CT_WALKING_SPEED_2" text="Zmniejsz prędkość chodu" />
-		<text name="input_AXIS_CT_WALKING_SPEED_1" text="Zwiększ prędkość chodu" />
-		<text name="AXIS_CT_WALKING_SPEED_HELP" text="Zmiana prędkości chodu" />
-		<text name="input_CT_WALKING_SPEED_DEFAULT" text="Zresetuj prędkość chodu do domyślnych wartości" />
-		<text name="input_CT_FOVY_DEFAULT" text="Zresetuj pole widzenia kamery (FOV) do domyślnych wartości" />
-		<text name="input_CT_FOVY_DEFAULT_2" text="Zresetuj pole widzenia kamery (FOV) do domyślnych wartości" />
-		<text name="input_AXIS_CT_FOVY_1" text="Zwiększ pole widzenia kamery (FOV)" />
-		<text name="input_AXIS_CT_FOVY_2" text="Zmniejsz pole widzenia kamery (FOV)" />
-		<text name="input_CT_FOVY_UP" text="Zwiększ pole widzenia kamery (FOV)" />
-		<text name="input_CT_FOVY_DOWN" text="Zmniejsz pole widzenia kamery (FOV)" />
-		<text name="AXIS_CT_FOVY_HELP" text="Zmiana pola widzenia kamery (FOV)" />
-		<text name="input_CT_CAMY_DEFAULT" text="Zresetuj wysokość kamery do ustawień domyślnych" />
-		<text name="input_CT_CAMY_DEFAULT_2" text="Zresetuj wysokość kamery do ustawień domyślnych" />
-		<text name="input_AXIS_CT_CAMY_1" text="Zwiększ wysokość kamery" />
-		<text name="input_AXIS_CT_CAMY_2" text="Zmniejsz wysokość kamery" />
-		<text name="input_CT_CAMY_UP" text="Zwiększ wysokość kamery" />
-		<text name="input_CT_CAMY_DOWN" text="Zmniejsz wysokość kamery" />
-		<text name="AXIS_CT_CAMY_HELP" text="Zmiana wysokości kamery" />
-		<text name="input_CT_CHANGE_DIRT" text="Zmiana poziomu zabrudzeń" />
-		<text name="input_CT_OPEN_PANEL_V2" text="Otwórz panel Creator Tools" />
-		<text name="input_CT_OPEN_COMMANDS_PANEL" text="Otórz panel komend" />
-		<text name="ui_and" text="i" />
-		<text name="ui_CT_ADMIN_ONLY_ACTION" text="Ta czynność może być wykonana tylko przez administratora, zaloguj się, aby kontynuować" />
-		<text name="ui_CT_HUD_TEXT" text="Wyświetlacze przezierne (HUDy)" />
-		<text name="ui_CT_HUD_TOOLTIP" text="Ukrywa lub pokazuje wyświetlacze przezierne (HUDy)." />
-		<text name="ui_CT_PLAYER_SPEED_TEXT" text="Prędkość chodu" />
-		<text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Zmienia prędkość chodu gracza." />
-		<text name="ui_CT_CREATIVE_MONEY_TEXT" text="Drukarnia piędziędzy" />
-		<text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Włacza lub wyłacza druk pieniędzy (1mld)." />
-		<text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Pokaż pomoc" />
-		<text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Włącza lub wyłącza pokazywanie przycisków w oknie pomocy." />
-		<text name="ui_CT_MUSCLES_MODE_TEXT" text="Strongman" />
-		<text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Jako strongman możesz podnieść obiekt, o każdej wadze." />
-		<text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Rzeczywisty czas" />
-		<text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Ukrywa lub pokazuje rzeczywisty czas." />
-		<text name="ui_execute" text="Wykonaj" />
-		<text name="ui_CT_growthStates0" text="Obecny" />
-		<text name="ui_CT_growthStates1" text="Śnieg" />
-		<text name="ui_CT_growthStates2" text="Pierwszy etap" />
-		<text name="ui_CT_growthStates3" text="Drugi etap" />
-		<text name="ui_CT_growthStates4" text="Trzeci etap" />
-		<text name="ui_CT_growthStates5" text="Wzrost" />
-		<text name="ui_setFieldFruit" text="Zasiewy pól" />
-		<text name="ui_CT_setFieldFruitField" text="Numer pola" />
-		<text name="ui_CT_setFieldFruitFruit" text="Uprawa" />
-		<text name="ui_CT_setFieldFruitGrowthState" text="Stan wzrostu" />
-		<text name="ui_CT_setFieldFruitFertilizerState" text="Stan nawożenia" />
-		<text name="ui_CT_setFieldFruitPloughingState" text="Zaoraj" />
-		<text name="ui_CT_setFieldFruitPloughingState_tooltip" text="Pole zostanie uznane za zaorane i otrzymasz premię w wysokości 10% za następne trzy sezony." />
-		<text name="ui_CT_setFieldFruitBuyField" text="Zajmij pole" />
-		<text name="ui_CT_setFieldFruitBuyField_tooltip" text="Jeśli nie jesteś właścicielem tego pola, stanie się on Twoim bez dodatkowych kosztów." />
-		<text name="ui_setFieldGround" text="Uprawa pola" />
-		<text name="ui_CT_setFieldGroundGround" text="Gleba" />
-		<text name="ui_CT_setFieldGroundStates_cultivator" text="Zakultywatorowana" />
-		<text name="ui_CT_setFieldGroundStates_plough" text="Zaorana" />
-		<text name="ui_CT_setFieldGroundStates_sowing" text="Śnieg" />
-		<text name="ui_CT_setFieldGroundStates_sowing_width" text="Szerokość śniegu" />
-		<text name="ui_CT_setFieldGroudAngle" text="Kąt" />
-		<text name="ui_CT_setFieldGroudAngle_tooltip" text="Kąt obrotu tekstury gleby." />
-		<text name="hl_CT_CATEGORY" text="Creator Tools" />
-		<text name="hl_CT_TITLE_00" text="Ogólne" />
-		<text name="hl_CT_TEXT_00_00" text="Jak sama nazwa mów, ten mod jest przeznaczony dla twórców (np. streamer'ów i videomaker'ów), ale jest również przydatny dla zwykłych graczy, którzy potrzebują dodatkowych narzędzi." />
-		<text name="hl_CT_TEXT_00_01" text="Główne funkcje zostały wymienione i wyjaśnione tutaj, możesz otworzyć panel modu za pomocą $input_CT_OPEN_PANEL_V2;." />
-		<text name="hl_CT_TITLE_01" text="Ukrywanie HUDa" />
-		<text name="hl_CT_TEXT_01_00" text="Możesz ukryć i pokazać HUDy (wyświetlacze przezierne) za pomocą $input_CT_HUD_TOGGLE;." />
-		<text name="hl_CT_TITLE_02" text="Prędkość gracza" />
-		<text name="hl_CT_TEXT_02_00" text="Możesz zwiększyć i zmniejszyć prędkość gracza za pomocą $input_AXIS_CT_WALKING_SPEED;." />
-		<text name="hl_CT_TEXT_02_01" text="Możesz oczywiście zresetować prędkość gracza za pomocą $input_CT_WALKING_SPEED_DEFAULT;." />
-		<text name="hl_CT_TITLE_03" text="Wysokość kamery" />
-		<text name="hl_CT_TEXT_03_00" text="Możesz podnieść i opuścić kamerę za pomocą $input_AXIS_CT_CAMY; lub $input_CT_CAMY_UP; i $input_CT_CAMY_DOWN;." />
-		<text name="hl_CT_TEXT_03_01" text="Możesz oczywiście zresetować wysokość kamery za pomocą $input_CT_CAMY_DEFAULT; lub $input_CT_CAMY_DEFAULT_2;." />
-		<text name="hl_CT_TITLE_04" text="Zoom kamery" />
-		<text name="hl_CT_TEXT_04_00" text="Możesz przybliżyć i oddalić widok za pomocą $input_AXIS_CT_FOVY; lub $input_CT_FOVY_UP; i $input_CT_FOVY_DOWN;." />
-		<text name="hl_CT_TEXT_04_01" text="Możesz oczywiście zresetować widok do ustawień domyślnych za pomocą $input_CT_FOVY_DEFAULT; lub $input_CT_FOVY_DEFAULT_2;." />
-		<text name="hl_CT_TITLE_05" text="Zmiana zabrudzenia" />
-		<text name="hl_CT_TEXT_05_00" text="Gdy jesteś w pojeździe, możesz zmienić poziom zabrudzenia za pomocą $input_CT_CHANGE_DIRT;." />
-		<text name="hl_CT_TITLE_06" text="Dodatkowe skalowanie czasu" />
-		<text name="hl_CT_TEXT_06_00" text="Ten mod doaje 7 nowych skali czasu (od 240x do 15360x), możesz zmieniać ją za pomocą $input_INCREASE_TIMESCALE; i $input_DECREASE_TIMESCALE;." />
-	</texts>
+    <translationContributors>Ziuta</translationContributors>
+    <texts>
+        <text name="input_CT_HUD_TOGGLE" text="Ukryj/Pokaż HUD" />
+        <text name="CT_SHOW_HUD_HELP" text="Pokaż HUD" />
+        <text name="CT_HIDE_HUD_HELP" text="Ukryj HUD" />
+        <text name="input_AXIS_CT_WALKING_SPEED_2" text="Zmniejsz prędkość chodu" />
+        <text name="input_AXIS_CT_WALKING_SPEED_1" text="Zwiększ prędkość chodu" />
+        <text name="AXIS_CT_WALKING_SPEED_HELP" text="Zmiana prędkości chodu" />
+        <text name="input_CT_WALKING_SPEED_DEFAULT" text="Zresetuj prędkość chodu do domyślnych wartości" />
+        <text name="input_CT_FOVY_DEFAULT" text="Zresetuj pole widzenia kamery (FOV) do domyślnych wartości" />
+        <text name="input_CT_FOVY_DEFAULT_2" text="Zresetuj pole widzenia kamery (FOV) do domyślnych wartości" />
+        <text name="input_AXIS_CT_FOVY_1" text="Zwiększ pole widzenia kamery (FOV)" />
+        <text name="input_AXIS_CT_FOVY_2" text="Zmniejsz pole widzenia kamery (FOV)" />
+        <text name="input_CT_FOVY_UP" text="Zwiększ pole widzenia kamery (FOV)" />
+        <text name="input_CT_FOVY_DOWN" text="Zmniejsz pole widzenia kamery (FOV)" />
+        <text name="AXIS_CT_FOVY_HELP" text="Zmiana pola widzenia kamery (FOV)" />
+        <text name="input_CT_CAMY_DEFAULT" text="Zresetuj wysokość kamery do ustawień domyślnych" />
+        <text name="input_CT_CAMY_DEFAULT_2" text="Zresetuj wysokość kamery do ustawień domyślnych" />
+        <text name="input_AXIS_CT_CAMY_1" text="Zwiększ wysokość kamery" />
+        <text name="input_AXIS_CT_CAMY_2" text="Zmniejsz wysokość kamery" />
+        <text name="input_CT_CAMY_UP" text="Zwiększ wysokość kamery" />
+        <text name="input_CT_CAMY_DOWN" text="Zmniejsz wysokość kamery" />
+        <text name="AXIS_CT_CAMY_HELP" text="Zmiana wysokości kamery" />
+        <text name="input_CT_CHANGE_DIRT" text="Zmiana poziomu zabrudzeń" />
+        <text name="input_CT_OPEN_PANEL_V2" text="Otwórz panel Creator Tools" />
+        <text name="input_CT_OPEN_COMMANDS_PANEL" text="Otórz panel komend" />
+        <text name="ui_and" text="i" />
+        <text name="ui_CT_ADMIN_ONLY_ACTION" text="Ta czynność może być wykonana tylko przez administratora, zaloguj się, aby kontynuować" />
+        <text name="ui_CT_HUD_TEXT" text="Wyświetlacze przezierne (HUDy)" />
+        <text name="ui_CT_HUD_TOOLTIP" text="Ukrywa lub pokazuje wyświetlacze przezierne (HUDy)." />
+        <text name="ui_CT_PLAYER_SPEED_TEXT" text="Prędkość chodu" />
+        <text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Zmienia prędkość chodu gracza." />
+        <text name="ui_CT_CREATIVE_MONEY_TEXT" text="Drukarnia piędziędzy" />
+        <text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Włacza lub wyłacza druk pieniędzy (1mld)." />
+        <text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Pokaż pomoc" />
+        <text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Włącza lub wyłącza pokazywanie przycisków w oknie pomocy." />
+        <text name="ui_CT_MUSCLES_MODE_TEXT" text="Strongman" />
+        <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Jako strongman możesz podnieść obiekt, o każdej wadze." />
+        <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Rzeczywisty czas" />
+        <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Ukrywa lub pokazuje rzeczywisty czas." />
+        <!-- Missing translation of "Gold Nuggets" -->
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Gold Nuggets" />
+        <!-- Missing translation of "Hides or shows the gold nuggets on map." -->
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Hides or shows the gold nuggets on map." />
+        <!-- Missing translation of "Screenshots mode" -->
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Screenshots mode" />
+        <!-- Missing translation of "With screenshots mode, you'll get a better visual effect." -->
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="With screenshots mode, you'll get a better visual effect." />
+        <!-- Missing translation of "Mouse wheel" -->
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Mouse wheel" />
+        <!-- Missing translation of "Enables or disables the mouse wheel controls." -->
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Enables or disables the mouse wheel controls." />
+        <!-- Missing translation of "Crosshire" -->
+        <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Crosshire" />
+        <!-- Missing translation of "Hides or shows the crosshire (with auto state will follow the HUDs visibility)." -->
+        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshire (with auto state will follow the HUDs visibility)." />
+        <!-- Missing translation of "Camera collisions" -->
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Camera collisions" />
+        <!-- Missing translation of "Enables or disables the collisions of cameras." -->
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" text="Enables or disables the collisions of cameras." />
+        <text name="ui_execute" text="Wykonaj" />
+        <text name="ui_CT_growthStates0" text="Obecny" />
+        <text name="ui_CT_growthStates1" text="Śnieg" />
+        <text name="ui_CT_growthStates2" text="Pierwszy etap" />
+        <text name="ui_CT_growthStates3" text="Drugi etap" />
+        <text name="ui_CT_growthStates4" text="Trzeci etap" />
+        <text name="ui_CT_growthStates5" text="Wzrost" />
+        <text name="ui_setFieldFruit" text="Zasiewy pól" />
+        <text name="ui_CT_setFieldFruitField" text="Numer pola" />
+        <text name="ui_CT_setFieldFruitFruit" text="Uprawa" />
+        <text name="ui_CT_setFieldFruitGrowthState" text="Stan wzrostu" />
+        <text name="ui_CT_setFieldFruitFertilizerState" text="Stan nawożenia" />
+        <text name="ui_CT_setFieldFruitPloughingState" text="Zaoraj" />
+        <text name="ui_CT_setFieldFruitPloughingState_tooltip" text="Pole zostanie uznane za zaorane i otrzymasz premię w wysokości 10% za następne trzy sezony." />
+        <text name="ui_CT_setFieldFruitBuyField" text="Zajmij pole" />
+        <text name="ui_CT_setFieldFruitBuyField_tooltip" text="Jeśli nie jesteś właścicielem tego pola, stanie się on Twoim bez dodatkowych kosztów." />
+        <text name="ui_setFieldGround" text="Uprawa pola" />
+        <text name="ui_CT_setFieldGroundGround" text="Gleba" />
+        <text name="ui_CT_setFieldGroundStates_cultivator" text="Zakultywatorowana" />
+        <text name="ui_CT_setFieldGroundStates_plough" text="Zaorana" />
+        <text name="ui_CT_setFieldGroundStates_sowing" text="Śnieg" />
+        <text name="ui_CT_setFieldGroundStates_sowing_width" text="Szerokość śniegu" />
+        <text name="ui_CT_setFieldGroudAngle" text="Kąt" />
+        <text name="ui_CT_setFieldGroudAngle_tooltip" text="Kąt obrotu tekstury gleby." />
+        <!-- Missing translation of "Creator Tools" -->
+        <text name="hl_CT_CATEGORY" text="Creator Tools" />
+        <text name="hl_CT_TITLE_00" text="Ogólne" />
+        <text name="hl_CT_TEXT_00_00" text="Jak sama nazwa mów, ten mod jest przeznaczony dla twórców (np. streamer'ów i videomaker'ów), ale jest również przydatny dla zwykłych graczy, którzy potrzebują dodatkowych narzędzi." />
+        <text name="hl_CT_TEXT_00_01" text="Główne funkcje zostały wymienione i wyjaśnione tutaj, możesz otworzyć panel modu za pomocą $input_CT_OPEN_PANEL_V2;." />
+        <text name="hl_CT_TITLE_01" text="Ukrywanie HUDa" />
+        <text name="hl_CT_TEXT_01_00" text="Możesz ukryć i pokazać HUDy (wyświetlacze przezierne) za pomocą $input_CT_HUD_TOGGLE;." />
+        <text name="hl_CT_TITLE_02" text="Prędkość gracza" />
+        <text name="hl_CT_TEXT_02_00" text="Możesz zwiększyć i zmniejszyć prędkość gracza za pomocą $input_AXIS_CT_WALKING_SPEED;." />
+        <text name="hl_CT_TEXT_02_01" text="Możesz oczywiście zresetować prędkość gracza za pomocą $input_CT_WALKING_SPEED_DEFAULT;." />
+        <text name="hl_CT_TITLE_03" text="Wysokość kamery" />
+        <text name="hl_CT_TEXT_03_00" text="Możesz podnieść i opuścić kamerę za pomocą $input_AXIS_CT_CAMY; lub $input_CT_CAMY_UP; i $input_CT_CAMY_DOWN;." />
+        <text name="hl_CT_TEXT_03_01" text="Możesz oczywiście zresetować wysokość kamery za pomocą $input_CT_CAMY_DEFAULT; lub $input_CT_CAMY_DEFAULT_2;." />
+        <text name="hl_CT_TITLE_04" text="Zoom kamery" />
+        <text name="hl_CT_TEXT_04_00" text="Możesz przybliżyć i oddalić widok za pomocą $input_AXIS_CT_FOVY; lub $input_CT_FOVY_UP; i $input_CT_FOVY_DOWN;." />
+        <text name="hl_CT_TEXT_04_01" text="Możesz oczywiście zresetować widok do ustawień domyślnych za pomocą $input_CT_FOVY_DEFAULT; lub $input_CT_FOVY_DEFAULT_2;." />
+        <text name="hl_CT_TITLE_05" text="Zmiana zabrudzenia" />
+        <text name="hl_CT_TEXT_05_00" text="Gdy jesteś w pojeździe, możesz zmienić poziom zabrudzenia za pomocą $input_CT_CHANGE_DIRT;." />
+        <text name="hl_CT_TITLE_06" text="Dodatkowe skalowanie czasu" />
+        <text name="hl_CT_TEXT_06_00" text="Ten mod doaje 7 nowych skali czasu (od 240x do 15360x), możesz zmieniać ją za pomocą $input_INCREASE_TIMESCALE; i $input_DECREASE_TIMESCALE;." />
+    </texts>
 </l10n>

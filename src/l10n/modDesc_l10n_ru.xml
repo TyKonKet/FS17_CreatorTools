@@ -40,6 +40,26 @@
         <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме суперсилы, вы можете поднять объекты любого веса." />
         <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Реальное время" />
         <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Отображает или скрывает реальное время." />
+        <!-- Missing translation of "Gold Nuggets" -->
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Gold Nuggets" />
+        <!-- Missing translation of "Hides or shows the gold nuggets on map." -->
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Hides or shows the gold nuggets on map." />
+        <!-- Missing translation of "Screenshots mode" -->
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Screenshots mode" />
+        <!-- Missing translation of "With screenshots mode, you'll get a better visual effect." -->
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="With screenshots mode, you'll get a better visual effect." />
+        <!-- Missing translation of "Mouse wheel" -->
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Mouse wheel" />
+        <!-- Missing translation of "Enables or disables the mouse wheel controls." -->
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Enables or disables the mouse wheel controls." />
+        <!-- Missing translation of "Crosshire" -->
+        <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Crosshire" />
+        <!-- Missing translation of "Hides or shows the crosshire (with auto state will follow the HUDs visibility)." -->
+        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshire (with auto state will follow the HUDs visibility)." />
+        <!-- Missing translation of "Camera collisions" -->
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Camera collisions" />
+        <!-- Missing translation of "Enables or disables the collisions of cameras." -->
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" text="Enables or disables the collisions of cameras." />
         <text name="ui_execute" text="Выполнить" />
         <text name="ui_CT_growthStates0" text="Текущая" />
         <text name="ui_CT_growthStates1" text="Посеяно" />
@@ -64,6 +84,7 @@
         <text name="ui_CT_setFieldGroundStates_sowing_width" text="Посажено рядами" />
         <text name="ui_CT_setFieldGroudAngle" text="Угол" />
         <text name="ui_CT_setFieldGroudAngle_tooltip" text="Угол поворота текстуры почвы." />
+        <!-- Missing translation of "Creator Tools" -->
         <text name="hl_CT_CATEGORY" text="Creator Tools" />
         <text name="hl_CT_TITLE_00" text="Общие" />
         <text name="hl_CT_TEXT_00_00" text="Как следует из названия, этот мод предназначен для создателей (например, стримеров и создателей видео), но также полезен для обычных игроков, которым необходимы дополнительные инструменты." />

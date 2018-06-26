@@ -15,7 +15,7 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [ ] Fix to muscle mode, it throw objects back
 - [x] Ability to disable mouse wheel inputs to prevent conflicts with chainsaws
 - [x] Fix gui focus navigation
-- [ ] Regenerate translation files
+- [x] Regenerate translation files
 - [x] Rework hud hider
 - [x] Reorder gui elements
 - [ ] FillVehicle command
