@@ -16,9 +16,9 @@ function CreatorToolsCustomCommands:registerCommands()
     addConsoleCommand("ctShowVehicleDistance", "Shows the distance between vehicle and cam", "consoleCommandShowVehicleDistance", g_currentMission)
     addConsoleCommand("ctSuspendApp", "Suspends the game", "consoleCommandSuspendApp")
     addConsoleCommand("ctVerifyI18N", "Checks the I18N", "consoleCommandVerifyAll", g_i18n)
-    addConsoleCommand("ctActivateCameraPath", "Activate camera path", "consoleActivateCameraPath", g_currentMission);
+    addConsoleCommand("ctActivateCameraPath", "Activate camera path", "consoleActivateCameraPath", g_currentMission)
     if g_currentMission.husbandries["chicken"] ~= nil then
-        addConsoleCommand("ctSpawnPickupObjects", "Spawn pickup objects", "consoleCommandSpawnPickupObjects", g_currentMission.husbandries["chicken"]);
+        addConsoleCommand("ctSpawnPickupObjects", "Spawn pickup objects", "consoleCommandSpawnPickupObjects", g_currentMission.husbandries["chicken"])
     end
     if g_currentMission:getIsServer() then
         addConsoleCommand("ctAddBale", "Adds a bale", "consoleCommandAddBale", g_currentMission)
@@ -29,6 +29,7 @@ function CreatorToolsCustomCommands:registerCommands()
         addConsoleCommand("ctDeleteAllVehicles", "Deletes all vehicles", "consoleCommandDeleteAllVehicles", g_currentMission)
         addConsoleCommand("ctExportStoreItems", "Exports storeItem data", "consoleCommandExportStoreItems", g_currentMission)
         addConsoleCommand("ctFillVehicle", "Fills the vehicle with given filltype", "consoleCommandFillVehicle", g_currentMission)
+        addConsoleCommand("ctFillVehicleTimmiej93", "Fills the vehicle with given filltype", "consoleCommandFillVehicleTimmiej93", g_currentMission)
         addConsoleCommand("ctSetAnimals", "Sets the amount of given animals", "consoleCommandSetAnimals", g_currentMission)
         addConsoleCommand("ctSetDirtScale", "Sets a given dirt scale", "consoleCommandSetDirtScale", g_currentMission)
         addConsoleCommand("ctSetFuel", "Sets the vehicle fuel level", "consoleCommandSetFuel", g_currentMission)
@@ -56,6 +57,7 @@ function CreatorToolsCustomCommands:removeCommands()
     removeConsoleCommand("ctDeleteAllVehicles")
     removeConsoleCommand("ctExportStoreItems")
     removeConsoleCommand("ctFillVehicle")
+    removeConsoleCommand("ctFillVehicleTimmiej93")
     removeConsoleCommand("ctReloadCurrentGui")
     removeConsoleCommand("ctReloadVehicle")
     removeConsoleCommand("ctSetAnimals")
@@ -77,7 +79,7 @@ function CreatorToolsCustomCommands:removeCommands()
 end
 
 function FSBaseMission:consoleCommandSetAnimals(type, amount)
-    local usage = "emSetAnimals type(cow | pig | sheep) amount"
+    local usage = "ctSetAnimals type(cow | pig | sheep) amount"
     local husbandry = self.husbandries[type]
     if type == nil or type == "" or husbandry == nil then
         return "Invalid type. " .. usage
@@ -96,7 +98,7 @@ function FSBaseMission:consoleCommandSetAnimals(type, amount)
     return string.format("Setted %s from %s to %s(%s)", type, oldAmount, amount, difAmount)
 end
 
--- Ffunction by Timmiej93
+-- Function by Timmiej93
 function FSBaseMission:consoleCommandFillVehicleTimmiej93(filltype, amount, force)
     local vehicle = self.controlledVehicle
     local fillImps = {}
@@ -119,7 +121,7 @@ function FSBaseMission:consoleCommandFillVehicleTimmiej93(filltype, amount, forc
     local filltype = FillUtil.fillTypeNameToDesc[filltype]
     if filltype == nil or filltype == "" then
         local text = 'Invalid filltype "' .. tostring(filltype) .. '"\n'
-        text = text .. "Usage: emFillVehicle filltypeName amount\n"
+        text = text .. "Usage: ctFillVehicleTimmiej93 filltypeName amount\n"
         text = text .. "\t\tWith filltypeName being any of the following:\n"
         for FTN, table in pairs(FillUtil.fillTypeNameToDesc) do
             text = text .. "\t\t\t\t- Filltype: " .. FTN .. " :: Idx: " .. table.index .. "\n"

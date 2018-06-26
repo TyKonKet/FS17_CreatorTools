@@ -7,7 +7,7 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 
 - [ ] ~~Run factor~~
 - [ ] ~~Jump scale~~
-- [ ] Graphic commands working on mp  
+- [x] Graphic commands working on mp  
 - [x] Ability to hide golden nuggets from minimap  
 - [x] Screeshot mode  
 - [x] Ability to disable vehicle camera collision

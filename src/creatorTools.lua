@@ -48,7 +48,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     margeI18N()
     self.backup = {}
     self.target = {}
-    self.hideHud = true
+    self.hideHud = false
     self.showHelpLine = false
     self.backup.showHelpBox = true
     self.walkingSpeed = CreatorTools.DEFAULT_WALKING_SPEED

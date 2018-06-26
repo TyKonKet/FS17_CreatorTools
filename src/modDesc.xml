@@ -65,6 +65,8 @@
 		<sourceFile filename="helpers/goldNuggets.lua" />
 		<sourceFile filename="gui/cTPanelGui.lua" />
 		<sourceFile filename="gui/cTCommandsPanel.lua" />
+		<sourceFile filename="events/setFieldFruitEvent.lua" />
+		<sourceFile filename="events/setFieldGroundEvent.lua" />
 		<sourceFile filename="creatorTools.lua" />
 	</extraSourceFiles>
 	<inputBindings>

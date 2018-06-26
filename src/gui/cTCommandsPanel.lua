@@ -131,13 +131,11 @@ function CTCommandsPanel:SetFieldFruit()
     local fruit = FruitUtil.fruitIndexToDesc[self.setFieldFruitFruit:getState()].name
     local growthState = self.setFieldFruitGrowthState:getState()
     local fertilizerState = self.setFieldFruitFertilizerState:getState() - 1
-    local ploughingState = 0
-    if self.setFieldFruitPloughingState:getIsChecked() then
-        ploughingState = 1
-    end
+    local ploughingState = self.setFieldFruitPloughingState:getIsChecked() and 1 or 0
     local buyField = self.setFieldFruitBuyField:getIsChecked()
-    print(("gsSetFieldFruit %s %s %s %s %s %s"):format(field, fruit, growthState, fertilizerState, ploughingState, buyField))
-    g_currentMission:consoleCommandSetFieldFruit(field, fruit, growthState, fertilizerState, ploughingState, buyField)
+    if g_currentMission.isMasterUser or g_currentMission:getIsServer() then
+        SetFieldFruitEvent.send(field, fruit, growthState, fertilizerState, ploughingState, buyField)
+    end
 end
 
 function CTCommandsPanel:onCreatePageSetFieldGround(element)
@@ -185,11 +183,9 @@ function CTCommandsPanel:SetFieldGround()
     local ground = groundStates[self.setFieldGroundGround:getState()]
     local angle = self.setFieldGroudAngle:getState() - 1
     local fertilizerState = self.setFieldGroundFertilizerState:getState() - 1
-    local ploughingState = 0
-    if self.setFieldGroundPloughingState:getIsChecked() then
-        ploughingState = 1
-    end
+    local ploughingState = self.setFieldGroundPloughingState:getIsChecked() and 1 or 0
     local buyField = self.setFieldGroundBuyField:getIsChecked()
-    print(("gsSetFieldGround %s %s %s %s %s %s"):format(field, ground, angle, fertilizerState, ploughingState, buyField))
-    g_currentMission:consoleCommandSetFieldGround(field, ground, angle, fertilizerState, ploughingState, buyField)
+    if g_currentMission.isMasterUser or g_currentMission:getIsServer() then
+        SetFieldGroundEvent.send(field, ground, angle, fertilizerState, ploughingState, buyField)
+    end
 end

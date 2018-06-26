@@ -19,7 +19,7 @@ CreatorTools
 			<GuiElement type="paging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
 				<!-- Command setFieldFruit -->
 				<GuiElement type="empty" profile="page" name="setFieldFruit" onCreate="onCreatePageSetFieldFruit">
-					<GuiElement type="boxLayout" profile="settingsBox" position="20px 536px" >
+					<GuiElement type="boxLayout" profile="settingsBox" position="20px 536px">
 						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldFruitField" id="setFieldFruitField" focusId="1_1" focusChangeBottom="1_2">
 							<GuiElement type="button" profile="multiTextOptionLeft" />
 							<GuiElement type="button" profile="multiTextOptionRight" />
@@ -66,7 +66,7 @@ CreatorTools
 				</GuiElement>
 				<!-- Command setFieldGround -->
 				<GuiElement type="empty" profile="page" name="setFieldGround" onCreate="onCreatePageSetFieldGround">
-					<GuiElement type="boxLayout" profile="settingsBox" position="20px 536px" >
+					<GuiElement type="boxLayout" profile="settingsBox" position="20px 536px">
 						<GuiElement type="multiTextOption" profile="multiTextOptionSettings" onOpen="onOpenSetFieldGroundField" id="setFieldGroundField" focusId="1_1" focusChangeBottom="1_2">
 							<GuiElement type="button" profile="multiTextOptionLeft" />
 							<GuiElement type="button" profile="multiTextOptionRight" />
