@@ -48,7 +48,9 @@ function CTPanelGui:onClickOk()
     CreatorTools.showButtonsHelp = self.showButtonsHelpElement:getIsChecked()
     CreatorTools:setMusclesMode(self.musclesModeElement:getIsChecked())
     CreatorTools.showRealClock = self.showRealClockElement:getIsChecked()
-    GoldNuggets:activateNuggetHotspots(true, self.showGoldNuggetsElement:getIsChecked())
+    if GoldNuggets.activateNuggetHotspots ~= nil then
+        GoldNuggets:activateNuggetHotspots(true, self.showGoldNuggetsElement:getIsChecked())
+    end
     CreatorTools:setScreenShotsMode(self.showScreenShotsModeElement:getIsChecked())
     CreatorTools.disableMouseWheel = self.disableMouseWheelElement:getIsChecked()
     CreatorTools:setCrosshairState(self.crosshairStateElement:getState())
