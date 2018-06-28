@@ -7,49 +7,55 @@
 	</title>
 	<description>
 		<en>
-			<![CDATA[Creator Tools allow you to do magics with HUD, camera and much more.
+			<![CDATA[
+			Creator Tools allow you to do magics with HUD, camera and much more.
 
             Changelog {package_version}
-            - New window with useful commands
-                - Set field fruit
-                - Set field ground
-            - New useful commands with "ct" prefix
-            - New real clock option
-            - Fixed compatibility issue with Manual Attach
-            - Fixed issue with ingame menù
-            - Fixed issue with placement screen
-            - Fixed some input overlapping
-            - Fixed walkspeed text visibility]]>
+            - Fixed commands on multiplayer
+			- Fixed huds hider
+			- Fixed gui keyboard navigation
+			- Fixed muscle mode in multiplayer
+			- New golden nuggets function
+			- New screenshots mode
+			- New vehicle camera collision function
+			- New crosshire function
+			- New mouse wheel function
+			- New translations
+			]]>
 		</en>
 		<de>
-			<![CDATA[Creator Tools erlauben Ihnen Einstellungen am HUD der Kamera und vielem mehr vorzunehmen.
+			<![CDATA[
+			Creator Tools erlauben Ihnen Einstellungen am HUD der Kamera und vielem mehr vorzunehmen.
 
             Changelog {package_version}
-            - Neues Fenster mit nützlichen Befehlen
-                - Feldfrüchte einstellen
-                - Feldboden einstellen
-            - Neue nützliche Befehle mit Präfix "ct"
-            - Neue echte Uhr Option
-            - Kompatibilitätsproblem mit Manual Attach behoben
-            - Problem mit Ingame-Menü behoben
-            - Problem mit Placement-Bildschirm behoben
-            - Einige Inputüberlappungen wurden behoben
-            - Die Sichtbarkeit des Textes für die Laufgeschwindigkeit wurde korrigiert]]>
+            - Befehle im Multiplayer behoben
+			- Feste Huds hider
+			- Korrektur der GUI-Tastaturnavigation
+			- Muskel-Modus im Multiplayer behoben
+			- Neue goldene Nuggets funktionieren
+			- Neuer Screenshot-Modus
+			- Neue Fahrzeugkamerakollisionsfunktion
+			- Neue Crosshire-Funktion
+			- Neue Mausradfunktion
+			- Neue Übersetzungen
+			]]>
 		</de>
 		<fr>
-			<![CDATA[Creator Tools vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
+			<![CDATA[
+			Creator Tools vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
 
             Changelog {package_version}
-            - Nouvelle fenêtre avec des commandes utiles
-                - Définir les fruits du champ
-                - Définir le terrain
-            - Nouvelles commandes utiles avec le préfixe "ct"
-            - Nouvelle option d'horloge réelle
-            - Correction d'un problème de compatibilité avec Manual Attach
-            - Correction d'un problème avec ingame menù
-            - Correction d'un problème avec l'écran de placement
-            - Correction de certains chevauchements d'entrée
-            - Visibilité du texte de la vitesse de marche fixe]]>
+            - Correction de commandes en mode multijoueur
+			- Correction de huds hider
+			- Correction du clavier de navigation gui
+			- Mode musculaire fixe en mode multijoueur
+			- Nouvelle fonction de pépites d'or
+			- Nouveau mode de captures d'écran
+			- Nouvelle fonction de collision de caméra de véhicule
+			- Nouvelle fonction de cross-country
+			- Nouvelle fonction de la molette de la souris
+			- Nouvelles traductions
+			]]>
 		</fr>
 	</description>
 	<iconFilename>icon.dds</iconFilename>
