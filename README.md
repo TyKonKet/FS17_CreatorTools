@@ -12,7 +12,7 @@ Creator Tools allow you to do magics with HUD, camera and much more.
 - [x] Screeshot mode  
 - [x] Ability to disable vehicle camera collision
 - [x] Hide crosshair separately from huds
-- [ ] Fix to muscle mode, it throw objects back
+- [x] Fix to muscle mode, it throw objects back
 - [x] Ability to disable mouse wheel inputs to prevent conflicts with chainsaws
 - [x] Fix gui focus navigation
 - [x] Regenerate translation files

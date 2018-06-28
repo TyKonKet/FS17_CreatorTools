@@ -191,3 +191,20 @@ function VehicleCamera:getCollisionDistance()
     end
     return hasCollision, collisionDistance, normalX, normalY, normalZ, normalDotDir
 end
+
+function Player:throwObject()
+    if self.pickedUpObject ~= nil and self.pickedUpObjectJointId ~= nil then
+        self:pickUpObject(false)
+        local dx, dy, dz = localDirectionToWorld(self.cameraNode, 0, 0, -1)
+        local mass = getMass(self.pickedUpObject)
+        local v = 8.0 * (1.1 - math.min(1, mass / Player.MAX_PICKABLE_OBJECT_MASS))
+        local vx = dx * v
+        local vy = dy * v
+        local vz = dz * v
+        setLinearVelocity(self.pickedUpObject, vx, vy, vz)
+        local object = g_currentMission:getNodeObject(self.pickedUpObject)
+        if object ~= nil then
+            object.thrownFromPosition = {getWorldTranslation(g_currentMission.player.rootNode)}
+        end
+    end
+end
