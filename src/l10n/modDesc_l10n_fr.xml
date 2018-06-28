@@ -58,8 +58,8 @@
         <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Enables or disables the mouse wheel controls." />
         <!-- Missing translation of "Crosshire" -->
         <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Crosshire" />
-        <!-- Missing translation of "Hides or shows the crosshire (with auto state will follow the HUDs visibility)." -->
-        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshire (with auto state will follow the HUDs visibility)." />
+        <!-- Missing translation of "Hides or shows the crosshair (with auto state will follow the HUDs visibility)." -->
+        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshair (with auto state will follow the HUDs visibility)." />
         <!-- Missing translation of "Camera collisions" -->
         <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Camera collisions" />
         <!-- Missing translation of "Enables or disables the collisions of cameras." -->
