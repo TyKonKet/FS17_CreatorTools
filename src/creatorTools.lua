@@ -136,7 +136,7 @@ function CreatorTools:loadSavegame()
         local filePath = string.format("%ssavegame%d/%s", getUserProfileAppPath(), g_careerScreen.currentSavegame.savegameIndex, self.savegameFile)
         if fileExists(filePath) then
             local xml = loadXMLFile("creatorToolsSavegameXML", filePath, "creatorTools")
-            self.hideHud = not Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), self.hideHud)
+            self.hideHud = Utils.getNoNil(getXMLBool(xml, "creatorTools.hud#hide"), self.hideHud)
             self.backup.showHelpBox = Utils.getNoNil(getXMLBool(xml, "creatorTools.hud.helpbox#show"), self.backup.showHelpBox)
             self.walkingSpeed = Utils.getNoNil(getXMLInt(xml, "creatorTools.player#walkingSpeed"), self.walkingSpeed)
             self.fovy = Utils.getNoNil(getXMLFloat(xml, "creatorTools.player.camera#fovy"), self.backup.fovy)
