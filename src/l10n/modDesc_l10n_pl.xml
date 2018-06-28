@@ -25,41 +25,31 @@
         <text name="AXIS_CT_CAMY_HELP" text="Zmiana wysokości kamery" />
         <text name="input_CT_CHANGE_DIRT" text="Zmiana poziomu zabrudzeń" />
         <text name="input_CT_OPEN_PANEL_V2" text="Otwórz panel Creator Tools" />
-        <text name="input_CT_OPEN_COMMANDS_PANEL" text="Otórz panel komend" />
+        <text name="input_CT_OPEN_COMMANDS_PANEL" text="Otwórz panel komend" />
         <text name="ui_and" text="i" />
         <text name="ui_CT_ADMIN_ONLY_ACTION" text="Ta czynność może być wykonana tylko przez administratora, zaloguj się, aby kontynuować" />
         <text name="ui_CT_HUD_TEXT" text="Wyświetlacze przezierne (HUDy)" />
         <text name="ui_CT_HUD_TOOLTIP" text="Ukrywa lub pokazuje wyświetlacze przezierne (HUDy)." />
         <text name="ui_CT_PLAYER_SPEED_TEXT" text="Prędkość chodu" />
         <text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Zmienia prędkość chodu gracza." />
-        <text name="ui_CT_CREATIVE_MONEY_TEXT" text="Drukarnia piędziędzy" />
-        <text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Włacza lub wyłacza druk pieniędzy (1mld)." />
+        <text name="ui_CT_CREATIVE_MONEY_TEXT" text="Drukarnia pieniędzy" />
+        <text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Włącza lub wyłącza druk pieniędzy (1mld)." />
         <text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Pokaż pomoc" />
         <text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Włącza lub wyłącza pokazywanie przycisków w oknie pomocy." />
         <text name="ui_CT_MUSCLES_MODE_TEXT" text="Strongman" />
         <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="Jako strongman możesz podnieść obiekt, o każdej wadze." />
         <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Rzeczywisty czas" />
         <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Ukrywa lub pokazuje rzeczywisty czas." />
-        <!-- Missing translation of "Gold Nuggets" -->
-        <text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Gold Nuggets" />
-        <!-- Missing translation of "Hides or shows the gold nuggets on map." -->
-        <text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Hides or shows the gold nuggets on map." />
-        <!-- Missing translation of "Screenshots mode" -->
-        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Screenshots mode" />
-        <!-- Missing translation of "With screenshots mode, you'll get a better visual effect." -->
-        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="With screenshots mode, you'll get a better visual effect." />
-        <!-- Missing translation of "Mouse wheel" -->
-        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Mouse wheel" />
-        <!-- Missing translation of "Enables or disables the mouse wheel controls." -->
-        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Enables or disables the mouse wheel controls." />
-        <!-- Missing translation of "Crosshire" -->
-        <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Crosshire" />
-        <!-- Missing translation of "Hides or shows the crosshire (with auto state will follow the HUDs visibility)." -->
-        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshire (with auto state will follow the HUDs visibility)." />
-        <!-- Missing translation of "Camera collisions" -->
-        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Camera collisions" />
-        <!-- Missing translation of "Enables or disables the collisions of cameras." -->
-        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" text="Enables or disables the collisions of cameras." />
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Złote baryłki" />
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Ukrywa lub pokazuje złote baryłki na mapie." />
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Tryb zrzutu ekranu" />
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="Tryb zrzutu ekranu ulepsza efekty wizualne." />
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Kółko myszy" />
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Włącza lub wyłącza sterowanie wysokością kamery za pomocą kółka myszy." />
+        <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Celownik" />
+        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Ukrywa lub pokazuje celownik (w trybie AUTO zależne od ustawień widoczności HUDów)." />
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Kolizje kamery" />
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" text="Włącza lub wyłącza kolizje kamer." />
         <text name="ui_execute" text="Wykonaj" />
         <text name="ui_CT_growthStates0" text="Obecny" />
         <text name="ui_CT_growthStates1" text="Śnieg" />
@@ -83,11 +73,10 @@
         <text name="ui_CT_setFieldGroundStates_sowing" text="Śnieg" />
         <text name="ui_CT_setFieldGroundStates_sowing_width" text="Szerokość śniegu" />
         <text name="ui_CT_setFieldGroudAngle" text="Kąt" />
-        <text name="ui_CT_setFieldGroudAngle_tooltip" text="Kąt obrotu tekstury gleby." />
-        <!-- Missing translation of "Creator Tools" -->
-        <text name="hl_CT_CATEGORY" text="Creator Tools" />
+        <text name="ui_CT_setFieldGroudAngle_tooltip" text="Kąt obrotu tekstury gleby." />        
+        <text name="hl_CT_CATEGORY" text="Creator Tools" /> <!-- I decided not to translate the name mod. -->
         <text name="hl_CT_TITLE_00" text="Ogólne" />
-        <text name="hl_CT_TEXT_00_00" text="Jak sama nazwa mów, ten mod jest przeznaczony dla twórców (np. streamer'ów i videomaker'ów), ale jest również przydatny dla zwykłych graczy, którzy potrzebują dodatkowych narzędzi." />
+        <text name="hl_CT_TEXT_00_00" text="Jak sama nazwa mówi, ten mod jest przeznaczony dla twórców (np. streamer'ów i videomaker'ów), ale jest również przydatny dla zwykłych graczy, którzy potrzebują dodatkowych narzędzi." />
         <text name="hl_CT_TEXT_00_01" text="Główne funkcje zostały wymienione i wyjaśnione tutaj, możesz otworzyć panel modu za pomocą $input_CT_OPEN_PANEL_V2;." />
         <text name="hl_CT_TITLE_01" text="Ukrywanie HUDa" />
         <text name="hl_CT_TEXT_01_00" text="Możesz ukryć i pokazać HUDy (wyświetlacze przezierne) za pomocą $input_CT_HUD_TOGGLE;." />
@@ -103,6 +92,6 @@
         <text name="hl_CT_TITLE_05" text="Zmiana zabrudzenia" />
         <text name="hl_CT_TEXT_05_00" text="Gdy jesteś w pojeździe, możesz zmienić poziom zabrudzenia za pomocą $input_CT_CHANGE_DIRT;." />
         <text name="hl_CT_TITLE_06" text="Dodatkowe skalowanie czasu" />
-        <text name="hl_CT_TEXT_06_00" text="Ten mod doaje 7 nowych skali czasu (od 240x do 15360x), możesz zmieniać ją za pomocą $input_INCREASE_TIMESCALE; i $input_DECREASE_TIMESCALE;." />
+        <text name="hl_CT_TEXT_06_00" text="Ten mod dodaje 7 nowych skali czasu (od 240x do 15360x), możesz zmieniać ją za pomocą $input_INCREASE_TIMESCALE; i $input_DECREASE_TIMESCALE;." />
     </texts>
 </l10n>
