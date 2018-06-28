@@ -69,7 +69,7 @@ function CreatorTools:initialize(missionInfo, missionDynamicInfo, loadingScreen)
     self.musclesMode = false
     self.showRealClock = true
     self.screenShotsMode = false
-    self.disableMouseWheel = false
+    self.disableMouseWheel = true
     self.crosshairState = CreatorTools.CROSSHAIR_STATES.AUTO
     self.disableCameraCollisions = false
 
@@ -260,7 +260,7 @@ function CreatorTools:checkInputs(dt)
         if fovyAxis ~= nil then
             self:addFovy(fovyAxis * 0.5)
         end
-        if not self.disableMouseWheel then
+        if self.disableMouseWheel then
             if InputBinding.hasEvent(InputBinding.CT_FOVY_UP, true) then
                 self:addFovy(1 * 1.5)
             end
@@ -275,7 +275,7 @@ function CreatorTools:checkInputs(dt)
         if camyAxis ~= nil then
             self:addCamy(camyAxis * 0.25)
         end
-        if not self.disableMouseWheel then
+        if self.disableMouseWheel then
             if InputBinding.hasEvent(InputBinding.CT_CAMY_UP, true) and not g_gui:getIsGuiVisible() then
                 self:addCamy(1 * 0.75)
             end
