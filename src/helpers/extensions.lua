@@ -28,67 +28,74 @@ function CreatorToolsExtensions:setAllowsHudDisplay(v)
     g_currentMission.showVehicleSchema = v
 end
 
--- real extension methods
 function Utils.getTimeScaleIndex(timeScale)
     if 15360 <= timeScale then
-        return 13
+        return 15
     elseif 7680 <= timeScale then
-        return 12
+        return 14
     elseif 3840 <= timeScale then
-        return 11
+        return 13
     elseif 1920 <= timeScale then
-        return 10
+        return 12
     elseif 960 <= timeScale then
-        return 9
+        return 11
     elseif 480 <= timeScale then
-        return 8
+        return 10
     elseif 240 <= timeScale then
-        return 7
+        return 9
     elseif 120 <= timeScale then
-        return 6
+        return 8
     elseif 60 <= timeScale then
-        return 5
+        return 7
     elseif 30 <= timeScale then
-        return 4
+        return 6
     elseif 15 <= timeScale then
-        return 3
+        return 5
     elseif 5 <= timeScale then
+        return 4
+    elseif 3 <= timeScale then
+        return 3
+    elseif 1 <= timeScale then
         return 2
     end
     return 1
 end
 
 function Utils.getTimeScaleFromIndex(timeScaleIndex)
-    if 13 <= timeScaleIndex then
+    if 15 <= timeScaleIndex then
         return 15360
-    elseif 12 <= timeScaleIndex then
+    elseif 14 <= timeScaleIndex then
         return 7680
-    elseif 11 <= timeScaleIndex then
+    elseif 13 <= timeScaleIndex then
         return 3840
-    elseif 10 <= timeScaleIndex then
+    elseif 12 <= timeScaleIndex then
         return 1920
-    elseif 9 <= timeScaleIndex then
+    elseif 11 <= timeScaleIndex then
         return 960
-    elseif 8 <= timeScaleIndex then
+    elseif 10 <= timeScaleIndex then
         return 480
-    elseif 7 <= timeScaleIndex then
+    elseif 9 <= timeScaleIndex then
         return 240
-    elseif 6 <= timeScaleIndex then
+    elseif 8 <= timeScaleIndex then
         return 120
-    elseif 5 <= timeScaleIndex then
+    elseif 7 <= timeScaleIndex then
         return 60
-    elseif 4 <= timeScaleIndex then
+    elseif 6 <= timeScaleIndex then
         return 30
-    elseif 3 <= timeScaleIndex then
+    elseif 5 <= timeScaleIndex then
         return 15
-    elseif 2 <= timeScaleIndex then
+    elseif 4 <= timeScaleIndex then
         return 5
+    elseif 3 <= timeScaleIndex then
+        return 3
+    elseif 2 <= timeScaleIndex then
+        return 1
     end
-    return 1
+    return 0
 end
 
 function Utils.getNumTimeScales()
-    return 13
+    return 15
 end
 
 function Utils.getTimeScaleString(timeScaleIndex)
