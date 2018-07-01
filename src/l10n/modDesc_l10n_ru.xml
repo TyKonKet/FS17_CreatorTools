@@ -6,7 +6,7 @@
         <text name="CT_SHOW_HUD_HELP" text="Показать HUD" />
         <text name="CT_HIDE_HUD_HELP" text="Скрыть HUD" />
         <text name="input_AXIS_CT_WALKING_SPEED_2" text="Бежать быстрее" />
-        <text name="input_AXIS_CT_WALKING_SPEED_1" text="Бежать медленее" />
+        <text name="input_AXIS_CT_WALKING_SPEED_1" text="Бежать медленнее" />
         <text name="AXIS_CT_WALKING_SPEED_HELP" text="Изменить скорость бега" />
         <text name="input_CT_WALKING_SPEED_DEFAULT" text="Установить на 1x скорость бега" />
         <text name="input_CT_FOVY_DEFAULT" text="Установить FOV камеры в стандартное значение" />
@@ -27,39 +27,29 @@
         <text name="input_CT_OPEN_PANEL_V2" text="Открыть панель Creator Tools" />
         <text name="input_CT_OPEN_COMMANDS_PANEL" text="Открыть командную панель" />
         <text name="ui_and" text="и" />
-        <text name="ui_CT_ADMIN_ONLY_ACTION" text="Это действие может быть выполнено только админами, пожалуйста, войдите в систему, чтобы продолжить" />
-        <text name="ui_CT_HUD_TEXT" text="Heads-up displays (HUD)" />
-        <text name="ui_CT_HUD_TOOLTIP" text="Скрывать или отображать элементы дисплея (HUD)." />
+        <text name="ui_CT_ADMIN_ONLY_ACTION" text="Это действие может быть выполнено только админами, пожалуйста, войдите в систему, чтобы продолжить." />
+        <text name="ui_CT_HUD_TEXT" text="Отображение элементов HUD" />
+        <text name="ui_CT_HUD_TOOLTIP" text="Скрытие или отображение элементов дисплея (HUD)." />
         <text name="ui_CT_PLAYER_SPEED_TEXT" text="Скорость бега" />
         <text name="ui_CT_PLAYER_SPEED_TOOLTIP" text="Изменяет скорость бега игрока." />
         <text name="ui_CT_CREATIVE_MONEY_TEXT" text="Добавить денег" />
         <text name="ui_CT_CREATIVE_MONEY_TOOLTIP" text="Добавляет или вычитает 1 000 000 000 денег." />
         <text name="ui_CT_SHOW_BUTTONS_HELP_TEXT" text="Показывать подсказки" />
-        <text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Включает или отключает подсказки кнопок в окне справки." />
+        <text name="ui_CT_SHOW_BUTTONS_HELP_TOOLTIP" text="Включает или отключает сочетания клавиш в окне справки." />
         <text name="ui_CT_MUSCLES_MODE_TEXT" text="Режим суперсилы" />
         <text name="ui_CT_MUSCLES_MODE_TOOLTIP" text="В режиме суперсилы, вы можете поднять объекты любого веса." />
         <text name="ui_CT_SHOW_REALCLOCK_TEXT" text="Реальное время" />
         <text name="ui_CT_SHOW_REALCLOCK_TOOLTIP" text="Отображает или скрывает реальное время." />
-        <!-- Missing translation of "Gold Nuggets" -->
-        <text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Gold Nuggets" />
-        <!-- Missing translation of "Hides or shows the gold nuggets on map." -->
-        <text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Hides or shows the gold nuggets on map." />
-        <!-- Missing translation of "Screenshots mode" -->
-        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Screenshots mode" />
-        <!-- Missing translation of "With screenshots mode, you'll get a better visual effect." -->
-        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="With screenshots mode, you'll get a better visual effect." />
-        <!-- Missing translation of "Mouse wheel" -->
-        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Mouse wheel" />
-        <!-- Missing translation of "Enables or disables the mouse wheel controls." -->
-        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Enables or disables the mouse wheel controls." />
-        <!-- Missing translation of "Crosshire" -->
-        <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Crosshire" />
-        <!-- Missing translation of "Hides or shows the crosshair (with auto state will follow the HUDs visibility)." -->
-        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Hides or shows the crosshair (with auto state will follow the HUDs visibility)." />
-        <!-- Missing translation of "Camera collisions" -->
-        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Camera collisions" />
-        <!-- Missing translation of "Enables or disables the collisions of cameras." -->
-        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" text="Enables or disables the collisions of cameras." />
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TEXT" text="Золотые самородки"/>
+        <text name="ui_CT_SHOW_GOLD_NUGGETS_TOOLTIP" text="Скрывает или показывает на карте золотые самородки."/>
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TEXT" text="Режим скриншота"/>
+        <text name="ui_CT_SHOW_SCREENSHOTS_MODE_TOOLTIP" text="С режимом скриншотов вы получите лучший визуальный эффект."/>
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TEXT" text="Колёсико мыши"/>
+        <text name="ui_CT_DISABLE_MOUSE_WHEEL_TOOLTIP" text="Включает или отключает элементы управления колесиком мыши."/>
+        <text name="ui_CT_CROSSHAIR_STATE_TEXT" text="Точка по центру"/>
+        <text name="ui_CT_CROSSHAIR_STATE_TOOLTIP" text="Скрывает или показывает точку по центру (с автоматическим слежением за за видимостью HUD)."/>
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TEXT" text="Коллизия камеры"/>
+        <text name="ui_CT_DISABLE_CAMERA_COLLISIONS_TOOLTIP" text="Включает или отключает коллизию камеры."/>
         <text name="ui_execute" text="Выполнить" />
         <text name="ui_CT_growthStates0" text="Текущая" />
         <text name="ui_CT_growthStates1" text="Посеяно" />
@@ -84,13 +74,12 @@
         <text name="ui_CT_setFieldGroundStates_sowing_width" text="Посажено рядами" />
         <text name="ui_CT_setFieldGroudAngle" text="Угол" />
         <text name="ui_CT_setFieldGroudAngle_tooltip" text="Угол поворота текстуры почвы." />
-        <!-- Missing translation of "Creator Tools" -->
         <text name="hl_CT_CATEGORY" text="Creator Tools" />
         <text name="hl_CT_TITLE_00" text="Общие" />
         <text name="hl_CT_TEXT_00_00" text="Как следует из названия, этот мод предназначен для создателей (например, стримеров и создателей видео), но также полезен для обычных игроков, которым необходимы дополнительные инструменты." />
         <text name="hl_CT_TEXT_00_01" text="Основные особенности перечислены и объяснены здесь, вы можете открыть панель мода через $input_CT_OPEN_PANEL_V2;." />
         <text name="hl_CT_TITLE_01" text="Скрытие HUD" />
-        <text name="hl_CT_TEXT_01_00" text="Вы можете скрыть или отбразить HUDs (heads-up displays) нажав $input_CT_HUD_TOGGLE;." />
+        <text name="hl_CT_TEXT_01_00" text="Вы можете скрыть или отобразить HUD (heads-up displays) нажав $input_CT_HUD_TOGGLE;." />
         <text name="hl_CT_TITLE_02" text="Скорость передвижения" />
         <text name="hl_CT_TEXT_02_00" text="Вы можете увеличивать или уменьшать скорость передвижения $input_AXIS_CT_WALKING_SPEED;." />
         <text name="hl_CT_TEXT_02_01" text="Вы также можете вернуть скорость к стандартному значению $input_CT_WALKING_SPEED_DEFAULT;." />
@@ -103,6 +92,6 @@
         <text name="hl_CT_TITLE_05" text="Изменение загрязнённости" />
         <text name="hl_CT_TEXT_05_00" text="Когда вы находитесь на транспортном средстве, вы можете изменять степень его загрязнённости $input_CT_CHANGE_DIRT;." />
         <text name="hl_CT_TITLE_06" text="Доп. ускорение времени" />
-        <text name="hl_CT_TEXT_06_00" text="Этот мод добавляет семь новых шкал времени (от 240x до 15360x), вы можете менять их $input_INCREASE_TIMESCALE; и $input_DECREASE_TIMESCALE;." />
+        <text name="hl_CT_TEXT_06_00" text="Этот мод добавляет девять новых шкал времени (0x, 3x и от 240x до 15360x), которые можете менять стандартными клавишами $input_INCREASE_TIMESCALE; и $input_DECREASE_TIMESCALE;." />
     </texts>
 </l10n>
