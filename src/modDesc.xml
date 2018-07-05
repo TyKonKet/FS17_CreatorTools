@@ -25,18 +25,18 @@
 		</en>
 		<de>
 			<![CDATA[
-			Creator Tools erlauben Ihnen Einstellungen am HUD der Kamera und vielem mehr vorzunehmen.
+			Mit den Creator Tools kannst  Einstellungen am HUD, der Kamera und vielem mehr vor nehmen.
 
             Changelog {package_version}
-            - Befehle im Multiplayer behoben
-			- Feste Huds hider
+            - Probleme mit Befehlen im Multiplayer behoben
+			- HUDs aus-/einblenden fest integriert
 			- Korrektur der GUI-Tastaturnavigation
-			- Muskel-Modus im Multiplayer behoben
-			- Neue goldene Nuggets funktionieren
-			- Neuer Screenshot-Modus
-			- Neue Fahrzeugkamerakollisionsfunktion
-			- Neue Fadenkreuzfunktion
-			- Neue Mausradfunktion
+			- Power(Muskel)-Modus im Multiplayer behoben
+			- Gold-Nuggets anzeigen funktioniert
+			- Neuer Screenshots-Modus
+			- Neue Fahrzeug-Kamera-Kollisions-Funktion
+			- Neue Crosshair-Funktion
+			- Neue Mausrad-Funktion
 			- Neue Übersetzungen
 			]]>
 		</de>
