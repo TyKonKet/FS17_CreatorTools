@@ -13,6 +13,13 @@ function CTCommandsPanel:new(target)
     self.currentPageMappingIndex = 1
     self.currentPageId = 1
     self.commands = {}
+    self.seedableFruits = {}
+    for i = 1, FruitUtil.NUM_FRUITTYPES do
+        local desc = FruitUtil.fruitIndexToDesc[i]
+        if desc.allowsSeeding then
+            table.insert(self.seedableFruits, {fruitIndex = i, nameI18N = FillUtil.fillTypeIndexToDesc[FruitUtil.fruitTypeToFillType[i]].nameI18N, name = desc.name})
+        end
+    end
     return self
 end
 
@@ -103,8 +110,8 @@ end
 
 function CTCommandsPanel:onOpenSetFieldFruitFruit(element)
     local fruits = {}
-    for i = 1, FruitUtil.NUM_FRUITTYPES do
-        fruits[i] = FillUtil.fillTypeIndexToDesc[FruitUtil.fruitTypeToFillType[i]].nameI18N
+    for i, v in ipairs(self.seedableFruits) do
+        fruits[i] = v.nameI18N
     end
     self.setFieldFruitFruit:setTexts(fruits)
 end
@@ -128,7 +135,7 @@ end
 
 function CTCommandsPanel:SetFieldFruit()
     local field = self.setFieldFruitField:getState()
-    local fruit = FruitUtil.fruitIndexToDesc[self.setFieldFruitFruit:getState()].name
+    local fruit = self.seedableFruits[self.setFieldFruitFruit:getState()].name
     local growthState = self.setFieldFruitGrowthState:getState()
     local fertilizerState = self.setFieldFruitFertilizerState:getState() - 1
     local ploughingState = self.setFieldFruitPloughingState:getIsChecked() and 1 or 0
