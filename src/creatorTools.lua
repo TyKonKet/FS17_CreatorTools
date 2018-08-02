@@ -205,8 +205,8 @@ function CreatorTools:update(dt)
     setFovy(g_currentMission.player.cameraNode, Utils.lerp(getFovy(g_currentMission.player.cameraNode), self.target.fovy, self.target.fovyIntAlpha))
     self:checkInputs(dt)
     self:drawHelpButtons()
-    local r, g, b = getLightColor(g_currentMission.environment.sunLightId)
     if self.screenShotsMode then
+        local r, g, b = getLightColor(g_currentMission.environment.sunLightId)
         setLightColor(g_currentMission.environment.sunLightId, r * 3, g * 2.9, b * 2.67)
     end
 end

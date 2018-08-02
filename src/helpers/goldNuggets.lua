@@ -11,6 +11,7 @@ function CollectableGoldNuggets:new(name)
     GoldNuggets.activateNuggetHotspots = CollectableGoldNuggets.activateNuggetHotspots
     GoldNuggets.deleteGoldNugget = CollectableGoldNuggets.deleteGoldNugget
     GoldNuggets.triggerCallback = CollectableGoldNuggets.triggerCallback
+    GoldNuggets.delete = CollectableGoldNuggets.delete
     GoldNuggets.me = name
     local num = getNumOfChildren(GoldNuggets.me)
     GoldNuggets.goldNuggets = {}
