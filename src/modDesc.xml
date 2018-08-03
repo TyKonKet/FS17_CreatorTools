@@ -11,17 +11,7 @@
 			Creator Tools allow you to do magics with HUD, camera and much more.
 
             Changelog {package_version}
-            - Fixed commands on multiplayer
-			- Fixed huds hider
-			- Fixed gui keyboard navigation
-			- Fixed muscle mode in multiplayer
-			- New golden nuggets function
-			- New screenshots mode
-			- New vehicle camera collision function
-			- New crosshair function
-			- New mouse wheel function
-			- New translations
-			- New time scales
+            - Fixed issue causing game crash
 			]]>
 		</en>
 		<de>
@@ -29,16 +19,7 @@
 			Mit den Creator Tools kannst  Einstellungen am HUD, der Kamera und vielem mehr vor nehmen.
 
             Changelog {package_version}
-            - Probleme mit Befehlen im Multiplayer behoben
-			- HUDs aus-/einblenden fest integriert
-			- Korrektur der GUI-Tastaturnavigation
-			- Power(Muskel)-Modus im Multiplayer behoben
-			- Gold-Nuggets anzeigen funktioniert
-			- Neuer Screenshots-Modus
-			- Neue Fahrzeug-Kamera-Kollisions-Funktion
-			- Neue Crosshair-Funktion
-			- Neue Mausrad-Funktion
-			- Neue Übersetzungen
+            - Problem behoben, das zum Absturz des Spiels führte
 			]]>
 		</de>
 		<fr>
@@ -46,16 +27,7 @@
 			Creator Tools vous permettent de faire de la magie avec HUD, caméra et bien plus encore.
 
             Changelog {package_version}
-            - Correction de commandes en mode multijoueur
-			- Correction de huds hider
-			- Correction du clavier de navigation gui
-			- Mode musculaire fixe en mode multijoueur
-			- Nouvelle fonction de pépites d'or
-			- Nouveau mode de captures d'écran
-			- Nouvelle fonction de collision de caméra de véhicule
-			- Nouvelle fonction réticule
-			- Nouvelle fonction de la molette de la souris
-			- Nouvelles traductions
+            - Correction d'un problème provoquant une panne de jeu
 			]]>
 		</fr>
 	</description>
